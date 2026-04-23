@@ -1,0 +1,26 @@
+# Deny-by-default: nothing new at the repo root is tracked until it's
+# explicitly whitelisted below. Inside a whitelisted folder, new files
+# and subfolders are tracked normally — so dropping a new logo into
+# primary-logo/ or adding a new department just works.
+
+/*
+
+# Whitelisted top-level entries
+!/.gitignore
+!/LICENSE
+!/README.md
+!/brand-guide/
+!/departments/
+!/dist/
+!/favicon/
+!/initiatives/
+!/primary-logo/
+!/primary-logo-with-address/
+!/web-tokens/
+
+# OS / editor junk at any depth
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
+**/~$*
+**/*.tmp

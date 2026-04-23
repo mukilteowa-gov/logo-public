@@ -1,0 +1,42 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": "City of Mukilteo Brand Guide v1.0 (2015-01-05)",
+  "primary": {
+    "deep-navy": {
+      "hex": "#003660",
+      "rgb": [0, 54, 96],
+      "cmyk": [100, 60, 10, 53],
+      "pms": "2955",
+      "name": "Deep Navy"
+    },
+    "aqua": {
+      "hex": "#4F9B99",
+      "rgb": [79, 155, 153],
+      "cmyk": [71, 24, 42, 0],
+      "pms": "7716",
+      "name": "Aqua"
+    }
+  },
+  "secondary": {
+    "cool": {
+      "lavender":    { "hex": "#929FD0", "rgb": [146, 159, 208], "cmyk": [43, 33, 0, 0] },
+      "sky":         { "hex": "#6FBDE9", "rgb": [111, 189, 233], "cmyk": [52, 10, 0, 0] },
+      "blue":        { "hex": "#659AD2", "rgb": [101, 154, 210], "cmyk": [60, 30, 0, 0] },
+      "aqua-light":  { "hex": "#7DC8C2", "rgb": [125, 200, 194], "cmyk": [50, 2, 27, 0] },
+      "green-light": { "hex": "#B7DBA5", "rgb": [183, 219, 165], "cmyk": [30, 0, 45, 0] }
+    },
+    "warm": {
+      "wine":   { "hex": "#952E45", "rgb": [149, 46, 69],  "cmyk": [50, 100, 80, 0] },
+      "red":    { "hex": "#D34D4B", "rgb": [211, 77, 75],  "cmyk": [15, 85, 73, 0] },
+      "orange": { "hex": "#EC8D1C", "rgb": [236, 141, 28], "cmyk": [0, 50, 100, 4] },
+      "yellow": { "hex": "#FEBC11", "rgb": [254, 188, 17], "cmyk": [0, 28, 100, 0] }
+    },
+    "neutral": {
+      "gray-light": { "hex": "#BCBEC0", "rgb": [188, 190, 192], "cmyk": [0, 0, 0, 30] },
+      "gray":       { "hex": "#58595B", "rgb": [88, 89, 91],    "cmyk": [0, 0, 0, 80] },
+      "black":      { "hex": "#000000", "rgb": [0, 0, 0],       "cmyk": [0, 0, 0, 100] },
+      "brown":      { "hex": "#635546", "rgb": [99, 85, 70],    "cmyk": [0, 15, 30, 75] },
+      "sand":       { "hex": "#C1B8AF", "rgb": [193, 184, 175], "cmyk": [0, 5, 10, 28] }
+    }
+  }
+}

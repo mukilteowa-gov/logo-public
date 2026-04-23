@@ -1,0 +1,52 @@
+// City of Mukilteo — Brand Color Tokens (SCSS)
+// Source: City of Mukilteo Brand Guide v1.0 (2015-01-05)
+
+// ---- Primary palette ----
+$mukilteo-deep-navy: #003660;   // PMS 2955
+$mukilteo-aqua:      #4F9B99;   // PMS 7716
+
+// ---- Secondary — cool ----
+$mukilteo-lavender:    #929FD0;
+$mukilteo-sky:         #6FBDE9;
+$mukilteo-blue:        #659AD2;
+$mukilteo-aqua-light:  #7DC8C2;
+$mukilteo-green-light: #B7DBA5;
+
+// ---- Secondary — warm ----
+$mukilteo-wine:   #952E45;
+$mukilteo-red:    #D34D4B;
+$mukilteo-orange: #EC8D1C;
+$mukilteo-yellow: #FEBC11;
+
+// ---- Secondary — neutral ----
+$mukilteo-gray-light: #BCBEC0;
+$mukilteo-gray:       #58595B;
+$mukilteo-black:      #000000;
+$mukilteo-brown:      #635546;
+$mukilteo-sand:       #C1B8AF;
+
+// ---- Semantic aliases ----
+$mukilteo-brand-primary:   $mukilteo-deep-navy;
+$mukilteo-brand-secondary: $mukilteo-aqua;
+$mukilteo-text:            $mukilteo-deep-navy;
+$mukilteo-text-muted:      $mukilteo-gray;
+
+// ---- SCSS map for iteration / theming ----
+$mukilteo-colors: (
+  "deep-navy":   $mukilteo-deep-navy,
+  "aqua":        $mukilteo-aqua,
+  "lavender":    $mukilteo-lavender,
+  "sky":         $mukilteo-sky,
+  "blue":        $mukilteo-blue,
+  "aqua-light":  $mukilteo-aqua-light,
+  "green-light": $mukilteo-green-light,
+  "wine":        $mukilteo-wine,
+  "red":         $mukilteo-red,
+  "orange":      $mukilteo-orange,
+  "yellow":      $mukilteo-yellow,
+  "gray-light":  $mukilteo-gray-light,
+  "gray":        $mukilteo-gray,
+  "black":       $mukilteo-black,
+  "brown":       $mukilteo-brown,
+  "sand":        $mukilteo-sand
+);

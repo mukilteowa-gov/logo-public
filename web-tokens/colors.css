@@ -1,0 +1,41 @@
+/*
+ * City of Mukilteo — Brand Color Tokens
+ * Source: City of Mukilteo Brand Guide v1.0 (2015-01-05)
+ * Values are authoritative HEX codes from the Color Palette pages.
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="/path/to/colors.css">
+ *   .button { background: var(--mukilteo-deep-navy); }
+ */
+
+:root {
+  /* ---- Primary palette ---- */
+  --mukilteo-deep-navy: #003660;   /* PMS 2955 · CMYK 100/60/10/53 · RGB 0,54,96 */
+  --mukilteo-aqua:      #4F9B99;   /* PMS 7716 · CMYK 71/24/42/0  · RGB 79,155,153 */
+
+  /* ---- Secondary palette — cool ---- */
+  --mukilteo-lavender:   #929FD0;  /* CMYK 43/33/0/0  · RGB 146,159,208 */
+  --mukilteo-sky:        #6FBDE9;  /* CMYK 52/10/0/0  · RGB 111,189,233 */
+  --mukilteo-blue:       #659AD2;  /* CMYK 60/30/0/0  · RGB 101,154,210 */
+  --mukilteo-aqua-light: #7DC8C2;  /* CMYK 50/2/27/0  · RGB 125,200,194 */
+  --mukilteo-green-light:#B7DBA5;  /* CMYK 30/0/45/0  · RGB 183,219,165 */
+
+  /* ---- Secondary palette — warm ---- */
+  --mukilteo-wine:   #952E45;      /* CMYK 50/100/80/0 · RGB 149,46,69 */
+  --mukilteo-red:    #D34D4B;      /* CMYK 15/85/73/0  · RGB 211,77,75 */
+  --mukilteo-orange: #EC8D1C;      /* CMYK 0/50/100/4  · RGB 236,141,28 */
+  --mukilteo-yellow: #FEBC11;      /* CMYK 0/28/100/0  · RGB 254,188,17 */
+
+  /* ---- Secondary palette — neutral ---- */
+  --mukilteo-gray-light: #BCBEC0;  /* CMYK 0/0/0/30   · RGB 188,190,192 */
+  --mukilteo-gray:       #58595B;  /* CMYK 0/0/0/80   · RGB 88,89,91   · charcoal */
+  --mukilteo-black:      #000000;  /* CMYK 0/0/0/100  · RGB 0,0,0 */
+  --mukilteo-brown:      #635546;  /* CMYK 0/15/30/75 · RGB 99,85,70 */
+  --mukilteo-sand:       #C1B8AF;  /* CMYK 0/5/10/28  · RGB 193,184,175 */
+
+  /* ---- Semantic aliases (optional shortcuts) ---- */
+  --mukilteo-brand-primary:   var(--mukilteo-deep-navy);
+  --mukilteo-brand-secondary: var(--mukilteo-aqua);
+  --mukilteo-text:            var(--mukilteo-deep-navy);
+  --mukilteo-text-muted:      var(--mukilteo-gray);
+}

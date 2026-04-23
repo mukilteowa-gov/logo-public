@@ -1,0 +1,76 @@
+/*
+ * City of Mukilteo — Brand Font Tokens
+ * Source: City of Mukilteo Brand Guide v1.0 (2015-01-05)
+ *
+ * Each stack tries the official brand font first, then a free open-source
+ * lookalike from Google Fonts, then a system default. This means the stack
+ * "just works" on any machine — and upgrades automatically if the brand
+ * font is loaded (via @font-face) or the substitute is loaded (via a
+ * Google Fonts <link>).
+ *
+ * To activate the free substitutes in one step, also load fonts-google.css
+ * (or add the corresponding Google Fonts <link> to your HTML). See
+ * FONT-SUBSTITUTES.md for per-font reasoning and license info.
+ *
+ * NO font files ship with this repo — all brand fonts are proprietary.
+ * See LICENSING.md.
+ */
+
+:root {
+  /* ---- Sans-serif (body text, UI) ----
+     Brand: Museo Sans (exljbris, paid)
+     Free: Mulish (SIL OFL, Google Fonts) */
+  --mukilteo-sans:
+      "Museo Sans", "Mulish",
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Sans-serif condensed (headlines, tight labels) ----
+     Brand: Museo Sans Condensed (exljbris, paid)
+     Free: Barlow Condensed (SIL OFL, Google Fonts) */
+  --mukilteo-sans-condensed:
+      "Museo Sans Condensed", "Barlow Condensed", "Roboto Condensed",
+      "Arial Narrow", sans-serif;
+
+  /* ---- Serif (print body, feature headlines) ----
+     Brand: Chaparral Pro (Adobe, CC-only)
+     Free: Bitter (SIL OFL, Google Fonts) */
+  --mukilteo-serif:
+      "Chaparral Pro", "Bitter", "Source Serif 4",
+      Georgia, "Times New Roman", serif;
+
+  /* ---- Display (posters, feature type, Tuscan/Western flavor) ----
+     Brand: Rosewood Fill (Adobe, CC-only)
+     Free: none approved — no OFL font matches the decorative Tuscan
+     character closely enough to substitute honestly. The stack falls
+     through to a heavy serif (Bitter, already loaded for the serif role),
+     then to system display defaults. See FONT-SUBSTITUTES.md §4. */
+  --mukilteo-display:
+      "Rosewood Fill", "Bitter",
+      Georgia, "Times New Roman", serif;
+
+  /* ---- Logo caption (text that sits near the logo) ----
+     Brand: Avenir Next Condensed Demi Bold (Linotype/Monotype, paid)
+     Free: Barlow Condensed (SIL OFL, Google Fonts)
+     Note: the logo itself is vector — don't retypeset it. This stack is
+     only for matching nearby text (e.g. sub-brand captions). */
+  --mukilteo-logo-caption:
+      "Avenir Next Condensed", "Barlow Condensed", "Oswald",
+      "Arial Narrow", sans-serif;
+
+  /* ---- Brand-guide-sanctioned web fallbacks ---- */
+  --mukilteo-web-serif: Georgia, "Times New Roman", serif;
+  --mukilteo-web-sans:  Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Example @font-face — uncomment and fix paths if/when the City has
+ * licensed copies of a brand font hosted on its own server. Do NOT commit
+ * .woff2 files to this repo.
+ *
+ * @font-face {
+ *   font-family: "Museo Sans";
+ *   src: url("/fonts/MuseoSans-500.woff2") format("woff2");
+ *   font-weight: 500; font-style: normal; font-display: swap;
+ * }
+ */

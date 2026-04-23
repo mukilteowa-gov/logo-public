@@ -1,0 +1,48 @@
+// City of Mukilteo — Brand Font Tokens (SCSS)
+// Source: City of Mukilteo Brand Guide v1.0 (2015-01-05)
+// NO font files ship with this repo — see LICENSING.md.
+// Free substitutes are from Google Fonts (SIL OFL) — see FONT-SUBSTITUTES.md.
+
+// ---- Sans-serif (body, UI) ----
+// Brand: Museo Sans · Free: Mulish
+$mukilteo-sans:
+    "Museo Sans", "Mulish",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+// ---- Sans-serif condensed ----
+// Brand: Museo Sans Condensed · Free: Barlow Condensed
+$mukilteo-sans-condensed:
+    "Museo Sans Condensed", "Barlow Condensed", "Roboto Condensed",
+    "Arial Narrow", sans-serif;
+
+// ---- Serif (print body, headlines) ----
+// Brand: Chaparral Pro · Free: Bitter
+$mukilteo-serif:
+    "Chaparral Pro", "Bitter", "Source Serif 4",
+    Georgia, "Times New Roman", serif;
+
+// ---- Display (posters, feature type) ----
+// Brand: Rosewood Fill · Free: Rye
+$mukilteo-display:
+    "Rosewood Fill", "Rye", "Smokum",
+    Impact, "Arial Black", sans-serif;
+
+// ---- Logo caption ----
+// Brand: Avenir Next Condensed · Free: Barlow Condensed
+$mukilteo-logo-caption:
+    "Avenir Next Condensed", "Barlow Condensed", "Oswald",
+    "Arial Narrow", sans-serif;
+
+// ---- Brand-guide-sanctioned web fallbacks ----
+$mukilteo-web-serif: (Georgia, "Times New Roman", serif);
+$mukilteo-web-sans:  (Arial, Helvetica, sans-serif);
+
+// ---- Map for iteration ----
+$mukilteo-fonts: (
+  "sans":           $mukilteo-sans,
+  "sans-condensed": $mukilteo-sans-condensed,
+  "serif":          $mukilteo-serif,
+  "display":        $mukilteo-display,
+  "logo-caption":   $mukilteo-logo-caption
+);

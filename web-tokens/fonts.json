@@ -1,0 +1,62 @@
+{
+  "source": "City of Mukilteo Brand Guide v1.0 (2015-01-05)",
+  "note": "No font files ship with this repo. Free substitutes are from Google Fonts under SIL OFL 1.1. See FONT-SUBSTITUTES.md and LICENSING.md.",
+  "roles": {
+    "sans": {
+      "use": "Body text, UI, general-purpose sans-serif",
+      "brand": { "family": "Museo Sans", "vendor": "exljbris", "license": "commercial" },
+      "free-fallback": {
+        "family": "Mulish",
+        "source": "Google Fonts",
+        "license": "SIL OFL 1.1",
+        "url": "https://fonts.google.com/specimen/Mulish"
+      },
+      "stack": ["Museo Sans", "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+    },
+    "sans-condensed": {
+      "use": "Headlines, labels, tight horizontal space",
+      "brand": { "family": "Museo Sans Condensed", "vendor": "exljbris", "license": "commercial" },
+      "free-fallback": {
+        "family": "Barlow Condensed",
+        "source": "Google Fonts",
+        "license": "SIL OFL 1.1",
+        "url": "https://fonts.google.com/specimen/Barlow+Condensed"
+      },
+      "stack": ["Museo Sans Condensed", "Barlow Condensed", "Roboto Condensed", "Arial Narrow", "sans-serif"]
+    },
+    "serif": {
+      "use": "Print body copy, long-form headings",
+      "brand": { "family": "Chaparral Pro", "vendor": "Adobe", "license": "Adobe Fonts / Creative Cloud" },
+      "free-fallback": {
+        "family": "Bitter",
+        "source": "Google Fonts",
+        "license": "SIL OFL 1.1",
+        "url": "https://fonts.google.com/specimen/Bitter"
+      },
+      "stack": ["Chaparral Pro", "Bitter", "Source Serif 4", "Georgia", "Times New Roman", "serif"]
+    },
+    "display": {
+      "use": "Posters, feature type, big decorative headings with Tuscan/Western character. Also used in the logotype itself (already outlined in the vector files — don't retypeset).",
+      "brand": { "family": "Rosewood Fill", "vendor": "Adobe", "license": "Adobe Fonts / Creative Cloud" },
+      "free-fallback": null,
+      "note": "No OFL substitute — the decorative Tuscan/Western category is not well represented in free font libraries. Rye was evaluated and rejected as too lightweight and generic. Use the licensed Rosewood Fill via Adobe CC, fall back to a heavy Bitter weight, or commission custom type for campaigns that actually need this character. See FONT-SUBSTITUTES.md for the full reasoning.",
+      "stack": ["Rosewood Fill", "Bitter", "Georgia", "Times New Roman", "serif"]
+    },
+    "logo-caption": {
+      "use": "Text near the logo (sub-brand captions). Don't retypeset the logo itself — use the vector files.",
+      "brand": { "family": "Avenir Next Condensed", "weight": "Demi Bold", "vendor": "Linotype/Monotype", "license": "commercial" },
+      "free-fallback": {
+        "family": "Barlow Condensed",
+        "source": "Google Fonts",
+        "license": "SIL OFL 1.1",
+        "url": "https://fonts.google.com/specimen/Barlow+Condensed"
+      },
+      "stack": ["Avenir Next Condensed", "Barlow Condensed", "Oswald", "Arial Narrow", "sans-serif"]
+    }
+  },
+  "web-safe-fallbacks": {
+    "note": "The brand guide explicitly sanctions these for on-screen use when the preferred fonts aren't available.",
+    "serif": ["Georgia", "Times New Roman", "serif"],
+    "sans":  ["Arial", "Helvetica", "sans-serif"]
+  }
+}
