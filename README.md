@@ -1,93 +1,97 @@
 # City of Mukilteo — Brand & Logo Package
 
-Official logos, marks, and brand guidelines for the City of Mukilteo. This package is intended for web designers, vendors, print shops, partners, and anyone producing materials on behalf of the City.
+Official logos, brand guidelines, fonts, and color tokens for City of Mukilteo communications and web projects.
+
+This repository is intended for City staff, vendors, and partners working on Mukilteo communications.
+
+Use the files in this repository to keep City materials consistent.
+
+The brand guide PDF is the authoritative source for logo use, colors, typography, and misuse rules.
+
+Do not modify logo colors, proportions, or composition. Use only the provided files.
 
 ---
 
-## Building a website or web app? Start here.
+## For web developers
 
-For vendors producing web work (portals, forms, microsites), three stylesheets get you on-brand with zero font-licensing concerns:
+Three stylesheets drop in the brand palette and font stacks. The web font fallbacks are SIL OFL Google Fonts and can be used without a commercial font license. Load them from the jsDelivr CDN:
 
 ```html
-<link rel="stylesheet" href="/path/to/web-tokens/fonts-google.css">
-<link rel="stylesheet" href="/path/to/web-tokens/fonts.css">
-<link rel="stylesheet" href="/path/to/web-tokens/colors.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/colors.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts-google.css">
 ```
+
+Or copy `web-tokens/` into your project and reference local paths instead.
 
 Then in your CSS:
 
 ```css
 body { font-family: var(--mukilteo-sans); color: var(--mukilteo-deep-navy); }
-h1   { font-family: var(--mukilteo-serif); }
-.button-primary { background: var(--mukilteo-aqua); }
+h1   { font-family: var(--mukilteo-sans-condensed); }
+.btn { background: var(--mukilteo-aqua); color: #fff; }
 ```
 
-Grab the logo from `primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg`. Favicon from `favicon/`.
+Logos can be referenced directly:
 
-That's the whole brand system in a web context. Everything in this repo is free to use and redistribute, and the fonts are Google Fonts (SIL OFL licensed). See `web-tokens/` for details.
+```html
+<img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt="City of Mukilteo">
+```
 
----
-
-## Quick start
-
-**Most people want one of these:**
-
-| Need                                  | Grab this                                                             |
-| ------------------------------------- | --------------------------------------------------------------------- |
-| A logo for a website header           | `primary-logo/horizontal/full-color/mukilteo-logo-horizontal.svg`     |
-| A logo on a dark background           | `primary-logo/horizontal/reversed-color/`                             |
-| A logo for a Word doc or email        | `primary-logo/horizontal/full-color/mukilteo-logo-horizontal.png`     |
-| Small icon / social avatar            | `primary-logo/lighthouse-mark/full-color/`                            |
-| Website favicon                       | `favicon/favicon.ico`                                                 |
-| Print material (business card, flyer) | `primary-logo/horizontal/full-color/mukilteo-logo-horizontal.pdf`     |
-| Editable source (designer)            | Contact the City's communications office for `.ai` / `.psd` originals |
-| Brand colors, typography, usage rules | `brand-guide/mukilteo-brand-guide.pdf`                                |
-| Brand colors for a website (CSS/SCSS/JSON) | `web-tokens/colors.css` · `colors.scss` · `colors.json`          |
+For a visual reference — logo use, approved backgrounds, color palette, typography, and light/dark UI examples — open `web-tokens/demo.html`.
 
 ---
 
-## What's in each folder
+## Quick start — common uses
 
-- **`brand-guide/`** — Official brand guidelines (colors, typography, clear-space rules).
-- **`primary-logo/`** — The main City of Mukilteo logo, in three orientations:
-  - `horizontal/` — Long form, best for headers and wide spaces.
-  - `vertical/` — Stacked form, best for square spaces.
-  - `lighthouse-mark/` — The lighthouse icon alone (for avatars, favicons, small uses).
-  - Each orientation has four color treatments:
-    - `full-color/` — Default, use on white/light backgrounds.
-    - `reversed-color/` — Colored lighthouse with white text, use on dark/photo backgrounds.
-    - `white/` — All white, use on dark/photo backgrounds when single-color is required.
-    - `black/` — All black, use for single-color print or faxes.
-- **`primary-logo-with-address/`** — City logo paired with the mailing address (letterhead, formal docs).
-- **`departments/`** — Sub-brand logos for City departments (Fire, Police, Recreation, etc.).
-- **`initiatives/`** — Time-limited or program-specific branding (BTW, 75th Anniversary, etc.).
-- **`favicon/`** — Browser tab icons (`.ico` + sized PNG favicons).
-- **`web-tokens/`** — Brand colors as CSS custom properties, SCSS variables, and JSON. Pulls the official palette out of the brand-guide PDF so web projects can use it directly.
-- **`dist/`** — Packaged ZIP of this whole repo, for sharing as a single file.
+| Need                                      | Use this                                                      |
+| ----------------------------------------- | ------------------------------------------------------------- |
+| Logo for a website header                 | `primary-logo/horizontal/full-color/*.svg`                    |
+| Logo on a dark background                 | `primary-logo/horizontal/reversed-color/`                     |
+| Logo for Word or email                    | `primary-logo/horizontal/full-color/*.png`                    |
+| Small icon or social avatar               | `primary-logo/lighthouse-mark/full-color/`                    |
+| Website favicon                           | `favicon/`                                                    |
+| Print-ready (business card, flyer)        | `primary-logo/horizontal/full-color/*.pdf`                    |
+| Editable source (`.ai` / `.psd`)          | Contact the communications office                             |
+| Brand guidelines (colors, fonts, usage)   | `brand-guide/mukilteo-brand-guide.pdf`                        |
+| Brand tokens for code                     | `web-tokens/colors.{css,scss,json}` · `fonts.{css,scss,json}` |
 
 ---
 
-## File formats available
+## Folders
 
-For each logo, the following formats are provided wherever possible:
+| Folder                       | Contents                                                    |
+| ---------------------------- | ----------------------------------------------------------- |
+| `brand-guide/`               | Official brand PDF                                          |
+| `primary-logo/`              | Main logo: `horizontal/`, `vertical/`, `lighthouse-mark/`   |
+| `primary-logo-with-address/` | Logo paired with the mailing address                        |
+| `departments/`               | Department sub-brands (Fire, Police, Recreation, etc.)      |
+| `initiatives/`               | Program-specific branding (BTW, 75th Anniversary, etc.)     |
+| `favicon/`                   | Browser tab icons (`.ico`, `.svg`, `.png`, `.webp`)         |
+| `web-tokens/`                | CSS / SCSS / JSON brand tokens and the web brand-guide demo |
+| `dist/`                      | ZIP of the whole repo for offline sharing                   |
 
-| Format | Use for                                                          |
-| ------ | ---------------------------------------------------------------- |
-| `.svg` | Web, any size, tiny file. **Prefer this for anything digital.**  |
-| `.png` | Web/docs where SVG isn't supported. Transparent background.      |
-| `.webp`| Modern web, smaller than PNG. Use when page speed matters.       |
-| `.jpg` | Email, Word docs, anywhere transparency isn't needed.            |
-| `.pdf` | Print, presentations (vector, scales infinitely).                |
-| `.eps` | Legacy print workflows, professional print shops.                |
-| `.ico` | Browser favicons only.                                           |
-
-Editable source files (`.ai`, `.psd`) are maintained internally by the City's communications office. Contact them if you need one.
+Each `primary-logo/` orientation has four color treatments: `full-color/`, `reversed-color/` (colored lighthouse on dark backgrounds), `white/`, `black/`.
 
 ---
 
-## File naming convention
+## File formats
 
-Files follow this pattern:
+| Ext     | Use for                                                   |
+| ------- | --------------------------------------------------------- |
+| `.svg`  | Web. Prefer this for anything digital.                    |
+| `.webp` | Web, smaller than PNG when page speed matters.            |
+| `.png`  | Web and docs without SVG support. Transparent background. |
+| `.jpg`  | Email and Word where transparency isn't needed.           |
+| `.pdf`  | Print, presentations (vector).                            |
+| `.eps`  | Legacy print workflows.                                   |
+| `.ico`  | Browser favicons only.                                    |
+
+Editable source files (`.ai`, `.psd`) live with the communications office.
+
+---
+
+## File naming
 
 ```
 mukilteo-{logo}-{orientation}-{treatment}[-{size}].{ext}
@@ -95,15 +99,14 @@ mukilteo-{logo}-{orientation}-{treatment}[-{size}].{ext}
 
 Examples:
 - `mukilteo-logo-horizontal-full-color.svg`
-- `mukilteo-logo-horizontal-full-color-1200w.png`
 - `mukilteo-logo-vertical-reversed-color.pdf`
 - `mukilteo-lighthouse-mark-black.svg`
 - `mukilteo-fire-horizontal.svg`
 
-The `-{size}` suffix (e.g. `-1200w`) is only used for raster formats with a specific pixel width.
+The `-{size}` suffix (e.g. `-1200w`) applies only to raster formats at a specific pixel width.
 
 ---
 
-## Questions / need a format not listed?
+## Questions, or need a format not listed
 
 Contact the City's communications office.
