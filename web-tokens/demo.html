@@ -1,0 +1,2794 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>City of Mukilteo — Brand guide &amp; theme demo</title>
+<meta name="description" content="Visual, interactive brand guide for the City of Mukilteo. Logo rules, approved backgrounds, common misuse, color palette, typography, and a light/dark theme demo.">
+
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/favicon/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/favicon/apple-touch-icon.png">
+
+<!-- =============================================================
+     Inline fallback: hard-coded brand tokens + system font stacks.
+     These apply if the repo's colors.css / fonts.css can't be
+     reached (e.g. the HTML was copied out of the repo, or opened
+     offline). When the linked files load below, they override
+     these values because same-specificity rules loaded later win.
+     ============================================================= -->
+<style id="fallback-tokens">
+  :root {
+    /* primary */
+    --mukilteo-deep-navy: #003660;
+    --mukilteo-aqua:      #4F9B99;
+    /* secondary — cool */
+    --mukilteo-lavender:   #929FD0;
+    --mukilteo-sky:        #6FBDE9;
+    --mukilteo-blue:       #659AD2;
+    --mukilteo-aqua-light: #7DC8C2;
+    --mukilteo-green-light:#B7DBA5;
+    /* secondary — warm */
+    --mukilteo-wine:   #952E45;
+    --mukilteo-red:    #D34D4B;
+    --mukilteo-orange: #EC8D1C;
+    --mukilteo-yellow: #FEBC11;
+    /* secondary — neutral */
+    --mukilteo-gray-light: #BCBEC0;
+    --mukilteo-gray:       #58595B;
+    --mukilteo-black:      #000000;
+    --mukilteo-brown:      #635546;
+    --mukilteo-sand:       #C1B8AF;
+    /* aliases */
+    --mukilteo-brand-primary:   var(--mukilteo-deep-navy);
+    --mukilteo-brand-secondary: var(--mukilteo-aqua);
+    --mukilteo-text:            var(--mukilteo-deep-navy);
+    --mukilteo-text-muted:      var(--mukilteo-gray);
+    /* font stacks — system-only fallback (repo's fonts.css upgrades these) */
+    --mukilteo-sans:           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mukilteo-sans-condensed: "Arial Narrow", "Helvetica Neue Condensed", sans-serif;
+    --mukilteo-serif:          Georgia, "Times New Roman", serif;
+    --mukilteo-display:        Georgia, "Times New Roman", serif;
+    --mukilteo-logo-caption:   "Arial Narrow", sans-serif;
+    --mukilteo-web-serif:      Georgia, "Times New Roman", serif;
+    --mukilteo-web-sans:       Arial, Helvetica, sans-serif;
+    --copy-measure:            68ch;
+  }
+</style>
+
+<!-- Authoritative tokens from the public repo via jsDelivr CDN —
+     override the fallback above. Using CDN URLs means this HTML file
+     is fully shareable: open it from anywhere, assets load from the
+     canonical repo. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/colors.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts-google.css">
+
+<style>
+  /*
+   * Theme tokens.
+   *
+   * The LIGHT theme is anchored to the brand guide via ./colors.css.
+   * The DARK theme here is explicitly NOT covered by the guide. The brand
+   * guide approves only three dark/colored backgrounds (black, deep navy,
+   * aqua). What's below is a working-draft "Deep Ink" variant that uses
+   * a neutral near-black. It is marked clearly as non-authoritative.
+   */
+  [data-theme="light"] {
+    --surface-app:     #fafaf7;
+    --surface-card:    #ffffff;
+    --surface-muted:   #f4f1ec;
+    --surface-inset:   #eaf3f2;
+    --border:          #e2ddd2;
+    --border-strong:   var(--mukilteo-gray);          /* was sand #C1B8AF — failed 1.4.11 on paper surface */
+    --text-primary:    var(--mukilteo-deep-navy);
+    --text-secondary:  var(--mukilteo-gray);
+    --text-placeholder:#6d6e71;                        /* explicit, no opacity — AA on surface-app */
+    --text-on-accent:  #ffffff;
+    --accent:          var(--mukilteo-deep-navy);
+    --accent-hover:    #004a80;
+    --accent-soft:     #e5ebf1;
+    --accent-2:        var(--mukilteo-aqua);
+    --highlight:       var(--mukilteo-yellow);
+    --highlight-ink:   #5a4400;
+    --warn-bg:         #fff5d6;
+    --warn-text:       #5a4400;
+    --success:         #3b6b2e;
+    --success-soft:    #eaf5e2;
+    --danger:          var(--mukilteo-wine);
+    --danger-soft:     #fceff2;
+    --focus-ring:      var(--mukilteo-deep-navy);      /* was yellow — failed 1.4.11 on paper surface (1.69:1) */
+    --shadow-sm:       0 1px 2px rgba(0,54,96,0.06);
+    --shadow-md:       0 1px 2px rgba(0,54,96,0.06), 0 4px 12px rgba(0,54,96,0.06);
+    --shadow-lg:       0 4px 8px rgba(0,54,96,0.07), 0 20px 40px rgba(0,54,96,0.08);
+  }
+  [data-theme="dark"] {
+    --surface-app:     #0d0f11;
+    --surface-card:    #15181c;
+    --surface-muted:   #1f2328;
+    --surface-inset:   #10263a;
+    --border:          #2a2f36;
+    --border-strong:   #8a8f97;                        /* was #3d434c — failed 1.4.11 on dark surface */
+    --text-primary:    #f2f3f5;
+    --text-secondary:  #9aa0a8;
+    --text-placeholder:#8a8f97;                        /* explicit, no opacity — AA on dark surface */
+    --text-on-accent:  #07111e;
+    --accent:          var(--mukilteo-sky);
+    --accent-hover:    #8bcbee;
+    --accent-soft:     #10263a;
+    --accent-2:        var(--mukilteo-aqua-light);
+    --highlight:       var(--mukilteo-yellow);
+    --highlight-ink:   #1a1200;
+    --warn-bg:         #3d2e0c;
+    --warn-text:       #ffde7a;
+    --success:         var(--mukilteo-green-light);
+    --success-soft:    #17331e;
+    --danger:          #e8857f;
+    --danger-soft:     #3a1a18;
+    --focus-ring:      var(--mukilteo-yellow);
+    --shadow-sm:       0 1px 2px rgba(0,0,0,0.5);
+    --shadow-md:       0 1px 2px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.5);
+    --shadow-lg:       0 4px 10px rgba(0,0,0,0.6), 0 20px 50px rgba(0,0,0,0.55);
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--surface-app);
+    color: var(--text-primary);
+    transition: background 200ms ease, color 200ms ease;
+  }
+  body {
+    font-family: var(--mukilteo-sans);
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-hover); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.92em;
+    background: var(--surface-muted);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  /* ===============================================================
+     Top bar — sticky, always visible
+     =============================================================== */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--surface-card);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 28px;
+    display: flex; align-items: center; gap: 28px;
+    flex-wrap: wrap;
+  }
+  .topbar .title-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+  }
+  .topbar .subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-left: 12px;
+  }
+  .topbar .spacer { flex: 1; }
+
+  /* Theme toggle */
+  .toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  /* Floating variant — pinned to the viewport corner so the theme is
+     always one click away while comparing patterns anywhere on the page. */
+  .toggle.theme-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 90;
+    background: var(--surface-card);
+    box-shadow: var(--shadow-md);
+  }
+  @media (max-width: 520px) {
+    .toggle.theme-fab {
+      bottom: 14px;
+      right: 14px;
+    }
+  }
+  /* Keep radios visually hidden but in the tab order for keyboard users. */
+  .toggle input[type="radio"] {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .toggle .opt {
+    position: relative; z-index: 1;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    transition: color 200ms ease;
+  }
+  .toggle .opt.active { color: var(--text-on-accent); }
+  .toggle .slider {
+    position: absolute;
+    top: 4px; bottom: 4px; left: 4px;
+    width: calc(50% - 4px);
+    background: var(--accent);
+    border-radius: 999px;
+    transition: transform 220ms cubic-bezier(.4,.1,.25,1);
+    box-shadow: var(--shadow-sm);
+  }
+  [data-theme="dark"] .toggle .slider { transform: translateX(100%); }
+  .toggle .ico {
+    width: 14px; height: 14px;
+    stroke: currentColor; stroke-width: 1.8;
+    fill: none; flex-shrink: 0;
+  }
+
+  /* ===============================================================
+     Page layout: side TOC + main
+     =============================================================== */
+  .shell {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  @media (min-width: 960px) {
+    .shell { grid-template-columns: 220px 1fr; }
+  }
+
+  nav.toc {
+    display: none;
+  }
+  @media (min-width: 960px) {
+    nav.toc {
+      display: block;
+      position: sticky;
+      top: 104px;
+      align-self: start;
+      padding: 24px 16px 24px 28px;
+      max-height: calc(100vh - 104px);
+      overflow-y: auto;
+      font-size: 13px;
+    }
+    nav.toc::-webkit-scrollbar {
+      width: 8px;
+    }
+    nav.toc::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    nav.toc::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+    nav.toc::-webkit-scrollbar-thumb:hover {
+      background: var(--border-strong);
+    }
+    nav.toc ol {
+      list-style: none; margin: 0; padding: 0;
+    }
+    nav.toc #tocList  { counter-reset: tocnum 0; }
+    nav.toc #tocList2 { counter-reset: tocnum 7; }
+    nav.toc #tocList3 { counter-reset: tocnum 15; }
+    nav.toc li {
+      counter-increment: tocnum;
+      margin-bottom: 2px;
+    }
+    nav.toc a {
+      display: flex; gap: 8px;
+      text-decoration: none;
+      color: var(--text-primary);
+      padding: 5px 8px;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      line-height: 1.3;
+    }
+    nav.toc a::before {
+      content: counter(tocnum, decimal-leading-zero);
+      font-family: ui-monospace, monospace;
+      font-size: 10px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    nav.toc a:hover {
+      background: var(--surface-muted);
+      color: var(--accent);
+    }
+    nav.toc a.active {
+      border-left-color: var(--accent);
+      background: var(--surface-muted);
+      color: var(--accent);
+      font-weight: 600;
+    }
+  }
+
+  main.doc { padding: 28px 28px 80px; min-width: 0; }
+  main.doc > header.intro {
+    padding: 24px 0 36px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  main.doc > header.intro h1 {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 44px);
+    letter-spacing: 0.005em;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+  }
+  main.doc > header.intro .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  main.doc > header.intro p.lede {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: var(--copy-measure);
+  }
+
+  section.rule {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 120px;
+  }
+  section.rule:last-of-type { border-bottom: 0; }
+  section.rule > .head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  section.rule > .head .num {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 700;
+  }
+  section.rule h2 {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0;
+    color: var(--text-primary);
+  }
+  section.rule > .sub {
+    color: var(--text-secondary);
+    margin: 0 0 24px;
+    max-width: var(--copy-measure);
+  }
+  section.rule > p { max-width: var(--copy-measure); }
+
+  /* Pull-quote / "from the brand guide" ribbon */
+  .from-guide {
+    border-left: 3px solid var(--highlight);
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 0 6px 6px 0;
+    margin: 12px 0 20px;
+  }
+  .from-guide strong {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-right: 8px;
+  }
+
+  /* Generic card */
+  .card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ===============================================================
+     §Overview — primary color callout
+     =============================================================== */
+  .primaries {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (min-width: 620px) { .primaries { grid-template-columns: 1fr 1fr; } }
+  .primary-tile {
+    border-radius: 12px;
+    padding: 22px 24px;
+    color: #fff;
+    box-shadow: var(--shadow-sm);
+  }
+  .primary-tile.navy { background: var(--mukilteo-deep-navy); }
+  .primary-tile.aqua { background: var(--mukilteo-aqua); }
+  .primary-tile .pt-name {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .primary-tile .pt-meta {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    opacity: 0.85;
+    margin: 6px 0 0;
+    line-height: 1.6;
+  }
+
+  /* ===============================================================
+     §Logo signatures
+     =============================================================== */
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 14px;
+  }
+  @media (min-width: 760px) {
+    .sig-grid { grid-template-columns: 1.4fr 1fr 0.9fr; }
+  }
+  .sig {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 18px;
+    background: var(--surface-card);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .sig .canvas {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 18px;
+    min-height: 160px;
+  }
+  .sig .canvas img { max-width: 100%; height: auto; }
+  .sig.horizontal .canvas img { max-height: 70px; }
+  .sig.vertical   .canvas img { max-height: 140px; }
+  .sig.mark       .canvas img { max-height: 110px; }
+  .sig h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .sig dl {
+    margin: 0; display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 4px 14px;
+    font-size: 12.5px;
+  }
+  .sig dt { color: var(--text-secondary); }
+  .sig dd { margin: 0; color: var(--text-primary); }
+  .sig.mark h3 { color: var(--danger); }
+  .sig.mark .note {
+    font-size: 12px;
+    color: var(--danger);
+    margin: 0;
+  }
+
+  /* ===============================================================
+     §Backgrounds — approved matrix
+     =============================================================== */
+  .bg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .bg-tile {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .bg-tile .canvas {
+    display: flex; align-items: center; justify-content: center;
+    padding: 36px 28px;
+    min-height: 150px;
+  }
+  .bg-tile .canvas img {
+    max-height: 70px;
+    max-width: 88%;
+    height: auto;
+    display: block;
+  }
+  .bg-tile .cap {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    background: var(--surface-card);
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .bg-tile .cap .bg {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .bg-tile .cap .variant {
+    font-family: ui-monospace, monospace;
+    color: var(--text-secondary);
+  }
+  .bg-white .canvas { background: #ffffff; }
+  .bg-black .canvas { background: #000000; }
+  .bg-deep-navy .canvas { background: var(--mukilteo-deep-navy); }
+  .bg-aqua .canvas { background: var(--mukilteo-aqua); }
+
+  /* ===============================================================
+     §Common misuse — do's and don'ts
+     =============================================================== */
+  .dontgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .dont {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface-card);
+    position: relative;
+  }
+  .dont .canvas {
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .dont .canvas img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+  }
+  .dont .xbadge {
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--danger);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 2;
+    box-shadow: var(--shadow-sm);
+  }
+  .dont .cap {
+    padding: 10px 14px 12px;
+    border-top: 1px solid var(--border);
+  }
+  .dont .cap h4 {
+    margin: 0 0 2px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .dont .cap p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* Don't-specific canvas styles */
+  .dont.rotate   .canvas img { transform: rotate(-12deg); }
+  .dont.stretch  .canvas img { transform: scaleX(1.7); transform-origin: center; }
+  .dont.busy     .canvas {
+    background:
+      repeating-linear-gradient(45deg, rgba(0,54,96,0.25) 0 14px, rgba(79,155,153,0.4) 14px 28px),
+      radial-gradient(circle at 30% 40%, rgba(254,188,17,0.55), transparent 50%),
+      #cdcdc5;
+  }
+  .dont.lowcontrast .canvas { background: #cfd6df; }
+  .dont.unauthorized .canvas { background: #ff4fa0; }
+  .dont.stroke   .canvas img { filter: drop-shadow(0 0 0 #000) drop-shadow(1px 0 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(0 1px 0 #000) drop-shadow(0 -1px 0 #000); }
+  .dont.hue      .canvas img { filter: hue-rotate(140deg) saturate(1.3); }
+  .dont.clearzone .canvas {
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .dont.clearzone .cz-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .dont.clearzone .cz-label {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--mukilteo-deep-navy);
+    padding: 24px 2px 24px 18px;
+    line-height: 1.15;
+  }
+  .dont.clearzone .cz-logo {
+    flex: 1;
+    padding: 24px 18px 24px 0;
+    display: flex;
+    align-items: center;
+  }
+  .dont.clearzone .cz-logo img { max-height: 52px; }
+  .dont.midsentence .canvas {
+    padding: 18px;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: var(--mukilteo-deep-navy);
+    text-align: left;
+    line-height: 1.5;
+  }
+  .dont.midsentence img {
+    height: 22px; width: auto; vertical-align: middle;
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .dont.missing-mark .canvas {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--mukilteo-deep-navy);
+    letter-spacing: 0.02em;
+  }
+
+  /* ===============================================================
+     §Color palette
+     =============================================================== */
+  .secondary-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin: 28px 0 10px;
+  }
+  .secondary-title.spaced { margin-top: 36px; }
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .swatch {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface-card);
+  }
+  .swatch .chip { height: 56px; border-bottom: 1px solid var(--border); }
+  .swatch .chip.deep-navy { background: var(--mukilteo-deep-navy); }
+  .swatch .chip.aqua { background: var(--mukilteo-aqua); }
+  .swatch .chip.lavender { background: var(--mukilteo-lavender); }
+  .swatch .chip.sky { background: var(--mukilteo-sky); }
+  .swatch .chip.blue { background: var(--mukilteo-blue); }
+  .swatch .chip.aqua-light { background: var(--mukilteo-aqua-light); }
+  .swatch .chip.green-light { background: var(--mukilteo-green-light); }
+  .swatch .chip.wine { background: var(--mukilteo-wine); }
+  .swatch .chip.red { background: var(--mukilteo-red); }
+  .swatch .chip.orange { background: var(--mukilteo-orange); }
+  .swatch .chip.yellow { background: var(--mukilteo-yellow); }
+  .swatch .chip.gray-light { background: var(--mukilteo-gray-light); }
+  .swatch .chip.gray { background: var(--mukilteo-gray); }
+  .swatch .chip.black { background: #000000; }
+  .swatch .chip.brown { background: var(--mukilteo-brown); }
+  .swatch .chip.sand { background: var(--mukilteo-sand); }
+  .swatch .meta { padding: 8px 10px; font-size: 12px; }
+  .swatch .name { font-weight: 600; color: var(--text-primary); }
+  .swatch .hex {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  /* ===============================================================
+     §Typography
+     =============================================================== */
+  .type-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (min-width: 700px) {
+    .type-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .type-card {
+    padding: 18px 20px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .type-card .tag {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .type-card .display {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 42px; line-height: 1.1;
+    margin: 0;
+  }
+  .type-card .headline {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+  }
+  .type-card .body {
+    font-family: var(--mukilteo-sans);
+    font-size: 15px; line-height: 1.65;
+    margin: 0;
+  }
+  .type-card .serif-note {
+    font-family: var(--mukilteo-serif);
+    font-size: 16px; font-style: italic;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .type-card .meta {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  /* ===============================================================
+     §Theme demo — applied UI sample
+     =============================================================== */
+  .demo-frame {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 16px;
+    background: var(--surface-app);
+  }
+  .applied-nav {
+    background: var(--surface-card);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 22px;
+    display: flex; align-items: center; gap: 24px;
+  }
+  .applied-nav img { height: 36px; }
+  .applied-nav ul {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; gap: 20px;
+    font-size: 14px;
+  }
+  .applied-nav ul a {
+    color: var(--text-primary); text-decoration: none;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+  }
+  .applied-nav ul a.active {
+    color: var(--accent); border-bottom-color: var(--highlight);
+    font-weight: 600;
+  }
+  .applied-nav .right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  .avatar {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    border: 1px solid var(--border);
+  }
+
+  .applied-body { padding: 28px; }
+  .applied-body .crumb {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .applied-body .crumb a { color: var(--text-secondary); text-decoration: none; }
+  .applied-body h3.h1 {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+  }
+  .applied-body .lede {
+    color: var(--text-secondary);
+    margin: 0 0 22px;
+    font-size: 15px;
+    max-width: var(--copy-measure);
+  }
+
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 820px) { .cols { grid-template-columns: 1.35fr 1fr; } }
+
+  .panel {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .panel + .panel { margin-top: 16px; }
+  .panel h4 {
+    margin: 0 0 4px;
+    font-size: 15px; font-weight: 600;
+    color: var(--text-primary);
+  }
+  .panel .sub { margin: 0 0 14px; font-size: 13px; color: var(--text-secondary); }
+
+  /* Tabs */
+  .tabs { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 14px; gap: 4px; }
+  .tab {
+    padding: 8px 14px;
+    font-size: 13px; font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Form */
+  .field { margin-bottom: 14px; }
+  .field label {
+    display: block; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-secondary); margin-bottom: 6px;
+  }
+  .input, .select, .textarea {
+    width: 100%; font: inherit; font-size: 14px;
+    background: var(--surface-app); color: var(--text-primary);
+    border: 1px solid var(--border-strong); border-radius: 8px;
+    padding: 9px 12px; outline: none;
+  }
+  .textarea { resize: vertical; min-height: 72px; }
+  .input:focus, .select:focus, .textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 40%, transparent);
+  }
+  /* Placeholder: explicit color (no opacity) so it passes WCAG 1.4.3. */
+  .input::placeholder, .textarea::placeholder {
+    color: var(--text-placeholder);
+    opacity: 1;
+  }
+  .check { display: flex; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 10px; cursor: pointer; }
+  .check input { accent-color: var(--accent); width: 16px; height: 16px; }
+
+  /* Buttons */
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .btn {
+    font: inherit; font-size: 14px; font-weight: 600;
+    border: 1px solid transparent;
+    padding: 9px 16px; border-radius: 8px;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn.primary  { background: var(--accent); color: var(--text-on-accent); }
+  .btn.primary:hover { background: var(--accent-hover); }
+  .btn.danger { background: var(--danger); color: var(--text-on-accent); }
+  .btn.secondary {
+    background: var(--surface-muted);
+    color: var(--text-primary);
+    border-color: var(--border);
+  }
+  .btn.secondary:hover { border-color: var(--border-strong); }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .btn.ghost:hover { background: var(--accent-soft); }
+
+  /* Badges / alerts */
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .badge {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 3px 9px; border-radius: 999px;
+  }
+  .badge.n { background: var(--accent-soft); color: var(--accent); }
+  .badge.g { background: var(--success-soft); color: var(--success); }
+  .badge.r { background: var(--danger-soft); color: var(--danger); }
+  .badge.y { background: var(--highlight); color: var(--highlight-ink); }
+
+  .alert {
+    padding: 12px 14px; border-radius: 10px;
+    font-size: 13px; display: flex; gap: 10px; align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .alert.info    { background: var(--accent-soft); color: var(--accent); }
+  .alert.success { background: var(--success-soft); color: var(--success); }
+  .alert.warn    { background: var(--warn-bg); color: var(--warn-text); }
+  .alert.danger  { background: var(--danger-soft); color: var(--danger); }
+  .alert .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: currentColor; margin-top: 6px; flex-shrink: 0;
+  }
+
+  /* Table */
+  .table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
+  .table th, .table td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+  .table th {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-secondary); font-weight: 600;
+    background: var(--surface-muted);
+  }
+  .table tr:last-child td { border-bottom: 0; }
+  .table td.num { font-variant-numeric: tabular-nums; color: var(--text-secondary); }
+
+  /* ===============================================================
+     §Downloads
+     =============================================================== */
+  .dl-list {
+    list-style: none; padding: 0; margin: 10px 0 0;
+    display: grid; gap: 6px;
+  }
+  .dl-list li {
+    padding: 10px 14px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .dl-list li .what { font-weight: 600; color: var(--text-primary); }
+  .dl-list li .where {
+    font-family: ui-monospace, monospace;
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  .dl-list li a.where { text-decoration: none; }
+  .dl-list li a.where:hover { color: var(--accent); }
+
+  /* Code sample panel for the integration example */
+  .use-panel {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px 4px;
+    margin: 18px 0 8px;
+  }
+  .use-panel h3 {
+    margin: 0 0 4px;
+    font-size: 15px; font-weight: 600;
+    color: var(--text-primary);
+  }
+  .use-panel p.sub-text {
+    margin: 0 0 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .use-panel pre {
+    margin: 0 0 14px;
+    padding: 14px 16px;
+    background: var(--surface-app);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    overflow-x: auto;
+  }
+  .use-panel pre .c { color: var(--text-secondary); font-style: italic; }
+  .use-panel pre .k { color: var(--accent); }
+
+  /* Footer */
+  footer.page {
+    border-top: 1px solid var(--border);
+    padding: 28px 28px 40px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  footer.page .wrap {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* ===============================================================
+     §Web surface interpretation
+     =============================================================== */
+  #web-interpretation h3 {
+    margin: 26px 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .rule-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 6px 0 10px;
+    font-size: 14px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .rule-table th, .rule-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  .rule-table tr:last-child td { border-bottom: 0; }
+  .rule-table th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    font-weight: 700;
+    background: var(--surface-muted);
+  }
+  .rule-table code {
+    font-size: 12px;
+    background: var(--surface-muted);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, monospace;
+  }
+  .rule-table.tiered td:first-child { width: 150px; white-space: nowrap; }
+
+  .tier-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .tier-badge.preferred  { background: var(--success-soft); color: var(--success); }
+  .tier-badge.acceptable { background: var(--accent-soft);  color: var(--accent); }
+  .tier-badge.prohibited { background: var(--danger-soft);  color: var(--danger); }
+
+  .prohibition-list {
+    margin: 6px 0 0;
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+  .prohibition-list li { margin-bottom: 4px; }
+
+  .eval {
+    margin: 8px 0 6px;
+    padding: 14px 16px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: grid;
+    gap: 14px;
+  }
+  .eval-row { display: flex; align-items: center; gap: 14px; }
+  .eval-sw {
+    width: 56px; height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .eval-sw.surface-paper { background: #fafaf7; }
+  .eval-sw.surface-card-dark { background: #15181c; }
+  .eval-sw.surface-app-dark { background: #0d0f11; }
+  .eval-meta {
+    font-size: 13.5px;
+    color: var(--text-primary);
+    line-height: 1.55;
+  }
+  .eval-meta code {
+    font-size: 12px;
+    background: var(--surface-muted);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, monospace;
+  }
+  .eval-meta .pass {
+    display: block;
+    margin-top: 4px;
+    color: var(--success);
+    font-size: 12px;
+    font-family: ui-monospace, monospace;
+  }
+
+  .scope-note {
+    margin-top: 22px;
+    padding: 12px 16px;
+    background: var(--surface-muted);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.55;
+  }
+  .scope-note strong {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-right: 8px;
+  }
+
+  /* ===============================================================
+     Accessibility — focus, skip link, doctrine callout
+     =============================================================== */
+
+  /* Skip link — visible only when focused. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: var(--text-on-accent);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: var(--shadow-md);
+  }
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+  }
+
+  /* Global focus-visible indicators. Yellow focus ring carries meaning
+     across the page (it's the brand's secondary-accent highlight role). */
+  button:focus-visible,
+  a:focus-visible,
+  [role="radiogroup"] label:focus-within,
+  summary:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Doctrine callout — sits above §01 content, prominent. */
+  .doctrine {
+    margin: 18px 0 28px;
+    padding: 20px 22px 22px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .doctrine .doctrine-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .doctrine h3 {
+    margin: 0 0 12px;
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .doctrine p {
+    margin: 0 0 10px;
+    font-size: 14.5px;
+    color: var(--text-primary);
+    line-height: 1.6;
+    max-width: none;
+  }
+  .doctrine p:last-child { margin: 0; }
+
+  /* ===============================================================
+     Part dividers — visual break between the brand-rules half and
+     the UI-patterns half. Carries a label, title, and intent.
+     =============================================================== */
+  .part-divider {
+    margin: 72px 0 32px;
+    padding: 32px 0 24px;
+    border-top: 2px solid var(--accent);
+    border-bottom: 1px solid var(--border);
+  }
+  .part-divider:first-of-type { margin-top: 24px; }
+  .part-divider .part-number {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .part-divider .part-title {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: 0.005em;
+    margin: 0 0 10px;
+    color: var(--text-primary);
+  }
+  .part-divider .part-desc {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-secondary);
+    max-width: var(--copy-measure);
+    line-height: 1.55;
+  }
+
+  /* Subsection heading inside a §rule (used by §03 Logo use
+     which combines three sub-topics under one section). */
+  .rule-sub-h {
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    margin: 40px 0 8px;
+    color: var(--text-primary);
+  }
+  .rule-sub-h:first-of-type { margin-top: 20px; }
+
+  /* TOC group labels */
+  nav.toc .toc-group {
+    margin: 14px 8px 4px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+  }
+  nav.toc .toc-group:first-child { margin-top: 0; }
+
+  /* Accessibility checklist (§02) */
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: grid;
+    gap: 8px;
+  }
+  .checklist li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: baseline;
+    padding: 10px 14px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+  .checklist li::before {
+    content: "\2713";                            /* ✓ */
+    color: var(--success);
+    font-weight: 700;
+  }
+  .a11y-lead { margin-top: 26px; }
+  /* Pattern section framing */
+  .pattern-frame {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    margin-top: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .pattern-frame.flush {
+    padding: 0;
+    overflow: hidden;
+  }
+  .pattern-frame + .pattern-frame { margin-top: 14px; }
+  .pattern-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin: 0 0 10px;
+  }
+  .pattern-copy {
+    margin: 0 0 14px;
+    font-size: 14px;
+  }
+  .breadcrumb-demo {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .breadcrumb-demo a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .breadcrumb-demo [aria-current="page"] {
+    color: var(--text-primary);
+  }
+
+  /* Search pattern */
+  .search-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .search-input-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+  }
+  .search-input-wrap svg {
+    position: absolute;
+    left: 12px; top: 50%;
+    transform: translateY(-50%);
+    width: 16px; height: 16px;
+    color: var(--text-secondary);
+    pointer-events: none;
+  }
+  .search-input-wrap input {
+    width: 100%;
+    padding: 9px 12px 9px 36px;
+    font: inherit;
+    font-size: 14px;
+    background: var(--surface-app);
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    outline: none;
+  }
+  .search-input-wrap input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 40%, transparent);
+  }
+  .chip-filters {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .chip-filter {
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface-card);
+    color: var(--text-primary);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .chip-filter:hover { border-color: var(--accent); }
+  .chip-filter[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--text-on-accent);
+    border-color: var(--accent);
+  }
+
+  /* Modal pattern */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-dialog {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 28px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+  }
+  .modal-dialog h3 {
+    margin: 0 0 8px;
+    font-family: var(--mukilteo-sans-condensed);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text-primary);
+  }
+  .modal-dialog p {
+    margin: 0 0 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  /* ===============================================================
+     Palette swatch buttons + semantic mapping + color picker widget
+     (§06 interactive tools)
+     =============================================================== */
+
+  /* Swatch, when rendered as a <button> for click-to-copy */
+  button.swatch {
+    font: inherit;
+    text-align: left;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  }
+  button.swatch:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
+  }
+  button.swatch:active { transform: translateY(0); }
+
+  /* Source tag inside the semantic-mapping table ("brand" / "derived") */
+  .src-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+  .src-tag.brand   { background: var(--success-soft); color: var(--success); }
+  .src-tag.derived { background: var(--accent-soft);  color: var(--accent); }
+  .meta-note {
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  .from-guide.spaced { margin-top: 22px; }
+
+  /* "Pick & inspect" color picker widget */
+  .picker-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 10px;
+  }
+  @media (min-width: 620px) {
+    .picker-card { grid-template-columns: 160px 1fr; }
+  }
+  .picker-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .picker-chip {
+    width: 100%;
+    max-width: 140px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #003660;
+    box-shadow: var(--shadow-sm);
+  }
+  .picker-native {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .picker-native input[type="color"] {
+    width: 32px; height: 32px;
+    padding: 0;
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .picker-native input[type="color"]::-webkit-color-swatch-wrapper { padding: 2px; }
+  .picker-native input[type="color"]::-webkit-color-swatch { border: none; border-radius: 4px; }
+  .picker-native input[type="color"]::-moz-color-swatch { border: none; border-radius: 4px; }
+
+  .picker-field > label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .picker-hex-row {
+    display: flex;
+    gap: 8px;
+  }
+  .picker-hex-row .input {
+    flex: 1;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    text-transform: lowercase;
+  }
+
+  .picker-eval {
+    margin: 18px 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 18px;
+    row-gap: 8px;
+    font-size: 13px;
+  }
+  .picker-eval dt {
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    align-self: center;
+  }
+  .picker-eval dd {
+    margin: 0;
+    font-family: ui-monospace, monospace;
+    color: var(--text-primary);
+  }
+  .picker-eval dd.verdict {
+    font-family: var(--mukilteo-sans);
+  }
+  .picker-note {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ===============================================================
+     Demo-frame toast — intercepts fake link/button clicks inside
+     the §09 "Theme applied" sample and tells the user nothing will
+     actually happen (prevents href="#" from jumping to top).
+     Also used for "Copied #xxxxx" feedback on palette + picker.
+     =============================================================== */
+  .demo-toast {
+    position: fixed;
+    bottom: 88px;                      /* clears the floating theme FAB at 20px + ~50px tall */
+    left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    background: var(--text-primary);
+    color: var(--surface-card);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease;
+    z-index: 200;
+    max-width: 90vw;
+    text-align: center;
+  }
+  .demo-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html, body, .toggle .slider, .demo-toast { transition: none !important; }
+  }
+</style>
+</head>
+<body data-theme="light">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =============== Sticky top bar =============== -->
+  <header class="topbar">
+    <img class="title-logo" id="topLogo"
+         src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg"
+         alt="City of Mukilteo">
+    <span class="subtitle">Standards and examples</span>
+  </header>
+
+  <!-- Floating theme toggle — pinned bottom-right so light/dark is
+       always one click away when comparing examples. -->
+  <div class="toggle theme-fab" id="themeToggle" role="radiogroup" aria-label="Color theme">
+    <span class="slider" aria-hidden="true"></span>
+    <label class="opt active" data-v="light">
+      <input type="radio" name="theme" value="light" checked>
+      <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <span>Light</span>
+    </label>
+    <label class="opt" data-v="dark">
+      <input type="radio" name="theme" value="dark">
+      <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span>Dark</span>
+    </label>
+  </div>
+
+  <div class="shell">
+
+    <!-- =============== Side TOC =============== -->
+    <nav class="toc" aria-label="Brand guide contents">
+      <div class="toc-group">Part 1 &middot; Brand rules</div>
+      <ol id="tocList">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#logos">Logo use</a></li>
+        <li><a href="#backgrounds">Approved backgrounds</a></li>
+        <li><a href="#web-interpretation">Web surface rule</a></li>
+        <li><a href="#color">Color palette</a></li>
+        <li><a href="#typography">Typography</a></li>
+      </ol>
+      <div class="toc-group">Part 2 &middot; UI patterns</div>
+      <ol id="tocList2" start="8">
+        <li><a href="#pattern-nav">Navigation</a></li>
+        <li><a href="#pattern-forms">Forms</a></li>
+        <li><a href="#pattern-buttons">Buttons</a></li>
+        <li><a href="#pattern-alerts">Alerts and toasts</a></li>
+        <li><a href="#pattern-search">Search and filters</a></li>
+        <li><a href="#pattern-tables">Tables and lists</a></li>
+        <li><a href="#pattern-modal">Modals and panels</a></li>
+        <li><a href="#theme-demo">Light/dark theme demo</a></li>
+      </ol>
+      <div class="toc-group">Reference</div>
+      <ol id="tocList3" start="16">
+        <li><a href="#downloads">Downloads &amp; source</a></li>
+      </ol>
+    </nav>
+
+    <!-- =============== Main =============== -->
+    <main class="doc" id="main">
+
+      <header class="intro">
+        <h1>Mukilteo web brand guide</h1>
+        <p class="lede">A visual, interactive version of the City of Mukilteo brand guide. Shows the approved logos, color palette, typography, and common misuse &mdash; with a light/dark theme demo of the tokens applied to real UI. The PDF in <code>brand-guide/</code> is the authoritative source; this page is a distillation for web work.</p>
+      </header>
+
+      <!-- ========== PART 1 · BRAND RULES ========== -->
+      <div class="part-divider">
+        <span class="part-number">Part 1</span>
+        <h2 class="part-title">Brand rules</h2>
+        <p class="part-desc">Standards for the logo, color, web surfaces, typography, and accessibility. Derived from the 2015 print brand guide and extended for web use. The PDF remains the authoritative source.</p>
+      </div>
+
+      <!-- §Overview -->
+      <section class="rule" id="overview">
+        <div class="head"><span class="num">01</span><h2>Overview</h2></div>
+        <p class="sub">The City of Mukilteo logo is a visual expression of our city and its people. Consistent use establishes our identity; incorrect use dilutes it.</p>
+
+        <div class="from-guide">
+          <strong>From the guide</strong>
+          "The City of Mukilteo logo is a visual expression of our city and its people. It will be used by many and in numerous applications. Consistent use of the logo is critical to establishing our identity. Incorrect usage can dilute our brand identity and its effectiveness."
+        </div>
+
+        <div class="primaries">
+          <div class="primary-tile navy">
+            <p class="pt-name">Deep Navy</p>
+            <p class="pt-meta">
+              PMS 2955<br>
+              CMYK 100 / 60 / 10 / 53<br>
+              HEX #003660
+            </p>
+          </div>
+          <div class="primary-tile aqua">
+            <p class="pt-name">Aqua</p>
+            <p class="pt-meta">
+              PMS 7716<br>
+              CMYK 71 / 24 / 42 / 0<br>
+              HEX #4F9B99
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- §Accessibility -->
+      <section class="rule" id="accessibility">
+        <div class="head"><span class="num">02</span><h2>Accessibility</h2></div>
+        <p class="sub">This guide and any work derived from it must meet WCAG 2.1 AA at minimum.</p>
+
+        <div class="doctrine">
+          <span class="doctrine-label">Foundational principle</span>
+          <h3>Accessibility takes priority over brand rules.</h3>
+          <p>If a design meets the brand guide but fails <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 AA</a>, the design must be corrected. This applies to backgrounds, type sizing, contrast, focus indicators, and keyboard operability.</p>
+          <p>If the guide is silent, follow WCAG. If they agree, follow both. If they conflict, follow WCAG and notify Communications so the guide can be amended.</p>
+        </div>
+
+        <p class="a11y-lead">Requirements that apply across every section:</p>
+
+        <ul class="checklist">
+          <li>Text contrast meets <code>4.5:1</code> (normal text) or <code>3:1</code> (large text and UI component boundaries).</li>
+          <li>Every interactive element is keyboard operable.</li>
+          <li>Every form input has a programmatically associated label.</li>
+          <li>Focus is visible on all focusable elements.</li>
+          <li>Landmarks use semantic elements: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+          <li>Motion honors <code>prefers-reduced-motion</code>.</li>
+          <li>The page declares a language on <code>&lt;html&gt;</code>.</li>
+        </ul>
+
+      </section>
+
+      <!-- §Logo use (merged: signatures + clear zone + common misuse) -->
+      <section class="rule" id="logos">
+        <div class="head"><span class="num">03</span><h2>Logo use</h2></div>
+        <p class="sub">Signatures, minimum-size requirements, and common misuse &mdash; the approved forms of the logo and the ways it must not appear.</p>
+
+        <h3 class="rule-sub-h">Signatures</h3>
+        <p>Three approved formats. Horizontal is preferred for wide layouts; vertical for stacked or square spaces; the logomark alone is reserved for limited use.</p>
+
+        <div class="sig-grid">
+          <div class="sig horizontal">
+            <div class="canvas">
+              <img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt="Horizontal signature">
+            </div>
+            <h3>Horizontal signature</h3>
+            <dl>
+              <dt>Minimum size</dt><dd>1.25"</dd>
+              <dt>Best for</dt><dd>Wide headers, letterheads</dd>
+              <dt>Path</dt><dd><code>primary-logo/horizontal/</code></dd>
+            </dl>
+          </div>
+
+          <div class="sig vertical">
+            <div class="canvas">
+              <img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/vertical/full-color/mukilteo-logo-vertical-full-color.svg" alt="Vertical signature">
+            </div>
+            <h3>Vertical signature</h3>
+            <dl>
+              <dt>Minimum size</dt><dd>1"</dd>
+              <dt>Best for</dt><dd>Square spaces, stacked layouts</dd>
+              <dt>Path</dt><dd><code>primary-logo/vertical/</code></dd>
+            </dl>
+          </div>
+
+          <div class="sig mark">
+            <div class="canvas">
+              <img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/lighthouse-mark/full-color/mukilteo-lighthouse-mark-full-color.svg" alt="Logomark">
+            </div>
+            <h3>Logomark only &mdash; limited use</h3>
+            <p class="note">Use only as a watermark or support graphic. <strong>Not a primary identifier.</strong></p>
+            <dl>
+              <dt>Minimum size</dt><dd>1"</dd>
+              <dt>Path</dt><dd><code>primary-logo/lighthouse-mark/</code></dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Subsection: Common misuse -->
+        <h3 class="rule-sub-h" id="misuse">Common misuse</h3>
+        <p>A non-exhaustive set of violations pulled from the brand guide. Each tile shows the violation; the red circle marks "don't."</p>
+
+        <div class="dontgrid">
+          <div class="dont rotate">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't rotate or angle</h4><p>The logo must appear horizontal or vertical only &mdash; never tilted.</p></div>
+          </div>
+
+          <div class="dont stretch">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't alter proportions</h4><p>Never stretch, squash, or otherwise distort the logo.</p></div>
+          </div>
+
+          <div class="dont busy">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't use a busy background</h4><p>Photos, illustrations, and textures reduce legibility.</p></div>
+          </div>
+
+          <div class="dont lowcontrast">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't use low-contrast backgrounds</h4><p>A light blue-gray drains the deep navy in the logotype.</p></div>
+          </div>
+
+          <div class="dont unauthorized">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't use unauthorized colors</h4><p>Only white, black, deep navy, and aqua backgrounds are approved.</p></div>
+          </div>
+
+          <div class="dont stroke">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't add strokes or outlines</h4><p>Keep the logo's elements as drawn &mdash; no added weight.</p></div>
+          </div>
+
+          <div class="dont hue">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><h4>Don't alter the logo colors</h4><p>Only use the approved color versions from <code>primary-logo/</code>.</p></div>
+          </div>
+
+          <div class="dont clearzone">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas">
+              <div class="cz-row">
+                <span class="cz-label">City<br>Hall</span>
+                <span class="cz-logo"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></span>
+              </div>
+            </div>
+            <div class="cap"><h4>Don't violate the clear zone</h4><p>Type must not enter the clear area around the logo.</p></div>
+          </div>
+
+          <div class="dont midsentence">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas">
+              Apply online at the <img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""> website for more information.
+            </div>
+            <div class="cap"><h4>Don't use mid-sentence</h4><p>The logo is not a word. Never substitute it for the City's name in prose.</p></div>
+          </div>
+
+          <div class="dont missing-mark">
+            <div class="xbadge" aria-hidden="true">&times;</div>
+            <div class="canvas">City of Mukilteo</div>
+            <div class="cap"><h4>Don't drop the logomark</h4><p>The logotype must appear with the lighthouse mark &mdash; never alone.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- §Approved backgrounds -->
+      <section class="rule" id="backgrounds">
+        <div class="head"><span class="num">04</span><h2>Approved backgrounds</h2></div>
+        <p class="sub">The color logo appears on white (preferred), black, deep navy, or aqua. The reversed-to-white logo goes on black, deep navy, or aqua. <strong>No other background colors are approved</strong> for the color or reversed logo without explicit permission. See <a href="#web-interpretation">&sect;05</a> for how this rule applies on screens.</p>
+
+        <div class="bg-grid">
+          <div class="bg-tile bg-white">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt=""></div>
+            <div class="cap"><span class="bg">White</span><span class="variant">full-color</span></div>
+          </div>
+          <div class="bg-tile bg-black">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/reversed-color/mukilteo-logo-horizontal-reversed-color.svg" alt=""></div>
+            <div class="cap"><span class="bg">Black</span><span class="variant">reversed-color</span></div>
+          </div>
+          <div class="bg-tile bg-deep-navy">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/reversed-color/mukilteo-logo-horizontal-reversed-color.svg" alt=""></div>
+            <div class="cap"><span class="bg">Deep navy</span><span class="variant">reversed-color</span></div>
+          </div>
+          <div class="bg-tile bg-aqua">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/reversed-color/mukilteo-logo-horizontal-reversed-color.svg" alt=""></div>
+            <div class="cap"><span class="bg">Aqua</span><span class="variant">reversed-color</span></div>
+          </div>
+          <div class="bg-tile bg-black">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/white/mukilteo-logo-horizontal-white.svg" alt=""></div>
+            <div class="cap"><span class="bg">Black</span><span class="variant">white</span></div>
+          </div>
+          <div class="bg-tile bg-deep-navy">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/white/mukilteo-logo-horizontal-white.svg" alt=""></div>
+            <div class="cap"><span class="bg">Deep navy</span><span class="variant">white</span></div>
+          </div>
+          <div class="bg-tile bg-aqua">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/white/mukilteo-logo-horizontal-white.svg" alt=""></div>
+            <div class="cap"><span class="bg">Aqua</span><span class="variant">white</span></div>
+          </div>
+          <div class="bg-tile bg-white">
+            <div class="canvas"><img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/black/mukilteo-logo-horizontal-black.svg" alt=""></div>
+            <div class="cap"><span class="bg">White</span><span class="variant">black (one-color)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- §Web surface interpretation -->
+      <section class="rule" id="web-interpretation">
+        <div class="head"><span class="num">05</span><h2>Web surface interpretation</h2></div>
+        <p class="sub">Web surfaces are not pure white or pure black. This section defines how the approved backgrounds in &sect;03 apply to web environments, in measurable terms.</p>
+
+        <div class="from-guide">
+          <strong>From the guide</strong>
+          "Do not place the logo on any low contrast background. Do not use the logo with any unauthorized background color."
+        </div>
+
+        <h3>1 &middot; Replace named colors with roles</h3>
+        <table class="rule-table">
+          <thead><tr><th>Guide term</th><th>Web role</th></tr></thead>
+          <tbody>
+            <tr><td>White</td><td>Light neutral surface</td></tr>
+            <tr><td>Black</td><td>Dark neutral surface</td></tr>
+            <tr><td>Deep navy</td><td>Unchanged &mdash; specific brand color</td></tr>
+            <tr><td>Aqua</td><td>Unchanged &mdash; specific brand color</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2 &middot; Constrain what counts as each role</h3>
+        <p>A surface is neutral only if it meets both conditions:</p>
+        <ul class="prohibition-list">
+          <li>Luminance falls within the range below.</li>
+          <li>RGB values are close enough to appear gray &mdash; no visible tint.</li>
+        </ul>
+        <table class="rule-table">
+          <thead><tr><th>Role</th><th>Relative luminance</th><th>Max&minus;min RGB channel delta</th></tr></thead>
+          <tbody>
+            <tr><td>Light neutral</td><td><code>&ge; 0.85</code></td><td><code>&le; 12</code></td></tr>
+            <tr><td>Dark neutral</td><td><code>&le; 0.10</code></td><td><code>&le; 12</code></td></tr>
+          </tbody>
+        </table>
+        <p><strong>Luminance</strong> follows the <a href="https://www.w3.org/TR/WCAG21/#dfn-relative-luminance">WCAG 2.1 relative-luminance formula</a>.</p>
+        <p><strong>Channel delta</strong> is a local guardrail. It is not part of WCAG. The threshold may be adjusted in future revisions.</p>
+
+        <h3>3 &middot; Contrast</h3>
+        <p>Logo contrast must meet WCAG 2.1 AA:</p>
+        <ul class="prohibition-list">
+          <li><code>3:1</code> for the logomark (SC 1.4.11)</li>
+          <li><code>4.5:1</code> for the "CITY OF MUKILTEO" logotype (SC 1.4.3)</li>
+        </ul>
+        <p>AAA (<code>7:1</code>) is preferred.</p>
+
+        <h3>4 &middot; Prohibitions still apply</h3>
+        <p>These rules still apply:</p>
+        <ul class="prohibition-list">
+          <li>Saturated color backgrounds (pink, lime, red, tinted blues &mdash; anything that fails the channel-delta test)</li>
+          <li>Textured or busy backgrounds (photos, patterns, illustrations)</li>
+          <li>Altered, recolored, or substituted logo colors</li>
+          <li>Clear-zone violations &mdash; type, imagery, or shapes inside the zone</li>
+          <li>Low-contrast placements that fail §3, regardless of §2</li>
+        </ul>
+
+        <h3>5 &middot; Tier structure</h3>
+        <table class="rule-table tiered">
+          <thead><tr><th>Tier</th><th>Surfaces</th><th>When</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-badge preferred">Preferred</span></td>
+              <td><code>#ffffff</code> &middot; <code>#000000</code> &middot; deep navy <code>#003660</code> &middot; aqua <code>#4F9B99</code></td>
+              <td>Always approved. Default for anything brand-facing.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge acceptable">Acceptable</span></td>
+              <td>Any light or dark neutral that passes <strong>both</strong> tests in §2 <strong>and</strong> contrast in §3.</td>
+              <td>When a preferred surface is impractical &mdash; OS dark mode, soft off-white UI, print on uncoated stock.</td>
+            </tr>
+            <tr>
+              <td><span class="tier-badge prohibited">Prohibited</span></td>
+              <td>Saturated, tinted, textured, or low-contrast backgrounds.</td>
+              <td>Never, without explicit permission from the communications office.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>This page meets the rule</h3>
+        <div class="eval">
+          <div class="eval-row">
+            <div class="eval-sw surface-paper"></div>
+            <div class="eval-meta">
+              <code>#fafaf7</code> &mdash; light surface used on this page
+              <span class="pass">&check; luminance 0.954 &ge; 0.85 &nbsp;&middot;&nbsp; &check; channel delta 3 &le; 12 &nbsp;&middot;&nbsp; acceptable tier</span>
+            </div>
+          </div>
+          <div class="eval-row">
+            <div class="eval-sw surface-card-dark"></div>
+            <div class="eval-meta">
+              <code>#15181c</code> &mdash; dark surface used on this page (sticky header, cards)
+              <span class="pass">&check; luminance 0.009 &le; 0.10 &nbsp;&middot;&nbsp; &check; channel delta 7 &le; 12 &nbsp;&middot;&nbsp; acceptable tier</span>
+            </div>
+          </div>
+          <div class="eval-row">
+            <div class="eval-sw surface-app-dark"></div>
+            <div class="eval-meta">
+              <code>#0d0f11</code> &mdash; dark app surface (page background)
+              <span class="pass">&check; luminance 0.005 &le; 0.10 &nbsp;&middot;&nbsp; &check; channel delta 4 &le; 12 &nbsp;&middot;&nbsp; acceptable tier</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="scope-note"><strong>Scope</strong>The PDF brand guide remains the authoritative source. This section applies to surfaces only. Accent colors, typography, and UI behavior are evaluated separately.</p>
+      </section>
+
+      <!-- §Color palette -->
+      <section class="rule" id="color">
+        <div class="head"><span class="num">06</span><h2>Color palette</h2></div>
+        <p class="sub">The primary palette is deep navy and aqua. The secondary palette is accent only &mdash; it never replaces the primary. Tints and percentages of brand colors are acceptable in moderation. Click any swatch to copy its hex.</p>
+
+        <p class="secondary-title">Primary</p>
+        <div class="palette">
+          <button class="swatch" type="button" data-hex="#003660" aria-label="Copy Deep navy, hex 003660"><div class="chip deep-navy"></div><div class="meta"><div class="name">Deep navy</div><div class="hex">#003660</div></div></button>
+          <button class="swatch" type="button" data-hex="#4F9B99" aria-label="Copy Aqua, hex 4F9B99"><div class="chip aqua"></div><div class="meta"><div class="name">Aqua</div><div class="hex">#4F9B99</div></div></button>
+        </div>
+
+        <p class="secondary-title">Secondary &middot; cool</p>
+        <div class="palette">
+          <button class="swatch" type="button" data-hex="#929FD0" aria-label="Copy Lavender, hex 929FD0"><div class="chip lavender"></div><div class="meta"><div class="name">Lavender</div><div class="hex">#929FD0</div></div></button>
+          <button class="swatch" type="button" data-hex="#6FBDE9" aria-label="Copy Sky, hex 6FBDE9"><div class="chip sky"></div><div class="meta"><div class="name">Sky</div><div class="hex">#6FBDE9</div></div></button>
+          <button class="swatch" type="button" data-hex="#659AD2" aria-label="Copy Blue, hex 659AD2"><div class="chip blue"></div><div class="meta"><div class="name">Blue</div><div class="hex">#659AD2</div></div></button>
+          <button class="swatch" type="button" data-hex="#7DC8C2" aria-label="Copy Aqua light, hex 7DC8C2"><div class="chip aqua-light"></div><div class="meta"><div class="name">Aqua light</div><div class="hex">#7DC8C2</div></div></button>
+          <button class="swatch" type="button" data-hex="#B7DBA5" aria-label="Copy Green light, hex B7DBA5"><div class="chip green-light"></div><div class="meta"><div class="name">Green light</div><div class="hex">#B7DBA5</div></div></button>
+        </div>
+
+        <p class="secondary-title">Secondary &middot; warm</p>
+        <div class="palette">
+          <button class="swatch" type="button" data-hex="#952E45" aria-label="Copy Wine, hex 952E45"><div class="chip wine"></div><div class="meta"><div class="name">Wine</div><div class="hex">#952E45</div></div></button>
+          <button class="swatch" type="button" data-hex="#D34D4B" aria-label="Copy Red, hex D34D4B"><div class="chip red"></div><div class="meta"><div class="name">Red</div><div class="hex">#D34D4B</div></div></button>
+          <button class="swatch" type="button" data-hex="#EC8D1C" aria-label="Copy Orange, hex EC8D1C"><div class="chip orange"></div><div class="meta"><div class="name">Orange</div><div class="hex">#EC8D1C</div></div></button>
+          <button class="swatch" type="button" data-hex="#FEBC11" aria-label="Copy Yellow, hex FEBC11"><div class="chip yellow"></div><div class="meta"><div class="name">Yellow</div><div class="hex">#FEBC11</div></div></button>
+        </div>
+
+        <p class="secondary-title">Secondary &middot; neutral</p>
+        <div class="palette">
+          <button class="swatch" type="button" data-hex="#BCBEC0" aria-label="Copy Gray light, hex BCBEC0"><div class="chip gray-light"></div><div class="meta"><div class="name">Gray light</div><div class="hex">#BCBEC0</div></div></button>
+          <button class="swatch" type="button" data-hex="#58595B" aria-label="Copy Gray, hex 58595B"><div class="chip gray"></div><div class="meta"><div class="name">Gray</div><div class="hex">#58595B</div></div></button>
+          <button class="swatch" type="button" data-hex="#000000" aria-label="Copy Black, hex 000000"><div class="chip black"></div><div class="meta"><div class="name">Black</div><div class="hex">#000000</div></div></button>
+          <button class="swatch" type="button" data-hex="#635546" aria-label="Copy Brown, hex 635546"><div class="chip brown"></div><div class="meta"><div class="name">Brown</div><div class="hex">#635546</div></div></button>
+          <button class="swatch" type="button" data-hex="#C1B8AF" aria-label="Copy Sand, hex C1B8AF"><div class="chip sand"></div><div class="meta"><div class="name">Sand</div><div class="hex">#C1B8AF</div></div></button>
+        </div>
+
+        <div class="from-guide spaced">
+          <strong>From the guide</strong>
+          "Tints/percentages of brand colors are acceptable to use in moderation. None of the secondary colors replace the primary brand color palette. These colors are intended to be used sparingly and as accent, secondary colors."
+        </div>
+
+        <!-- Semantic mapping: brand palette to UI states -->
+        <p class="secondary-title spaced">Semantic mapping</p>
+        <p>How the brand palette maps to UI states. Brand values are used where they pass WCAG. Derivations are used where a direct brand value fails contrast or does not fit the role (per &sect;02 and &sect;05).</p>
+
+        <table class="rule-table">
+          <thead>
+            <tr><th>Role</th><th>Light</th><th>Dark</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Accent</strong><br><span class="meta-note">primary action</span></td>
+              <td><code>#003660</code> <span class="src-tag brand">brand</span><br><span class="meta-note">deep navy</span></td>
+              <td><code>#6FBDE9</code> <span class="src-tag brand">brand</span><br><span class="meta-note">sky</span></td>
+              <td>Deep navy can't meet 4.5:1 as text on dark surfaces. Sky takes the role &mdash; same hue family, sufficient luminance.</td>
+            </tr>
+            <tr>
+              <td><strong>Accent 2</strong><br><span class="meta-note">secondary</span></td>
+              <td><code>#4F9B99</code> <span class="src-tag brand">brand</span><br><span class="meta-note">aqua</span></td>
+              <td><code>#7DC8C2</code> <span class="src-tag brand">brand</span><br><span class="meta-note">aqua light</span></td>
+              <td>Brand values on both.</td>
+            </tr>
+            <tr>
+              <td><strong>Highlight</strong><br><span class="meta-note">attention pill</span></td>
+              <td><code>#FEBC11</code> <span class="src-tag brand">brand</span><br><span class="meta-note">yellow</span></td>
+              <td><code>#FEBC11</code> <span class="src-tag brand">brand</span><br><span class="meta-note">yellow</span></td>
+              <td>Brand yellow on both. Used as a saturated fill for attention badges.</td>
+            </tr>
+            <tr>
+              <td><strong>Success</strong></td>
+              <td><code>#3b6b2e</code> <span class="src-tag derived">derived</span></td>
+              <td><code>#B7DBA5</code> <span class="src-tag brand">brand</span><br><span class="meta-note">green light</span></td>
+              <td>Brand green light is too pale for text on a light surface. Derivation keeps the hue family and clears 4.5:1.</td>
+            </tr>
+            <tr>
+              <td><strong>Danger</strong></td>
+              <td><code>#952E45</code> <span class="src-tag brand">brand</span><br><span class="meta-note">wine</span></td>
+              <td><code>#e8857f</code> <span class="src-tag derived">derived</span></td>
+              <td>Light wine works as text on soft-tint backgrounds. Brand red (<code>#D34D4B</code>) on the dark-red-tint panel falls below 4.5:1; lightened salmon passes.</td>
+            </tr>
+            <tr>
+              <td><strong>Warn panel</strong></td>
+              <td><code>#fff5d6</code> bg / <code>#5a4400</code> text <span class="src-tag derived">derived</span></td>
+              <td><code>#3d2e0c</code> bg / <code>#ffde7a</code> text <span class="src-tag derived">derived</span></td>
+              <td>Full-saturation yellow works as a badge fill but not as an alert panel &mdash; it either glares (light) or leaves no readable text (dark). Amber derivations carry the warning signal with contrast.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Live picker that evaluates any color against the §05 rule -->
+        <p class="secondary-title spaced">Pick &amp; inspect</p>
+        <p>Pick any color to see its luminance, channel delta, and &sect;05 verdict live. Use this to check whether a candidate surface qualifies as a neutral before shipping it.</p>
+
+        <div class="picker-card">
+          <div class="picker-left">
+            <div class="picker-chip" id="pickChip"></div>
+            <label class="picker-native">
+              <input type="color" id="pickInput" value="#003660" aria-label="Color picker">
+              System picker
+            </label>
+          </div>
+          <div class="picker-right">
+            <div class="picker-field">
+              <label for="pickHex">Hex</label>
+              <div class="picker-hex-row">
+                <input type="text" id="pickHex" class="input" value="#003660" maxlength="7" autocomplete="off" spellcheck="false">
+                <button type="button" class="btn secondary" id="pickCopy">Copy</button>
+              </div>
+            </div>
+            <dl class="picker-eval">
+              <dt>Luminance</dt><dd id="pickLum">&mdash;</dd>
+              <dt>Channel delta</dt><dd id="pickDelta">&mdash;</dd>
+              <dt>&sect;05 verdict</dt><dd class="verdict" id="pickVerdict">&mdash;</dd>
+            </dl>
+            <p class="picker-note" id="pickNote"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- §Typography -->
+      <section class="rule" id="typography">
+        <div class="head"><span class="num">07</span><h2>Typography</h2></div>
+        <p class="sub">Print: Museo Sans / Museo Sans Condensed (sans), Chaparral Pro (serif), Rosewood Fill (display). Web/limited print: Arial and Georgia are sanctioned fallbacks in the guide. This repo additionally ships Google Fonts substitutes (all SIL OFL) so the stacks work on any machine &mdash; see <code>web-tokens/FONT-SUBSTITUTES.md</code>.</p>
+
+        <div class="type-grid">
+          <div class="type-card">
+            <p class="tag">Display &middot; sans condensed</p>
+            <p class="display">City of Mukilteo</p>
+            <p class="meta">Brand: Museo Sans Condensed &middot; free fallback: Barlow Condensed</p>
+          </div>
+          <div class="type-card">
+            <p class="tag">Headline &middot; sans condensed</p>
+            <p class="headline">A community where the tides meet the trees.</p>
+            <p class="meta">Use for page headings, section heads.</p>
+          </div>
+          <div class="type-card">
+            <p class="tag">Body &middot; sans</p>
+            <p class="body">The City of Mukilteo sits on Puget Sound, framed by the Olympic Mountains to the west and the Cascade Range to the east. Incorporated in 1947.</p>
+            <p class="meta">Brand: Museo Sans &middot; free fallback: Mulish</p>
+          </div>
+          <div class="type-card">
+            <p class="tag">Feature &middot; serif</p>
+            <p class="serif-note">&ldquo;Where the tides meet the trees.&rdquo;</p>
+            <p class="meta">Brand: Chaparral Pro &middot; free fallback: Bitter</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PART 2 · WEB UI PATTERNS ========== -->
+      <div class="part-divider">
+        <span class="part-number">Part 2</span>
+        <h2 class="part-title">Web UI patterns</h2>
+        <p class="part-desc">Reference examples for applying the brand rules in common web interfaces. These are <strong>not official brand rules</strong> unless adopted separately &mdash; but <strong>use them as defaults, not exceptions</strong>. Not part of the 2015 print brand guide.</p>
+      </div>
+
+      <!-- §08 Navigation -->
+      <section class="rule" id="pattern-nav">
+        <div class="head"><span class="num">08</span><h2>Navigation</h2></div>
+        <p class="sub">Top navigation and breadcrumbs. The logo follows &sect;03 (horizontal preferred, min 1.25&Prime;). Active state uses a highlight underline plus the accent color &mdash; color is never the only cue.</p>
+
+        <p class="pattern-label">Top navigation</p>
+        <div class="pattern-frame flush">
+          <nav class="applied-nav" aria-label="Pattern demo top navigation">
+            <img src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt="City of Mukilteo">
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="right">
+              <button class="btn ghost" type="button">Sign in</button>
+              <span class="avatar">MK</span>
+            </div>
+          </nav>
+        </div>
+
+        <p class="pattern-label">Breadcrumb</p>
+        <div class="pattern-frame">
+          <div class="breadcrumb-demo">
+            <a href="#">Home</a>
+            &rsaquo;
+            <a href="#">Permits</a>
+            &rsaquo;
+            <span aria-current="page">Application</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- §09 Forms -->
+      <section class="rule" id="pattern-forms">
+        <div class="head"><span class="num">09</span><h2>Forms</h2></div>
+        <p class="sub">Text, email, select, textarea, checkbox. Every input has a programmatically associated label (&sect;02). Inputs with a known purpose use <code>autocomplete</code>. Focus indicator uses the theme-aware focus ring.</p>
+
+        <div class="pattern-frame">
+          <div class="field"><label for="p-name">Full name</label><input id="p-name" class="input" type="text" autocomplete="name" value="Jamie Alvarez"></div>
+          <div class="field"><label for="p-email">Email</label><input id="p-email" class="input" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div class="field">
+            <label for="p-type">Permit type</label>
+            <select id="p-type" class="select">
+              <option>Residential &mdash; interior remodel</option>
+              <option>Residential &mdash; addition</option>
+              <option>Accessory dwelling unit</option>
+            </select>
+          </div>
+          <div class="field"><label for="p-notes">Notes for reviewer</label><textarea id="p-notes" class="textarea" placeholder="Anything the reviewer should know&hellip;"></textarea></div>
+          <label class="check"><input type="checkbox" checked> I am the property owner</label>
+          <label class="check"><input type="checkbox"> Send me status updates by email</label>
+        </div>
+      </section>
+
+      <!-- §10 Buttons -->
+      <section class="rule" id="pattern-buttons">
+        <div class="head"><span class="num">10</span><h2>Buttons</h2></div>
+        <p class="sub">Primary, secondary, ghost, and danger variants. Primary uses the accent token. Status badges follow the same color system as alerts (&sect;11).</p>
+
+        <p class="pattern-label">Variants</p>
+        <div class="pattern-frame">
+          <div class="btns">
+            <button class="btn primary" type="button">Primary</button>
+            <button class="btn secondary" type="button">Secondary</button>
+            <button class="btn ghost" type="button">Ghost</button>
+            <button class="btn danger" type="button">Danger</button>
+          </div>
+        </div>
+
+        <p class="pattern-label">Status badges</p>
+        <div class="pattern-frame">
+          <div class="badges">
+            <span class="badge n">In review</span>
+            <span class="badge g">Approved</span>
+            <span class="badge y">Needs info</span>
+            <span class="badge r">Denied</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- §11 Alerts and toasts -->
+      <section class="rule" id="pattern-alerts">
+        <div class="head"><span class="num">11</span><h2>Alerts and toasts</h2></div>
+        <p class="sub">Four semantic alert types for inline status. One reusable toast for transient feedback. Color never carries the message alone &mdash; the leading strong word does.</p>
+
+        <p class="pattern-label">Inline alerts</p>
+        <div class="pattern-frame">
+          <div class="alert info"><span class="dot"></span><div><strong>Received.</strong> Your application is queued for initial review.</div></div>
+          <div class="alert success"><span class="dot"></span><div><strong>Fee paid.</strong> Receipt #A-2031 sent to your email.</div></div>
+          <div class="alert warn"><span class="dot"></span><div><strong>Action needed.</strong> Upload a site plan to continue.</div></div>
+          <div class="alert danger"><span class="dot"></span><div><strong>Missing signature.</strong> Please sign section 3.</div></div>
+        </div>
+
+        <p class="pattern-label">Toast</p>
+        <div class="pattern-frame">
+          <p class="pattern-copy">Transient message at the bottom of the page. Auto-dismisses after ~2 seconds. Screen readers announce it via <code>role="status"</code> + <code>aria-live="polite"</code> without interrupting.</p>
+          <div class="btns">
+            <button class="btn secondary" type="button" id="toastTrigger">Trigger a toast</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- §12 Search and filters -->
+      <section class="rule" id="pattern-search">
+        <div class="head"><span class="num">12</span><h2>Search and filters</h2></div>
+        <p class="sub">A search input with an inline icon and a row of filter chips. Chips are buttons with <code>aria-pressed</code> so their state is announced.</p>
+
+        <div class="pattern-frame">
+          <div class="search-row">
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" placeholder="Search permits, records, meetings&hellip;" aria-label="Search" id="pattern-search-input">
+            </div>
+          </div>
+          <div class="chip-filters" role="group" aria-label="Filter results">
+            <button class="chip-filter" type="button" aria-pressed="true">All</button>
+            <button class="chip-filter" type="button" aria-pressed="false">Permits</button>
+            <button class="chip-filter" type="button" aria-pressed="false">Records</button>
+            <button class="chip-filter" type="button" aria-pressed="false">Meetings</button>
+            <button class="chip-filter" type="button" aria-pressed="false">Forms</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- §13 Tables and lists -->
+      <section class="rule" id="pattern-tables">
+        <div class="head"><span class="num">13</span><h2>Tables and lists</h2></div>
+        <p class="sub">Data tables use semantic markup: <code>&lt;thead&gt;</code> and <code>&lt;th&gt;</code>. Header tags let assistive tech announce cell context when navigating by column or row.</p>
+
+        <div class="pattern-frame">
+          <table class="table">
+            <thead><tr><th>Ref</th><th>Type</th><th>Status</th><th class="num">Fee</th></tr></thead>
+            <tbody>
+              <tr><td>A-2031</td><td>Remodel</td><td><span class="badge n">In review</span></td><td class="num">$240.00</td></tr>
+              <tr><td>A-1988</td><td>Fence</td><td><span class="badge g">Approved</span></td><td class="num">$&nbsp;85.00</td></tr>
+              <tr><td>A-1902</td><td>ADU</td><td><span class="badge y">Needs info</span></td><td class="num">$612.50</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- §14 Modals and panels -->
+      <section class="rule" id="pattern-modal">
+        <div class="head"><span class="num">14</span><h2>Modals and panels</h2></div>
+        <p class="sub">A modal is a focused interruption. It traps attention, not keyboard &mdash; pressing Escape closes it, and focus returns to the trigger on close.</p>
+
+        <div class="pattern-frame">
+          <p class="pattern-copy">Click to open a demo modal. Try dismissing with the Escape key, the Cancel button, or a click on the backdrop.</p>
+          <div class="btns">
+            <button class="btn primary" type="button" id="modalOpenBtn">Open demo modal</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- §15 Light/dark theme demo (composite) -->
+      <section class="rule" id="theme-demo">
+        <div class="head"><span class="num">15</span><h2>Light/dark theme demo</h2></div>
+        <p class="sub">All the patterns above composed into a realistic civic page. Use the toggle at the top of the page to flip light/dark. The dark theme ("Deep Ink") uses <a href="#web-interpretation">&sect;05 Acceptable-tier</a> surfaces.</p>
+
+        <div class="from-guide">
+          <strong>Scope</strong>
+          Dark-theme surfaces meet the &sect;05 rule. Accent colors, typography, and UI behavior are evaluated separately. Each has its own contrast, keyboard, and usability checks.
+        </div>
+
+        <div class="demo-frame">
+          <nav class="applied-nav" aria-label="Demo site navigation (non-functional)">
+            <img id="siteLogo" src="https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg" alt="City of Mukilteo">
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="right">
+              <button class="btn ghost" type="button">Sign in</button>
+              <span class="avatar">MK</span>
+            </div>
+          </nav>
+
+          <div class="applied-body">
+            <div class="crumb"><a href="#">Home</a> &rsaquo; <a href="#">Permits</a> &rsaquo; Application</div>
+            <h3 class="h1">Apply for a residential permit</h3>
+            <p class="lede">Fill out the form below to start a new application. Most permits are reviewed within 10 business days.</p>
+
+            <div class="cols">
+
+              <div class="panel">
+                <div class="tabs">
+                  <div class="tab active">Applicant</div>
+                  <div class="tab">Property</div>
+                  <div class="tab">Scope of work</div>
+                </div>
+                <div class="field"><label for="f-name">Full name</label><input id="f-name" class="input" type="text" autocomplete="name" value="Jamie Alvarez"></div>
+                <div class="field"><label for="f-email">Email</label><input id="f-email" class="input" type="email" autocomplete="email" placeholder="you@example.com"></div>
+                <div class="field">
+                  <label for="f-type">Permit type</label>
+                  <select id="f-type" class="select">
+                    <option>Residential &mdash; interior remodel</option>
+                    <option>Residential &mdash; addition</option>
+                    <option>Accessory dwelling unit</option>
+                  </select>
+                </div>
+                <div class="field"><label for="f-notes">Notes for reviewer</label><textarea id="f-notes" class="textarea" placeholder="Anything the reviewer should know&hellip;"></textarea></div>
+                <label class="check"><input type="checkbox" checked> I am the property owner</label>
+                <label class="check"><input type="checkbox"> Send me status updates by email</label>
+                <div class="btns">
+                  <button class="btn primary" type="button">Submit application</button>
+                  <button class="btn secondary" type="button">Save draft</button>
+                  <button class="btn ghost" type="button">Cancel</button>
+                </div>
+                <div class="badges">
+                  <span class="badge n">In review</span>
+                  <span class="badge g">Approved</span>
+                  <span class="badge y">Needs info</span>
+                  <span class="badge r">Denied</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="panel">
+                  <h4>Status</h4>
+                  <p class="sub">Latest updates on this application.</p>
+                  <div class="alert info"><span class="dot"></span><div><strong>Received.</strong> Your application is queued for initial review.</div></div>
+                  <div class="alert success"><span class="dot"></span><div><strong>Fee paid.</strong> Receipt #A-2031 sent to your email.</div></div>
+                  <div class="alert warn"><span class="dot"></span><div><strong>Action needed.</strong> Upload a site plan to continue.</div></div>
+                  <div class="alert danger"><span class="dot"></span><div><strong>Missing signature.</strong> Please sign section 3.</div></div>
+                </div>
+                <div class="panel">
+                  <h4>Recent applications</h4>
+                  <p class="sub">Your last three submittals.</p>
+                  <table class="table">
+                    <thead><tr><th>Ref</th><th>Type</th><th class="num">Fee</th></tr></thead>
+                    <tbody>
+                      <tr><td>A-2031</td><td>Remodel</td><td class="num">$240.00</td></tr>
+                      <tr><td>A-1988</td><td>Fence</td><td class="num">$&nbsp;85.00</td></tr>
+                      <tr><td>A-1902</td><td>ADU</td><td class="num">$612.50</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- §Downloads -->
+      <section class="rule" id="downloads">
+        <div class="head"><span class="num">16</span><h2>Use the tokens &middot; downloads</h2></div>
+        <p class="sub">The authoritative reference is the brand guide PDF. All files below live in the public repo at <a href="https://github.com/mukilteowa-gov/logo-public">github.com/mukilteowa-gov/logo-public</a> &mdash; pull them directly, or vendor them into your project.</p>
+
+        <div class="use-panel">
+          <h3>Integration &mdash; three-line drop-in</h3>
+          <p class="sub-text">These three stylesheets load the brand palette, brand font stacks, and the free Google Fonts substitutes they fall through to. Add them to <code>&lt;head&gt;</code>:</p>
+<pre><span class="c">&lt;!-- Option 1: vendored into your project --&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"/path/to/web-tokens/colors.css"<span class="k">&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"/path/to/web-tokens/fonts.css"<span class="k">&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"/path/to/web-tokens/fonts-google.css"<span class="k">&gt;</span>
+
+<span class="c">&lt;!-- Option 2: pulled directly from GitHub via jsDelivr CDN --&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/colors.css"<span class="k">&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts.css"<span class="k">&gt;</span>
+<span class="k">&lt;link rel=</span>"stylesheet" <span class="k">href=</span>"https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/web-tokens/fonts-google.css"<span class="k">&gt;</span></pre>
+
+          <p class="sub-text">Then in your CSS:</p>
+<pre><span class="k">body</span> { font-family: <span class="k">var</span>(--mukilteo-sans); color: <span class="k">var</span>(--mukilteo-deep-navy); }
+<span class="k">h1</span>   { font-family: <span class="k">var</span>(--mukilteo-sans-condensed); }
+<span class="k">.btn</span> { background: <span class="k">var</span>(--mukilteo-aqua); color: #fff; }</pre>
+
+          <p class="sub-text">For standalone robustness, hard-code the primary colors and a system font stack as a fallback block <em>before</em> the <code>&lt;link&gt;</code> tags &mdash; see the <code>&lt;style id="fallback-tokens"&gt;</code> at the top of this page's source for a ready-to-copy example.</p>
+        </div>
+
+        <ul class="dl-list">
+          <li><span class="what">Brand guide (PDF, authoritative)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/brand-guide/mukilteo-brand-guide.pdf">brand-guide/mukilteo-brand-guide.pdf</a></li>
+          <li><span class="what">Hex-color extract (PDF)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/brand-guide/mukilteo-brand-guide-hex-colors.pdf">brand-guide/mukilteo-brand-guide-hex-colors.pdf</a></li>
+          <li><span class="what">Secondary colors (PDF)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/brand-guide/mukilteo-secondary-colors.pdf">brand-guide/mukilteo-secondary-colors.pdf</a></li>
+          <li><span class="what">Adobe CC color library</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/brand-guide/mukilteo-colors.cclibs">brand-guide/mukilteo-colors.cclibs</a></li>
+          <li><span class="what">Color tokens (CSS)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/colors.css">web-tokens/colors.css</a></li>
+          <li><span class="what">Color tokens (SCSS)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/colors.scss">web-tokens/colors.scss</a></li>
+          <li><span class="what">Color tokens (JSON)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/colors.json">web-tokens/colors.json</a></li>
+          <li><span class="what">Font stacks (CSS)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/fonts.css">web-tokens/fonts.css</a></li>
+          <li><span class="what">Free font substitutes (Google Fonts)</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/fonts-google.css">web-tokens/fonts-google.css</a></li>
+          <li><span class="what">Font substitutes rationale</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/blob/main/web-tokens/FONT-SUBSTITUTES.md">web-tokens/FONT-SUBSTITUTES.md</a></li>
+          <li><span class="what">All logos</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/tree/main/primary-logo">primary-logo/ (horizontal, vertical, lighthouse-mark)</a></li>
+          <li><span class="what">Favicons</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public/tree/main/favicon">favicon/</a></li>
+          <li><span class="what">Repo home</span><a class="where" href="https://github.com/mukilteowa-gov/logo-public">github.com/mukilteowa-gov/logo-public</a></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="page">
+    <div class="wrap">
+      <span>&copy; City of Mukilteo &middot; Brand Guide v1.0 (2015-01-05)</span>
+      <span>Brand-guide PDF is the authoritative source</span>
+    </div>
+  </footer>
+
+  <!-- Toast — reused by multiple handlers (§11 trigger, §15 demo intercepts, palette copy) -->
+  <div class="demo-toast" id="demoToast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- §14 Modal dialog -->
+  <div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <div class="modal-dialog">
+      <h3 id="demoModalTitle">Confirm submission</h3>
+      <p>Your permit application will be sent for initial review. You can save a draft instead if you need more time.</p>
+      <div class="modal-actions">
+        <button class="btn ghost" type="button" id="modalCancelBtn">Cancel</button>
+        <button class="btn primary" type="button" id="modalConfirmBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Theme: stored preference > OS preference > light.
+  const STORAGE_KEY = "mukilteo-demo-theme";
+  const body        = document.body;
+  const toggle      = document.getElementById("themeToggle");
+  const opts        = toggle.querySelectorAll(".opt");
+  const inputs      = toggle.querySelectorAll("input");
+  const siteLogo    = document.getElementById("siteLogo");
+  const topLogo     = document.getElementById("topLogo");
+
+  const LOGO_LIGHT = "https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/full-color/mukilteo-logo-horizontal-full-color.svg";
+  const LOGO_DARK  = "https://cdn.jsdelivr.net/gh/mukilteowa-gov/logo-public@main/primary-logo/horizontal/reversed-color/mukilteo-logo-horizontal-reversed-color.svg";
+
+  function initialTheme() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+    return "light";
+  }
+  function applyTheme(name) {
+    body.setAttribute("data-theme", name);
+    opts.forEach(o => o.classList.toggle("active", o.dataset.v === name));
+    inputs.forEach(i => { i.checked = (i.value === name); });
+    if (siteLogo) siteLogo.src = (name === "dark") ? LOGO_DARK : LOGO_LIGHT;
+    if (topLogo)  topLogo.src  = (name === "dark") ? LOGO_DARK : LOGO_LIGHT;
+  }
+  function setTheme(name) {
+    applyTheme(name);
+    localStorage.setItem(STORAGE_KEY, name);
+  }
+  // Radio inputs are the source of truth — keyboard (arrow keys, Tab+Space)
+  // and mouse (clicking a label) both fire `change`.
+  inputs.forEach(i => i.addEventListener("change", () => {
+    if (i.checked) setTheme(i.value);
+  }));
+  if (window.matchMedia) {
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+      if (!localStorage.getItem(STORAGE_KEY)) applyTheme(e.matches ? "dark" : "light");
+    });
+  }
+  applyTheme(initialTheme());
+
+  // =============================================================
+  // Toast — single instance, reused by every feature below.
+  // =============================================================
+  const toastEl = document.getElementById("demoToast");
+  let toastTimer = null;
+  function showToast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2200);
+  }
+
+  // =============================================================
+  // Clipboard copy with fallback for non-secure contexts (file://).
+  // =============================================================
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (e) { /* fall through */ }
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  // =============================================================
+  // Demo-frame click interception (§09): prevent href="#" jumps,
+  // explain buttons aren't wired up.
+  // =============================================================
+  (function setupDemoFrameToast() {
+    const demoFrame = document.querySelector(".demo-frame");
+    if (!demoFrame) return;
+    demoFrame.addEventListener("click", (e) => {
+      const link = e.target.closest("a[href]");
+      if (link) {
+        e.preventDefault();
+        showToast("Demo — links and buttons here don't navigate.");
+        return;
+      }
+      const btn = e.target.closest("button:not([disabled])");
+      if (btn) {
+        showToast("Demo — this button is illustrative, not wired up.");
+        return;
+      }
+      const tab = e.target.closest(".tab");
+      if (tab) {
+        showToast("Demo — tabs here are decorative.");
+      }
+    });
+  })();
+
+  // =============================================================
+  // Palette swatch click-to-copy (§07).
+  // =============================================================
+  (function setupPaletteCopy() {
+    document.querySelectorAll("#color .swatch[data-hex]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const hex = btn.dataset.hex;
+        const ok = await copyText(hex);
+        showToast(ok ? `Copied ${hex}` : `Couldn't copy ${hex}`);
+      });
+    });
+  })();
+
+  // =============================================================
+  // "Pick & inspect" widget — live WCAG luminance + §04 verdict.
+  // =============================================================
+  (function setupPicker() {
+    const input   = document.getElementById("pickInput");
+    const hexEl   = document.getElementById("pickHex");
+    const chip    = document.getElementById("pickChip");
+    const copyBtn = document.getElementById("pickCopy");
+    const lumEl   = document.getElementById("pickLum");
+    const dEl     = document.getElementById("pickDelta");
+    const vEl     = document.getElementById("pickVerdict");
+    const noteEl  = document.getElementById("pickNote");
+    if (!input) return;
+
+    // WCAG 2.1 relative luminance
+    function linearize(v) {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    }
+    function luminance(r, g, b) {
+      return 0.2126 * linearize(r) + 0.7152 * linearize(g) + 0.0722 * linearize(b);
+    }
+
+    const PREFERRED = new Set(["#ffffff", "#000000", "#003660", "#4f9b99"]);
+
+    function evaluate(hex) {
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      const L = luminance(r, g, b);
+      const delta = Math.max(r, g, b) - Math.min(r, g, b);
+      const norm = hex.toLowerCase();
+
+      if (PREFERRED.has(norm)) {
+        return { tier: "preferred", L, delta, note: "Exact match for a guide-approved background." };
+      }
+      if (L >= 0.85 && delta <= 12) {
+        return { tier: "acceptable", L, delta, note: "Passes as a light neutral surface." };
+      }
+      if (L <= 0.10 && delta <= 12) {
+        return { tier: "acceptable", L, delta, note: "Passes as a dark neutral surface." };
+      }
+      let reason;
+      if (delta > 12 && (L >= 0.85 || L <= 0.10)) {
+        reason = `Channel delta ${delta} exceeds the local guardrail (≤ 12). The color reads as tinted.`;
+      } else if (delta > 12) {
+        reason = `Channel delta ${delta} exceeds the local guardrail (≤ 12), and luminance ${L.toFixed(3)} is outside both neutral ranges.`;
+      } else {
+        reason = `Luminance ${L.toFixed(3)} is between the dark (≤ 0.10) and light (≥ 0.85) neutral ranges.`;
+      }
+      return { tier: "prohibited", L, delta, note: reason + " Use this color as an accent, not as a surface." };
+    }
+
+    function update(hex) {
+      hex = hex.toLowerCase();
+      if (!/^#[0-9a-f]{6}$/.test(hex)) return;
+      chip.style.background = hex;
+      input.value = hex;
+      if (hexEl.value.toLowerCase() !== hex) hexEl.value = hex;
+      const ev = evaluate(hex);
+      lumEl.textContent = ev.L.toFixed(3);
+      dEl.textContent = ev.delta;
+      vEl.innerHTML = `<span class="tier-badge ${ev.tier}">${ev.tier}</span>`;
+      noteEl.textContent = ev.note;
+    }
+
+    input.addEventListener("input", () => update(input.value));
+    hexEl.addEventListener("input", () => {
+      let v = hexEl.value.trim();
+      if (v && !v.startsWith("#")) v = "#" + v;
+      if (/^#[0-9a-fA-F]{6}$/.test(v)) update(v);
+    });
+    copyBtn.addEventListener("click", async () => {
+      const hex = hexEl.value.toLowerCase();
+      if (!/^#[0-9a-f]{6}$/.test(hex)) { showToast("Not a valid hex."); return; }
+      const ok = await copyText(hex);
+      showToast(ok ? `Copied ${hex}` : `Couldn't copy ${hex}`);
+    });
+
+    update("#003660");
+  })();
+
+  // =============================================================
+  // TOC active-section highlight via IntersectionObserver.
+  // Queries every TOC link across the three part-grouped ols.
+  // =============================================================
+  const sections = document.querySelectorAll("section.rule, header.intro");
+  const tocLinks = document.querySelectorAll("nav.toc a");
+  const tocMap = {};
+  tocLinks.forEach(a => { tocMap[a.getAttribute("href").slice(1)] = a; });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        tocLinks.forEach(a => a.classList.toggle("active", tocMap[id] === a));
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+  sections.forEach(s => io.observe(s));
+
+  // =============================================================
+  // Intercept placeholder <a href="#"> inside ANY .pattern-frame
+  // (§08–§14 reference patterns). Prevents jump-to-top. Buttons
+  // and real controls in pattern frames still work normally.
+  // =============================================================
+  document.querySelectorAll(".pattern-frame").forEach(frame => {
+    frame.addEventListener("click", (e) => {
+      const link = e.target.closest("a[href]");
+      if (link && link.getAttribute("href") === "#") {
+        e.preventDefault();
+        showToast("Demo — this link doesn't navigate.");
+      }
+    });
+  });
+
+  // =============================================================
+  // §11 Toast trigger button.
+  // =============================================================
+  (function setupToastTrigger() {
+    const btn = document.getElementById("toastTrigger");
+    if (!btn) return;
+    let n = 0;
+    btn.addEventListener("click", () => {
+      n++;
+      showToast(`Saved. (${n} time${n === 1 ? "" : "s"})`);
+    });
+  })();
+
+  // =============================================================
+  // §12 Chip filters — single-select group with aria-pressed.
+  // =============================================================
+  (function setupChipFilters() {
+    document.querySelectorAll(".chip-filters").forEach(group => {
+      const chips = group.querySelectorAll(".chip-filter");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.setAttribute("aria-pressed", "false"));
+          chip.setAttribute("aria-pressed", "true");
+        });
+      });
+    });
+  })();
+
+  // =============================================================
+  // §14 Modal — open, close (Esc / backdrop / Cancel / Confirm),
+  // focus management back to the trigger.
+  // =============================================================
+  (function setupModal() {
+    const openBtn    = document.getElementById("modalOpenBtn");
+    const modal      = document.getElementById("demoModal");
+    const cancelBtn  = document.getElementById("modalCancelBtn");
+    const confirmBtn = document.getElementById("modalConfirmBtn");
+    if (!openBtn || !modal) return;
+
+    let lastFocused = null;
+
+    function open() {
+      lastFocused = document.activeElement;
+      modal.classList.add("open");
+      // Focus the first action so keyboard users land inside the dialog.
+      requestAnimationFrame(() => cancelBtn.focus());
+    }
+    function close() {
+      modal.classList.remove("open");
+      if (lastFocused && typeof lastFocused.focus === "function") {
+        lastFocused.focus();
+      }
+    }
+
+    openBtn.addEventListener("click", open);
+    cancelBtn.addEventListener("click", close);
+    confirmBtn.addEventListener("click", () => {
+      close();
+      showToast("Demo — submission is not wired up.");
+    });
+    // Click on the backdrop (not the dialog itself) closes.
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    // Escape closes when modal is open.
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) close();
+    });
+  })();
+</script>
+
+</body>
+</html>
