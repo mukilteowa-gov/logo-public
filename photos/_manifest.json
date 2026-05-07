@@ -17,13 +17,15 @@
       "usage": "confirmed uses; subset of: public-website, background, historical-archive",
       "candidateUses": "speculative uses requiring visual confirmation; subset of: hero-image",
       "webSizeBytes": "file size of the in-repo web-optimized JPG",
-      "originalSizeBytes": "byte size of the source original; useful for tracking how much optimization saved"
+      "originalSizeBytes": "byte size of the source original; useful for tracking how much optimization saved",
+      "identifiablePeopleInFrame": "true if recognizable individuals appear in the frame; image releases may be required before public use"
     }
   },
   "generatedAt": "2026-05-06",
   "summary": {
     "totalPhotos": 136,
-    "needsReview": 58,
+    "needsReview": 46,
+    "identifiablePeopleInFrame": 7,
     "totalSizeMB": 73.5
   },
   "entries": [
@@ -34,9 +36,12 @@
       "originalSizeBytes": 2643736,
       "category": "waterfront",
       "subjects": [
+        "Mukilteo Lighthouse",
         "Lighthouse Park",
         "pier",
-        "waterfront"
+        "waterfront",
+        "Puget Sound",
+        "low tide"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -46,8 +51,8 @@
         "label": "modern",
         "confidence": "medium"
       },
-      "description": "The pier at Lighthouse Park.",
-      "publicCaption": "The pier at Lighthouse Park.",
+      "description": "Mukilteo Lighthouse Park photographed from offshore at low tide. The Mukilteo Lighthouse and keeper's quarters sit center-right behind a low rip-rap shoreline; a wooden public pier on weathered pilings extends from a craftsman-style house at left. Conifer-covered bluffs rise in the background.",
+      "publicCaption": "Mukilteo Lighthouse and the public pier at Lighthouse Park.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -57,7 +62,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 615540
+      "webSizeBytes": 615540,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-washington-banner.jpg",
@@ -67,7 +73,10 @@
       "category": "broll",
       "subjects": [
         "banner",
-        "branding"
+        "branding",
+        "City of Mukilteo seal",
+        "Mukilteo Lighthouse",
+        "web banner"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -77,16 +86,17 @@
         "label": "modern",
         "confidence": "medium"
       },
-      "description": "Pre-rendered 'Mukilteo, Washington' banner image.",
+      "description": "Pre-rendered horizontal web banner: 'CITY OF MUKILTEO' wordmark and circular seal on a navy background at left, composited with a photograph of the Mukilteo Lighthouse and keeper's quarters at right.",
       "publicCaption": "",
-      "notes": "Graphic rather than photograph.",
+      "notes": "Designed web banner (logo + photo composite). The composite uses a photo of the Mukilteo Lighthouse, but the asset itself is a graphic. Filename 'MukilteoWashington.jpg' suggests this was an older site header — confirm whether it's still in use before keeping in active assets.",
       "needsReview": true,
       "reviewFlags": [],
       "usage": [
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 23375
+      "webSizeBytes": 23375,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "92nd-street-park-yellow-flowers-archway.jpg",
@@ -110,14 +120,15 @@
       },
       "description": "B-roll: yellow flowers in focus with 92nd Street Park main archway behind.",
       "publicCaption": "",
-      "notes": "Decorative; useful as page texture, not a documentary image.",
+      "notes": "Decorative; useful as page texture, not a documentary image. Near-duplicate of 92nd-street-park-5229.jpg in the same batch (same composition, this version is better resolved). Recommend choosing one as canonical b-roll.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 269365
+      "webSizeBytes": 269365,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-broll-flowers.jpg",
@@ -127,8 +138,10 @@
       "category": "broll",
       "subjects": [
         "City Hall",
-        "flowers",
-        "foreground focus"
+        "leaf",
+        "foliage",
+        "foreground focus",
+        "shallow depth of field"
       ],
       "location": {
         "name": "Mukilteo City Hall",
@@ -138,7 +151,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll: flowers in foreground with City Hall in the background.",
+      "description": "B-roll: a single sharp serrated leaf in the foreground with the Mukilteo City Hall building softly blurred in the background.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -147,7 +160,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 378758
+      "webSizeBytes": 378758,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "japanese-gulch-purple-flowers-trail.jpg",
@@ -156,28 +170,31 @@
       "originalSizeBytes": 713486,
       "category": "broll",
       "subjects": [
-        "Japanese Gulch",
-        "purple flowers",
-        "trail"
+        "foxglove",
+        "flowers",
+        "garden",
+        "close-up",
+        "pavilion"
       ],
       "location": {
-        "name": "Japanese Gulch trail, Mukilteo",
-        "confidence": "medium"
+        "name": "Mukilteo (specific location unconfirmed)",
+        "confidence": "low"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll: purple flowers in focus with what appears to be Japanese Gulch trail in background.",
+      "description": "Close-up of magenta foxglove (Digitalis) flower spikes in bloom, with a small wooden pavilion or shelter and a kiosk-style sign visible in the soft-focus background, set on a manicured lawn beside an asphalt path.",
       "publicCaption": "",
-      "notes": "Confirm the trail before captioning.",
+      "notes": "Background shows a manicured lawn with a pavilion/shelter and information kiosk — much more consistent with a community garden or developed park entrance than the Japanese Gulch trail. Strong visual similarity to 'community-garden.jpg' from the pilot batch — likely the same location. Original filename '125.JPG' is generic so the 'Japanese Gulch' label appears to be a renaming guess. Recommend renaming the file.",
       "needsReview": true,
       "reviewFlags": [],
       "usage": [
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 325876
+      "webSizeBytes": 325876,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "92nd-street-park-5224.jpg",
@@ -196,19 +213,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "92nd Street Park.",
-      "publicCaption": "",
+      "description": "Wide paved walking path curving through a grass lawn at 92nd Street Park, with a small playground, picnic tables, and a shelter visible in the middle distance against a backdrop of mature evergreens.",
+      "publicCaption": "A walking path winds through 92nd Street Park.",
       "notes": "Numeric suffix preserved for disambiguation.",
-      "needsReview": true,
-      "reviewFlags": [
-        "caption-needed",
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 642136
+      "webSizeBytes": 642136,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "92nd-street-park-5227.jpg",
@@ -227,8 +242,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "92nd Street Park.",
-      "publicCaption": "",
+      "description": "Low-angle view of the wooden post-and-beam pavilion/archway at 92nd Street Park, with open lattice gable and surrounding evergreens against an overcast sky.",
+      "publicCaption": "The wooden archway at 92nd Street Park.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -239,16 +254,20 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 843161
+      "webSizeBytes": 843161,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "92nd-street-park-5229.jpg",
       "originalFilename": "92nd Street Park-5229.jpg",
       "originalSha256": "151e2c1426c894e34112fbd930bfbe2a2559ef934688afcc85196d38c369f91b",
       "originalSizeBytes": 1414065,
-      "category": "park",
+      "category": "broll",
       "subjects": [
-        "92nd Street Park"
+        "92nd Street Park",
+        "yellow flowers",
+        "archway",
+        "foreground focus"
       ],
       "location": {
         "name": "92nd Street Park, Mukilteo",
@@ -258,7 +277,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "92nd Street Park.",
+      "description": "Yellow wildflowers in sharp foreground focus with the wooden post-and-beam archway at 92nd Street Park visible in the soft-focus background.",
       "publicCaption": "",
       "notes": "",
       "needsReview": true,
@@ -266,11 +285,10 @@
         "caption-needed",
         "multiple-similar-shots"
       ],
-      "usage": [
-        "public-website"
-      ],
+      "usage": "background",
       "candidateUses": [],
-      "webSizeBytes": 380399
+      "webSizeBytes": 380399,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "92nd-street-park-5233.jpg",
@@ -279,7 +297,9 @@
       "originalSizeBytes": 2496454,
       "category": "park",
       "subjects": [
-        "92nd Street Park"
+        "92nd Street Park",
+        "park signage",
+        "carved wood sign"
       ],
       "location": {
         "name": "92nd Street Park, Mukilteo",
@@ -289,19 +309,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "92nd Street Park.",
-      "publicCaption": "",
+      "description": "Carved wooden entrance sign for 92nd Street Park, with the park name in green relief lettering and a painted cartouche depicting the Mukilteo lighthouse and a sailboat. Flowering shrubs frame the base of the sign.",
+      "publicCaption": "92nd Street Park.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "caption-needed",
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 751223
+      "webSizeBytes": 751223,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "aid-unit.jpg",
@@ -312,7 +330,9 @@
       "subjects": [
         "aid unit",
         "Mukilteo Fire",
-        "emergency vehicle"
+        "emergency vehicle",
+        "M-25",
+        "Star of Life"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -322,7 +342,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Fire Department aid unit.",
+      "description": "Side-panel detail of Mukilteo Fire aid unit M-25, showing the gold 'MUKILTEO FIRE' lettering, unit number, and Star of Life EMS symbol.",
       "publicCaption": "Mukilteo Fire Department aid unit.",
       "notes": "",
       "needsReview": false,
@@ -331,7 +351,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 359166
+      "webSizeBytes": 359166,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "almgrens-landing-sign.jpg",
@@ -342,7 +363,8 @@
       "subjects": [
         "Almgren's Landing",
         "signage",
-        "small business"
+        "hanging sign",
+        "601"
       ],
       "location": {
         "name": "Almgren's Landing, Mukilteo",
@@ -352,7 +374,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Outdoor signage for Almgren's Landing.",
+      "description": "Hanging wooden sign at 601, reading 'ALMGREN'S LANDING' on green placards with a painted depiction of a small white-and-red boat at center.",
       "publicCaption": "Almgren's Landing.",
       "notes": "",
       "needsReview": false,
@@ -361,7 +383,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 527154
+      "webSizeBytes": 527154,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "arbors-gated-community.jpg",
@@ -371,8 +394,9 @@
       "category": "residential",
       "subjects": [
         "The Arbors",
-        "gated community",
-        "housing"
+        "townhomes",
+        "multifamily housing",
+        "residential street"
       ],
       "location": {
         "name": "The Arbors, Mukilteo",
@@ -382,7 +406,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic shot of a gated community (The Arbors).",
+      "description": "Curving residential street through a planned multi-family neighborhood, with a wrought-iron lamp post and landscaped traffic island in the foreground and beige two- and three-story townhomes on either side under dramatic cumulus clouds.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -391,7 +415,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 492621
+      "webSizeBytes": 492621,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-band-shell.jpg",
@@ -402,7 +427,9 @@
       "subjects": [
         "Lighthouse Park",
         "band shell",
-        "performance space"
+        "performance space",
+        "pavilion",
+        "public restroom"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -412,7 +439,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Band shell at Lighthouse Park.",
+      "description": "Heavy-timber park pavilion at Lighthouse Park with a covered central gathering area flanked by enclosed bays, photographed in soft evening light. Functions as both performance/event space and includes restroom facilities.",
       "publicCaption": "Band shell at Lighthouse Park.",
       "notes": "",
       "needsReview": false,
@@ -421,7 +448,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 612792
+      "webSizeBytes": 612792,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "barbara-brennan-park-sign.jpg",
@@ -430,19 +458,21 @@
       "originalSizeBytes": 2333632,
       "category": "park",
       "subjects": [
-        "Barbara Brennan Memorial Park",
-        "park signage"
+        "Barbara Brennen Dobra Memorial Park",
+        "park signage",
+        "carved wood sign",
+        "dahlias"
       ],
       "location": {
-        "name": "Barbara Brennan Memorial Park, Mukilteo",
+        "name": "Barbara Brennen Dobra Memorial Park, Mukilteo",
         "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Outdoor sign for Barbara Brennan Memorial Park.",
-      "publicCaption": "Barbara Brennan Memorial Park.",
+      "description": "Carved wooden sign for Barbara Brennen Dobra Memorial Park, with a painted lighthouse cartouche at top and the memorial name in cream relief lettering. Red dahlia-like flowers in foreground partially obscure additional inscription text.",
+      "publicCaption": "Barbara Brennen Dobra Memorial Park.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -450,7 +480,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 667579
+      "webSizeBytes": 667579,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-beach-facing-south.jpg",
@@ -471,7 +502,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Beach near Lighthouse Park, facing south.",
+      "description": "Pebble-and-driftwood beach at Lighthouse Park looking south down the Mukilteo waterfront, Puget Sound rolling in under a hazy sky.",
       "publicCaption": "Mukilteo waterfront, looking south from Lighthouse Park.",
       "notes": "",
       "needsReview": false,
@@ -482,7 +513,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 483819
+      "webSizeBytes": 483819,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "big-gulch-trailhead-archway.jpg",
@@ -494,7 +526,9 @@
         "Big Gulch",
         "trail",
         "archway",
-        "trailhead"
+        "trailhead",
+        "North Fork trailhead",
+        "forest"
       ],
       "location": {
         "name": "Big Gulch trail, Mukilteo",
@@ -504,8 +538,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Archway leading to Big Gulch trail.",
-      "publicCaption": "Big Gulch trailhead.",
+      "description": "Wide symmetrical view of the cedar timber-frame arch at the Big Gulch Trail North Fork trailhead, framing a gravel path into dense forest. Trailhead signboard with the City of Mukilteo logo mounted on the crossbar.",
+      "publicCaption": "The North Fork trailhead at Big Gulch Trail.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -513,7 +547,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 997931
+      "webSizeBytes": 997931,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "big-gulch-trailhead-arch-closeup.jpg",
@@ -525,7 +560,9 @@
         "Big Gulch",
         "trail",
         "archway",
-        "closeup"
+        "trailhead sign",
+        "North Fork trailhead",
+        "City of Mukilteo"
       ],
       "location": {
         "name": "Big Gulch trail, Mukilteo",
@@ -535,8 +572,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Top of the Big Gulch trailhead arch, close-up.",
-      "publicCaption": "",
+      "description": "Close-up of the trailhead signboard mounted under the Big Gulch Trail arch, reading 'BIG GULCH TRAIL — NORTH FORK TRAILHEAD' with the City of Mukilteo logo. Heavy cedar timber framing visible above the sign.",
+      "publicCaption": "Big Gulch Trail — North Fork trailhead.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -544,7 +581,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 475971
+      "webSizeBytes": 475971,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-speedway-bike-lane-southeast.jpg",
@@ -563,9 +601,9 @@
       },
       "era": {
         "label": "2023-2025",
-        "confidence": "medium"
+        "confidence": "low"
       },
-      "description": "Mukilteo Speedway bike lane, facing southeast from the sidewalk.",
+      "description": "Mukilteo Speedway bike lane viewed from the sidewalk, with a freshly painted bicycle stencil in the right-most lane in the foreground and a strip-mall commercial frontage with a digital LED billboard on the far side of the road.",
       "publicCaption": "Bike lane along Mukilteo Speedway.",
       "notes": "",
       "needsReview": false,
@@ -574,7 +612,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 893027
+      "webSizeBytes": 893027,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-speedway-bike-lane-south.jpg",
@@ -585,7 +624,9 @@
       "subjects": [
         "Mukilteo Speedway",
         "bike lane",
-        "infrastructure"
+        "infrastructure",
+        "pedestrian archway",
+        "public art"
       ],
       "location": {
         "name": "Mukilteo Speedway",
@@ -593,9 +634,9 @@
       },
       "era": {
         "label": "2023-2025",
-        "confidence": "medium"
+        "confidence": "low"
       },
-      "description": "Mukilteo Speedway bike lane, facing south from the sidewalk.",
+      "description": "Mukilteo Speedway looking south from the sidewalk, with a 'RIGHT LANE BICYCLES ONLY' sign in the right foreground and a decorative pedestrian archway (Pacific Northwest / salmon motif) spanning the sidewalk in mid-frame. Multi-lane traffic and storefronts visible beyond.",
       "publicCaption": "Bike lane along Mukilteo Speedway.",
       "notes": "",
       "needsReview": false,
@@ -604,7 +645,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 559940
+      "webSizeBytes": 559940,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "camdens-housing.jpg",
@@ -614,17 +656,19 @@
       "category": "residential",
       "subjects": [
         "Camdens",
-        "housing"
+        "townhomes",
+        "multifamily housing",
+        "courtyard"
       ],
       "location": {
-        "name": "Mukilteo, WA",
+        "name": "The Camdens, Mukilteo, WA",
         "confidence": "medium"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic housing shot (Camdens).",
+      "description": "Walking path through a landscaped courtyard at a multi-family townhome development, with two- and three-story craftsman-style buildings in mixed cream, rose, and blue-gray siding flanking the path.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -633,7 +677,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 772401
+      "webSizeBytes": 772401,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "chamber-of-commerce-sign.jpg",
@@ -643,7 +688,9 @@
       "category": "civic-building",
       "subjects": [
         "Mukilteo Chamber of Commerce",
-        "signage"
+        "Visitor Center",
+        "signage",
+        "Mukilteo Lighthouse Festival"
       ],
       "location": {
         "name": "Mukilteo Chamber of Commerce",
@@ -653,7 +700,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "One of the signs on the Chamber of Commerce building.",
+      "description": "Exterior sign on the Mukilteo Chamber of Commerce / Visitor Center building, featuring a stylized lighthouse graphic and a 'Mukilteo Lighthouse Festival' banner along the bottom.",
       "publicCaption": "Mukilteo Chamber of Commerce.",
       "notes": "",
       "needsReview": false,
@@ -662,7 +709,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 417058
+      "webSizeBytes": 417058,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-deer-5553.jpg",
@@ -695,7 +743,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 804925
+      "webSizeBytes": 804925,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-deer-5554.jpg",
@@ -728,7 +777,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 864432
+      "webSizeBytes": 864432,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-leaves-foreground.jpg",
@@ -749,7 +799,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Leaves in focus in the foreground; City Hall blurred in the background.",
+      "description": "A single sharp green leaf in the right foreground, with the Mukilteo City Hall building softly blurred behind. Shallow depth of field with bokeh highlights at left.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -758,7 +808,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 222618
+      "webSizeBytes": 222618,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-bike-rack-entrance.jpg",
@@ -779,8 +830,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Bike rack with bikes at the City Hall entrance.",
-      "publicCaption": "",
+      "description": "A single parked bicycle in the sculptural bicycle-shaped bike rack outside the Mukilteo City Hall main entrance, with the 'MUKILTEO CITY HALL' wordmark visible on the wood-slat wall.",
+      "publicCaption": "Bike parking at the Mukilteo City Hall entrance.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -788,7 +839,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 561036
+      "webSizeBytes": 561036,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-sign.jpg",
@@ -798,7 +850,9 @@
       "category": "civic-building",
       "subjects": [
         "City Hall",
-        "signage"
+        "signage",
+        "Mukilteo Lighthouse motif",
+        "branding"
       ],
       "location": {
         "name": "Mukilteo City Hall",
@@ -808,7 +862,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Outdoor City Hall sign, close-up.",
+      "description": "Close-up of the exterior 'MUKILTEO CITY HALL' signage, with a stylized white lighthouse silhouette set between the words on horizontal cedar siding.",
       "publicCaption": "Mukilteo City Hall.",
       "notes": "",
       "needsReview": false,
@@ -817,7 +871,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 471058
+      "webSizeBytes": 471058,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-fountain-closeup.jpg",
@@ -827,7 +882,9 @@
       "category": "civic-building",
       "subjects": [
         "City Hall",
-        "fountain"
+        "water feature",
+        "basalt column",
+        "close-up"
       ],
       "location": {
         "name": "Mukilteo City Hall",
@@ -837,7 +894,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Top of the City Hall fountain, close-up.",
+      "description": "Side-on close-up of the basalt-column water feature in the Mukilteo City Hall entry plaza, with the sculptural bicycle bike rack and entry doors blurred in the background.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -846,7 +903,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 745626
+      "webSizeBytes": 745626,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-bike-rack.jpg",
@@ -866,7 +924,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Bike rack at City Hall, no bikes.",
+      "description": "Empty sculptural bicycle-shaped bike rack outside the Mukilteo City Hall main entrance, with the 'MUKILTEO CITY HALL' wordmark visible on the wall.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -875,7 +933,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 613119
+      "webSizeBytes": 613119,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-side-profile-greenery.jpg",
@@ -897,7 +956,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Side profile of City Hall, accentuating wood frame pillars with lots of side greenery.",
+      "description": "Side elevation of Mukilteo City Hall showing the row of wood pillars with dark steel brackets, framed by ferns and dense green groundcover with a planted slope and conifer trees in the middle distance.",
       "publicCaption": "Mukilteo City Hall.",
       "notes": "",
       "needsReview": false,
@@ -906,7 +965,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 754290
+      "webSizeBytes": 754290,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-side-profile.jpg",
@@ -926,7 +986,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Side profile of City Hall.",
+      "description": "Side elevation of Mukilteo City Hall, showing the row of wood pillars with steel brackets, a paved walkway with a low bench, and a planted slope with conifer trees beyond.",
       "publicCaption": "Mukilteo City Hall.",
       "notes": "",
       "needsReview": false,
@@ -935,7 +995,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 865035
+      "webSizeBytes": 865035,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-fountain-entrance.jpg",
@@ -956,7 +1017,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Fountain in foreground, City Hall entrance in background, both in focus.",
+      "description": "Mukilteo City Hall entry plaza: the basalt-column water feature in the right foreground, the sculptural bike rack in the middle distance, and the 'MUKILTEO CITY HALL' wordmark on the wall behind.",
       "publicCaption": "Mukilteo City Hall.",
       "notes": "",
       "needsReview": false,
@@ -967,7 +1028,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 608770
+      "webSizeBytes": 608770,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-dusk.jpg",
@@ -988,7 +1050,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Dusk shot of City Hall with nice lighting.",
+      "description": "Mukilteo City Hall photographed at blue hour, with interior lights glowing through the glass stair tower and entrance, basalt-column landscape feature in the foreground, and the 'MUKILTEO CITY HALL' wordmark visible on the wall.",
       "publicCaption": "Mukilteo City Hall at dusk.",
       "notes": "",
       "needsReview": false,
@@ -999,7 +1061,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 569886
+      "webSizeBytes": 569886,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-commercial-building.jpg",
@@ -1008,7 +1071,11 @@
       "originalSizeBytes": 1950412,
       "category": "business",
       "subjects": [
-        "commercial building"
+        "shopping center",
+        "storefronts",
+        "jewelers",
+        "covered walkway",
+        "retail"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1018,9 +1085,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic commercial building.",
+      "description": "Covered sidewalk colonnade of a one-story shopping center with square white columns on brick bases, shed-roof overhang, and a row of storefronts. The nearest visible storefront sign reads 'JEWELERS'; large planters and a sandwich-board poster line the walkway.",
       "publicCaption": "",
-      "notes": "Subject is generic — confirm specific building before publishing with a caption.",
+      "notes": "'JEWELERS' signage is visible on the leftmost storefront — could help a local reviewer identify the specific Mukilteo shopping center (e.g., Harbour Pointe Center, Speedway Plaza, or another). Architecture is mid-late 20th century strip-retail with craftsman-influenced columns.",
       "needsReview": true,
       "reviewFlags": [
         "subject-identification-unconfirmed"
@@ -1029,7 +1096,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 539280
+      "webSizeBytes": 539280,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "community-garden.jpg",
@@ -1038,7 +1106,10 @@
       "originalSizeBytes": 1578152,
       "category": "park",
       "subjects": [
-        "community garden"
+        "foxglove",
+        "flowers",
+        "garden",
+        "close-up"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1048,9 +1119,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Community garden.",
-      "publicCaption": "Mukilteo community garden.",
-      "notes": "Confirm which community garden; Mukilteo has more than one location.",
+      "description": "Close-up of magenta foxglove (Digitalis) flower spikes in bloom, with a small wood-sided shed or cabin and dark conifer forest visible in the soft-focus background.",
+      "publicCaption": "Foxglove in bloom at a Mukilteo community garden.",
+      "notes": "Specific community garden not identified; ambiguity acknowledged. Mukilteo has more than one location that could match.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed"
@@ -1059,7 +1130,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 438387
+      "webSizeBytes": 438387,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "goat-trail-rd-sign.jpg",
@@ -1079,8 +1151,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Looking up at a roadside street sign reading 'GOAT TRAIL RD'.",
-      "publicCaption": "",
+      "description": "Low-angle view of a wooden street-sign post with two green 'GOAT TRAIL RD' street blades (one with a directional arrow), the blank back of a stop sign behind it, and power lines crossing a clear blue sky.",
+      "publicCaption": "Goat Trail Road street signs.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1088,7 +1160,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 165612
+      "webSizeBytes": 165612,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-restroom.jpg",
@@ -1099,7 +1172,9 @@
       "subjects": [
         "Lighthouse Park",
         "public restroom",
-        "park amenity"
+        "park amenity",
+        "pavilion",
+        "band shell"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -1109,7 +1184,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Public restroom at Lighthouse Park.",
+      "description": "Heavy-timber multi-use pavilion at Lighthouse Park that includes restroom facilities. (Same building / image as lighthouse-park-band-shell.jpg in this batch.)",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -1118,7 +1193,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 491018
+      "webSizeBytes": 491018,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-roundabout-salmon-sculpture.jpg",
@@ -1131,7 +1207,9 @@
         "roundabout",
         "public art",
         "salmon",
-        "metal sculpture"
+        "metal sculpture",
+        "Northwest Coast art",
+        "waterfront"
       ],
       "location": {
         "name": "Lighthouse Park roundabout",
@@ -1141,7 +1219,7 @@
         "label": "modern",
         "confidence": "high"
       },
-      "description": "Modern metal sculpture at the Lighthouse Park roundabout, formed as a tilted cube or pyramid-like geometric structure with cut-out salmon and Northwest Coast-inspired design motifs.",
+      "description": "Tilted cube-shaped metal sculpture at the Lighthouse Park roundabout, with laser-cut salmon and Northwest Coast-inspired design motifs on each face. Photographed in late-afternoon light with the waterfront and Whidbey Island visible in the distance.",
       "publicCaption": "Salmon-themed metal sculpture at the Lighthouse Park roundabout.",
       "notes": "",
       "needsReview": false,
@@ -1152,7 +1230,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 572445
+      "webSizeBytes": 572445,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-boat-launch-san-juan-islands.jpg",
@@ -1163,8 +1242,9 @@
       "subjects": [
         "Lighthouse Park",
         "boat launch",
-        "San Juan Islands",
-        "Puget Sound"
+        "Puget Sound",
+        "sunset",
+        "pier"
       ],
       "location": {
         "name": "Lighthouse Park boat launch, Mukilteo",
@@ -1174,8 +1254,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "View from the Lighthouse Park boat launch, facing toward the San Juan Islands.",
-      "publicCaption": "Looking toward the San Juan Islands from Lighthouse Park.",
+      "description": "Golden-hour view down the Lighthouse Park boat-launch pier, with mooring pilings silhouetted against a warm sky and the forested ridgeline of (likely) Whidbey Island in the distance.",
+      "publicCaption": "Sunset over Puget Sound from the Lighthouse Park boat launch.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1185,7 +1265,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 446539
+      "webSizeBytes": 446539,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-ferry-terminal-golden-hour.jpg",
@@ -1204,12 +1285,12 @@
         "confidence": "high"
       },
       "era": {
-        "label": "2023-2025",
+        "label": "old ferry dock — pre-2020 (likely earlier than current terminal opened late 2020)",
         "confidence": "medium"
       },
-      "description": "Early/dusk golden-hour shot of a ferry berthed at the Mukilteo ferry terminal.",
+      "description": "Golden-hour shot of a Washington State ferry berthed at a wood-piling pier at the Mukilteo ferry terminal, with Whidbey Island's wooded silhouette visible across the water at right. Interior cabin lights are just beginning to glow.",
       "publicCaption": "Ferry at the Mukilteo terminal at golden hour.",
-      "notes": "",
+      "notes": "The wood-piling pier in this frame matches the old Mukilteo ferry dock, not the current (opened late 2020) terminal — era of '2023-2025' is likely incorrect; this is most likely an older photo.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -1218,7 +1299,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 492151
+      "webSizeBytes": 492151,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "bronze-animals-on-book-sculpture.jpg",
@@ -1231,28 +1313,29 @@
         "bronze sculpture",
         "bear",
         "rabbit",
-        "book"
+        "book",
+        "reading",
+        "literacy"
       ],
       "location": {
-        "name": null,
-        "confidence": "unknown"
+        "name": "Mukilteo Library",
+        "confidence": "high"
       },
       "era": {
         "label": "modern",
         "confidence": "medium"
       },
-      "description": "Bronze public art sculpture showing a bear, rabbit, and small animal figure on an oversized open book.",
-      "publicCaption": "Bronze animal sculpture on an open book.",
-      "notes": "Location not confirmed from image. Do not assign to Lighthouse Park, City Hall, or another site without separate confirmation.",
-      "needsReview": true,
-      "reviewFlags": [
-        "location-unconfirmed"
-      ],
+      "description": "Bronze sculpture group of a bear, a rabbit, and a small third animal arranged on an oversized open book that forms the sculpture's base. Installed on a concrete walkway outside a building with cream split-face block walls, dark green window frames, and a covered breezeway.",
+      "publicCaption": "Bronze literacy-themed sculpture outside the Mukilteo Library.",
+      "notes": "Location not confirmed from image. Architecture (cream split-face block, dark green window frames, covered breezeway) and the literacy-themed subject matter are consistent with a library or community building entrance — worth checking against the Mukilteo Library exterior before assigning.",
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 543355
+      "webSizeBytes": 543355,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-lighthouse-from-pier.jpg",
@@ -1275,9 +1358,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "View of the Mukilteo Lighthouse at Lighthouse Park from the waterfront or pier area, with shoreline, pilings, Puget Sound, and cloudy sky in the background.",
+      "description": "Mukilteo Lighthouse and keeper's quarters viewed across a pebble spit at low tide. The white wood lighthouse with red roof and copper-domed lantern room is centered; a row of weathered pier pilings extends along the shoreline at right. Puget Sound and distant Whidbey Island form the background under a soft overcast sky.",
       "publicCaption": "Mukilteo Lighthouse at Lighthouse Park.",
-      "notes": "View direction: west/southwest from pier or waterfront area (medium confidence).",
+      "notes": "Photographed from the beach / pebble spit looking roughly north-northwest toward the lighthouse (the pilings extending to the right read as the public pier seen from its base).",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -1286,7 +1369,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 454143
+      "webSizeBytes": 454143,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "losvar-condominiums-from-water.jpg",
@@ -1309,7 +1393,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "View of Losvar Condominiums on the Mukilteo waterfront, photographed from the water, likely from a boat or ferry. Hillside homes and trees are visible in the background.",
+      "description": "View of a four-story waterfront residential building (Losvar Condominiums per filename) photographed from the water, with continuous balconies, a fronting pier and rip-rap beach, and a forested hillside dotted with houses rising behind.",
       "publicCaption": "Mukilteo waterfront near Losvar Condominiums.",
       "notes": "Viewpoint: from water, likely boat or ferry (high confidence).",
       "needsReview": false,
@@ -1318,7 +1402,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 545490
+      "webSizeBytes": 545490,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-station-commuter-parking-broll.jpg",
@@ -1340,8 +1425,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll of the sidewalk and commuter parking lot at Mukilteo Train Station.",
-      "publicCaption": "",
+      "description": "B-roll looking down the sidewalk between the Mukilteo Station commuter parking lot (left, with parked cars under young trees) and the Sound Transit Sounder rail tracks (right, behind a wood pergola with metal-mesh fencing). Bright summer daylight.",
+      "publicCaption": "Sidewalk along the commuter parking at Mukilteo Station.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1349,7 +1434,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 743497
+      "webSizeBytes": 743497,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "city-hall-broll-deer.jpg",
@@ -1370,7 +1456,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll of City Hall with deer wandering around.",
+      "description": "A live spotted fawn stands on the driveway in front of the Mukilteo City Hall entrance (address 11930), framed by foreground shrubs.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -1380,7 +1466,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 801735
+      "webSizeBytes": 801735,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "washington-state-ferry-puget-sound.jpg",
@@ -1403,7 +1490,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Washington State Ferry underway on Puget Sound, photographed from the water or shoreline with open water and hazy sky.",
+      "description": "Modern Washington State Ferries vessel (white hull with characteristic dark green trim and twin upper-deck stacks) underway on open water, photographed in profile against a hazy white-grey sky with no shoreline visible. Vessel class not identifiable from this distance/angle.",
       "publicCaption": "Washington State Ferry on Puget Sound.",
       "notes": "Viewpoint: from water or shoreline (medium confidence).",
       "needsReview": false,
@@ -1414,7 +1501,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 289322
+      "webSizeBytes": 289322,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "treaty-of-point-elliott-monument-rosehill.jpg",
@@ -1438,7 +1526,7 @@
         "label": "modern",
         "confidence": "high"
       },
-      "description": "Treaty of Point Elliott monument and plaque near Rosehill Community Center, with the community center building and landscaping in the background. Camera is facing generally south/southeast.",
+      "description": "Treaty of Point Elliott monument (1855-1930 bronze plaque on a granite stone) photographed at an angle that includes the modern Rosehill Community Center building, landscaped beds, and a wood bench in the background. Same monument as the frontal variant. Camera is facing generally south/southeast.",
       "publicCaption": "Treaty of Point Elliott monument near Rosehill Community Center.",
       "notes": "View direction: south/southeast (high confidence).",
       "needsReview": false,
@@ -1448,7 +1536,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 744876
+      "webSizeBytes": 744876,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "treaty-of-point-elliott-monument-frontal.jpg",
@@ -1458,10 +1547,11 @@
       "category": "historical-marker",
       "subjects": [
         "Treaty of Point Elliott",
-        "Rosehill Community Center",
         "historical marker",
         "monument",
-        "plaque"
+        "plaque",
+        "Isaac Stevens",
+        "1855"
       ],
       "location": {
         "name": "Rosehill Community Center",
@@ -1471,9 +1561,9 @@
         "label": "modern",
         "confidence": "high"
       },
-      "description": "Treaty of Point Elliott monument photographed straight-on with no foreground elements. Same subject as DSC_6664, frontal angle.",
+      "description": "Frontal photograph of the Treaty of Point Elliott monument: a rough-hewn granite stone with a bronze plaque dated 1855-1930. Plaque text commemorates Governor Isaac I. Stevens concluding the treaty in January 1855 with twenty-two tribes, and was erected by a historical society. Concrete steps and a metal railing are visible behind the monument; same monument as treaty-of-point-elliott-monument-rosehill.jpg, photographed from a different angle that excludes the Rosehill Community Center building.",
       "publicCaption": "Treaty of Point Elliott monument.",
-      "notes": "",
+      "notes": "Plaque text visible: dated 1855-1930, references Governor Isaac I. Stevens concluding the treaty in January 1855 with twenty-two tribes, erected by a historical society (full attribution line not legible at this resolution). Frontal crop excludes the Rosehill Community Center building visible in the rosehill variant.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -1481,7 +1571,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 768780
+      "webSizeBytes": 768780,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "totem-park-totem-pole-top.jpg",
@@ -1492,7 +1583,10 @@
       "subjects": [
         "Totem Park",
         "totem pole",
-        "public art"
+        "public art",
+        "thunderbird",
+        "longhouse",
+        "Coast Salish art"
       ],
       "location": {
         "name": "Mukilteo's Totem Park",
@@ -1502,7 +1596,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Top of the totem pole at Mukilteo Totem Park; foreground is only sky.",
+      "description": "Upward-angle photograph of the upper portion of the weathered totem pole at Mukilteo's Totem Park. The carving features stacked house/longhouse-like structures with windows and shingled roofs, topped by a small bird figure (appears to be a thunderbird or eagle) against a clear blue sky.",
       "publicCaption": "Totem pole at Mukilteo Totem Park.",
       "notes": "",
       "needsReview": false,
@@ -1511,7 +1605,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 170323
+      "webSizeBytes": 170323,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "apartments-broll-6959.jpg",
@@ -1522,7 +1617,9 @@
       "subjects": [
         "apartments",
         "condominiums",
-        "multifamily housing"
+        "multifamily housing",
+        "clock tower",
+        "autumn"
       ],
       "location": {
         "name": null,
@@ -1532,16 +1629,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll of apartment / condominium building.",
+      "description": "Multi-story apartment / condominium development with a tall wooden clock tower anchoring the foreground, surrounded by autumn-foliage trees and a manicured lawn under a cloudy sky.",
       "publicCaption": "",
-      "notes": "",
+      "notes": "Distinctive wooden clock tower with four-sided clock and belfry-style cap may identify the specific development to a local reviewer. Possibly the same or related complex shown in the pilot's 'mf-character-6966' photo, which had similar architectural language.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 469813
+      "webSizeBytes": 469813,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "apartments-broll-7000.jpg",
@@ -1550,9 +1648,10 @@
       "originalSizeBytes": 1000104,
       "category": "residential",
       "subjects": [
-        "apartments",
-        "condominiums",
-        "multifamily housing"
+        "single-family homes",
+        "residential street",
+        "craftsman",
+        "neighborhood"
       ],
       "location": {
         "name": null,
@@ -1562,7 +1661,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll of apartment / condominium building.",
+      "description": "Quiet residential street lined with two-story cream/white craftsman-style single-family homes with manicured front yards. Stop sign visible at a side intersection.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -1571,7 +1670,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 695564
+      "webSizeBytes": 695564,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "eagle-scout-project-plaque-2012.jpg",
@@ -1594,20 +1694,23 @@
         "label": "2012",
         "confidence": "high"
       },
-      "description": "Close-up of a Boy Scout Eagle Project plaque mounted on a wooden structure. The plaque credits a 2012 Eagle Project associated with the Mount Baker Council.",
+      "description": "Close-up of a Boy Scout Eagle Project plaque (Mount Baker Council, November 2012) screwed into the brown-painted wooden frame of an outdoor kiosk or shelter. A partially visible flyer pinned to an adjacent corkboard suggests this is a community/park kiosk.",
       "publicCaption": "Boy Scout Eagle Project plaque, 2012.",
-      "notes": "Plaque includes a personal name. Avoid using the name in the filename unless needed for archival indexing.",
+      "notes": "Plaque includes a personal name (do not surface in any public-facing field). A second flyer is partially visible in the upper-left of the frame and contains two phone numbers and what looks like a pet description — those are also personally-identifying and should be cropped or blurred before any public use.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
-        "contains-personal-name"
+        "contains-personal-name",
+        "contains-phone-numbers",
+        "crop-recommended-before-public-use"
       ],
       "usage": [
         "public-website",
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 400765
+      "webSizeBytes": 400765,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "edgewater-beach-ribbon-cutting-2014.jpg",
@@ -1645,7 +1748,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 553571
+      "webSizeBytes": 553571,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-waterfront-from-hillside.jpg",
@@ -1667,9 +1771,9 @@
       },
       "era": {
         "label": "2023-2025",
-        "confidence": "medium"
+        "confidence": "low"
       },
-      "description": "Tree-framed hillside view looking down toward the Mukilteo waterfront, with a Washington State Ferry, waterfront buildings, Puget Sound, and Whidbey Island visible in the distance.",
+      "description": "Tree-framed view through summer foliage and a large tree trunk, looking down from a hillside vantage toward the Mukilteo waterfront, a Washington State Ferry mid-crossing on Puget Sound, and the wooded shoreline of Whidbey Island in the distance.",
       "publicCaption": "View toward the Mukilteo waterfront and ferry from the hillside.",
       "notes": "Viewpoint: from hillside above waterfront (medium confidence).",
       "needsReview": false,
@@ -1680,7 +1784,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 965702
+      "webSizeBytes": 965702,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "fire-engine.jpg",
@@ -1691,7 +1796,9 @@
       "subjects": [
         "Mukilteo Fire",
         "fire engine",
-        "emergency vehicle"
+        "emergency vehicle",
+        "Mukilteo Lighthouse motif",
+        "department emblem"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1701,7 +1808,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Fire Department engine.",
+      "description": "Close-up of the side of a Mukilteo Fire Department engine showing the Maltese-cross 'MUKILTEO FIRE DEPT.' emblem with a Mukilteo Lighthouse central medallion, plus a partially visible 'Snohomish County E-24' apparatus ID decal.",
       "publicCaption": "Mukilteo Fire engine.",
       "notes": "",
       "needsReview": false,
@@ -1710,7 +1817,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 418852
+      "webSizeBytes": 418852,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "fire.jpg",
@@ -1719,7 +1827,10 @@
       "originalSizeBytes": 2135718,
       "category": "transportation",
       "subjects": [
-        "Mukilteo Fire"
+        "Mukilteo Fire",
+        "fire engine",
+        "lettering",
+        "close-up"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1729,8 +1840,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Fire (subject not specified by source name).",
-      "publicCaption": "",
+      "description": "Tight close-up of a fire engine cab front showing 'MUKILTEO' lettering in serif gold/black drop-shadow style across the door, with chrome bumper grille and twin windshield wipers visible.",
+      "publicCaption": "Mukilteo lettering on a fire engine.",
       "notes": "Generic name — could be station, vehicle, signage. Verify.",
       "needsReview": true,
       "reviewFlags": [
@@ -1740,7 +1851,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 289719
+      "webSizeBytes": 289719,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "fish-ladder.jpg",
@@ -1751,7 +1863,10 @@
       "subjects": [
         "fish ladder",
         "salmon",
-        "stream"
+        "stream",
+        "culvert",
+        "fish passage",
+        "infrastructure"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1761,8 +1876,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Fish ladder.",
-      "publicCaption": "Fish ladder.",
+      "description": "Circular stepped fish ladder built at the outlet of a moss-covered culvert, with water cascading through the weirs into a forested stream. Designed to allow salmon to ascend the culvert.",
+      "publicCaption": "A salmon-friendly fish ladder at a Mukilteo stream culvert.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1770,27 +1885,32 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 833823
+      "webSizeBytes": 833823,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "flower-6576.jpg",
       "originalFilename": "Flower-6576.jpg",
       "originalSha256": "03bf0afe62f0b57e6744596a15c9a8bc7e535303211d60955f59b156dd7d7155",
       "originalSizeBytes": 2555283,
-      "category": "broll",
+      "category": "park",
       "subjects": [
-        "flower"
+        "dahlia",
+        "flowers",
+        "Barbara Brenner Dobie Memorial Park",
+        "park sign",
+        "Fowler heritage area"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "name": "Barbara Brenner Dobie Memorial Park, 802 Mukilteo Lane, Mukilteo",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll flower closeup.",
-      "publicCaption": "",
+      "description": "Red-and-white dahlias in bloom at Barbara Brenner Dobie Memorial Park in Mukilteo, with the park sign (featuring the Mukilteo Lighthouse silhouette) in the soft-focus background.",
+      "publicCaption": "Dahlias bloom at Barbara Brenner Dobie Memorial Park.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1798,27 +1918,33 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 432535
+      "webSizeBytes": 432535,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "flower-6583.jpg",
       "originalFilename": "Flower-6583.jpg",
       "originalSha256": "8c7d1aca8f401d96ffa5c75d77f37bef004cb128f44815453bbcb5af0d0f89ee",
       "originalSizeBytes": 2320462,
-      "category": "broll",
+      "category": "park",
       "subjects": [
-        "flower"
+        "Barbara Brenner Dobie Memorial Park",
+        "park sign",
+        "Fowler Pear Tree",
+        "signage",
+        "dahlia",
+        "Mukilteo Lighthouse motif"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "name": "Barbara Brenner Dobie Memorial Park, 802 Mukilteo Lane, Mukilteo",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "B-roll flower closeup.",
-      "publicCaption": "",
+      "description": "Park entrance sign reading 'Barbara Brenner Dobie Memorial Park / Fowler Pear Tree / 802 Mukilteo Lane, Mukilteo, Washington', with a Mukilteo Lighthouse silhouette at the top and dahlias blooming in the foreground.",
+      "publicCaption": "Barbara Brenner Dobie Memorial Park, home of the Fowler heritage pear tree.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1826,15 +1952,22 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 869112
+      "webSizeBytes": 869112,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "for-web-127.jpg",
       "originalFilename": "For Web-127.jpg",
       "originalSha256": "e93fb85b9e6fd3126ce80c002fbe2bb575ac6861ef9691db887251681e0e7f5c",
       "originalSizeBytes": 2317897,
-      "category": "unknown",
-      "subjects": [],
+      "category": "nature",
+      "subjects": [
+        "flower",
+        "rockrose",
+        "garden",
+        "plants",
+        "close-up"
+      ],
       "location": {
         "name": null,
         "confidence": "unknown"
@@ -1843,36 +1976,41 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject not captured by source name (Lightroom 'For Web' export).",
-      "publicCaption": "",
-      "notes": "Rename based on actual content.",
-      "needsReview": true,
-      "reviewFlags": [
-        "location-unconfirmed",
-        "subject-identification-unconfirmed",
-        "multiple-similar-shots"
+      "description": "Close-up of a magenta-pink flower (appears to be a rockrose / Cistus) with a yellow center and dark maroon basal spots, photographed against soft-focus garden foliage. A small interpretive sign is visible in the background, suggesting a public garden or park.",
+      "publicCaption": "A rockrose blooms in a Mukilteo public garden.",
+      "notes": "Suggested rename: 'rockrose-bloom-public-garden.jpg' or 'pink-flower-garden-127.jpg'. The interpretive sign in the background, if readable at higher resolution, may identify the specific garden.",
+      "needsReview": false,
+      "reviewFlags": [],
+      "usage": [
+        "background",
+        "public-website"
       ],
-      "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 408821
+      "webSizeBytes": 408821,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "for-web-5012.jpg",
       "originalFilename": "For Web-5012.jpg",
       "originalSha256": "c64bdb033916c7c47dd7fc276a5a763169725453c2bb988b0532eeb9659286fc",
       "originalSizeBytes": 1991659,
-      "category": "unknown",
-      "subjects": [],
+      "category": "neighborhood",
+      "subjects": [
+        "Elliot Pointe",
+        "neighborhood sign",
+        "entrance monument",
+        "signage"
+      ],
       "location": {
-        "name": null,
-        "confidence": "unknown"
+        "name": "Elliot Pointe (neighborhood entrance), Mukilteo",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject not captured by source name (Lightroom 'For Web' export).",
-      "publicCaption": "",
+      "description": "Stone-and-wood entrance monument for the Elliot Pointe neighborhood, with a stylized blue-on-white sail/water emblem above the script 'Elliot Pointe' lettering, set into clipped evergreen hedges.",
+      "publicCaption": "Entrance to the Elliot Pointe neighborhood.",
       "notes": "Rename based on actual content.",
       "needsReview": true,
       "reviewFlags": [
@@ -1882,7 +2020,8 @@
       ],
       "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 894145
+      "webSizeBytes": 894145,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "fowler-grave.jpg",
@@ -1892,8 +2031,11 @@
       "category": "historical",
       "subjects": [
         "Fowler family",
+        "Capt. N. B. Fowler",
         "pioneer cemetery",
-        "grave"
+        "grave",
+        "headstone",
+        "Puget Sound view"
       ],
       "location": {
         "name": "Pioneer Cemetery, Mukilteo",
@@ -1903,7 +2045,7 @@
         "label": "2023-2025 (subject is historical)",
         "confidence": "medium"
       },
-      "description": "Grave of a member of the Fowler pioneer family.",
+      "description": "Headstone of Capt. N. B. Fowler (died January 22, 1922) in a small bluff-top pioneer cemetery, with a second 19th-century family stone visible at left and Puget Sound and a far shoreline visible beyond a low fence.",
       "publicCaption": "Fowler family grave.",
       "notes": "Public memorial; historical pioneer family.",
       "needsReview": false,
@@ -1913,7 +2055,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 797567
+      "webSizeBytes": 797567,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "fowler-pear-tree.jpg",
@@ -1923,19 +2066,23 @@
       "category": "historical",
       "subjects": [
         "Fowler family",
-        "heritage pear tree"
+        "heritage pear tree",
+        "Barbara Brenner Dobie Memorial Park",
+        "replanted tree",
+        "dedication plaque",
+        "memorial garden"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "name": "Barbara Brenner Dobie Memorial Park, 802 Mukilteo Lane, Mukilteo",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025 (subject is historical)",
         "confidence": "medium"
       },
-      "description": "Heritage pear tree associated with the Fowler pioneer family.",
+      "description": "A young (replanted) Fowler heritage pear tree staked in a circular bed with a stacked-stone retaining wall and a small dedication plaque, ringed by rose bushes at Barbara Brenner Dobie Memorial Park (802 Mukilteo Lane). A craftsman-style building with red metal roof is visible at right.",
       "publicCaption": "Fowler heritage pear tree.",
-      "notes": "",
+      "notes": "Tree appears to be a recent replanting/replacement (slender stake-supported sapling), not the original 19th-century heritage pear. Confirm with parks staff whether the original tree was lost and this is a successor planting from cuttings/grafts.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -1943,7 +2090,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 811443
+      "webSizeBytes": 811443,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "harbour-pointe.jpg",
@@ -1953,7 +2101,10 @@
       "category": "residential",
       "subjects": [
         "Harbour Pointe",
-        "neighborhood"
+        "neighborhood",
+        "entrance sign",
+        "monument sign",
+        "landscaping"
       ],
       "location": {
         "name": "Harbour Pointe, Mukilteo",
@@ -1963,8 +2114,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Harbour Pointe neighborhood.",
-      "publicCaption": "Harbour Pointe.",
+      "description": "Landscaped 'Harbour Pointe' monument entrance sign — white panel with dark serif lettering and a small nautical graphic — set in a mowed median with low hedges and seasonal flower plantings, framed by mature trees.",
+      "publicCaption": "The Harbour Pointe neighborhood entrance.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -1972,7 +2123,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 1051420
+      "webSizeBytes": 1051420,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "historic-flight-6382.jpg",
@@ -1981,8 +2133,12 @@
       "originalSizeBytes": 1693137,
       "category": "business",
       "subjects": [
-        "Historic Flight Foundation",
-        "aviation"
+        "vintage aircraft",
+        "radial engine",
+        "propeller",
+        "warbird",
+        "aviation",
+        "Historic Flight Foundation"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -1992,7 +2148,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Historic Flight Foundation.",
+      "description": "Close-up of the polished chrome spinner, three-blade propeller, and radial engine of a red vintage aircraft. Cursive script and a small winged emblem are visible on the cowling. Overcast sky.",
       "publicCaption": "",
       "notes": "Historic Flight Foundation has since relocated; verify currency before public use.",
       "needsReview": true,
@@ -2003,7 +2159,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 221945
+      "webSizeBytes": 221945,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "historic-flight-6385.jpg",
@@ -2012,8 +2169,12 @@
       "originalSizeBytes": 2221902,
       "category": "business",
       "subjects": [
-        "Historic Flight Foundation",
-        "aviation"
+        "vintage aircraft",
+        "cockpit",
+        "warbird",
+        "trainer aircraft",
+        "aviation",
+        "Historic Flight Foundation"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2023,7 +2184,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Historic Flight Foundation.",
+      "description": "Side view of the open cockpit and forward fuselage of a vintage red-and-white tandem-seat aircraft with a polished aluminum nose, two-blade propeller, and a panel of analog flight instruments visible inside the canopy.",
       "publicCaption": "",
       "notes": "",
       "needsReview": true,
@@ -2034,7 +2195,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 199114
+      "webSizeBytes": 199114,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "historic-flight-6394.jpg",
@@ -2043,8 +2205,13 @@
       "originalSizeBytes": 1947056,
       "category": "business",
       "subjects": [
-        "Historic Flight Foundation",
-        "aviation"
+        "vintage aircraft",
+        "T-6 Texan",
+        "warbird",
+        "military trainer",
+        "radial engine",
+        "aviation",
+        "Historic Flight Foundation"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2054,7 +2221,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Historic Flight Foundation.",
+      "description": "Three-quarter front view of a polished bare-aluminum military trainer aircraft (consistent with a North American T-6 Texan / SNJ) with a black propeller, large radial engine, and 'U.S.' lettering on the fuselage. Tarmac setting with conifers behind and what looks like an inflatable from a public event partly visible behind the wing.",
       "publicCaption": "",
       "notes": "",
       "needsReview": true,
@@ -2065,7 +2232,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 412615
+      "webSizeBytes": 412615,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "island-view-ridge.jpg",
@@ -2075,7 +2243,10 @@
       "category": "residential",
       "subjects": [
         "Island View Ridge",
-        "neighborhood"
+        "neighborhood",
+        "entrance sign",
+        "monument sign",
+        "pergola"
       ],
       "location": {
         "name": "Island View Ridge, Mukilteo",
@@ -2085,8 +2256,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Island View Ridge neighborhood.",
-      "publicCaption": "",
+      "description": "'Island View Ridge' neighborhood entrance monument — hand-painted-style sign panel under a wood-beam pergola with stacked-stone columns and vine drape, framed by manicured shrubs.",
+      "publicCaption": "The Island View Ridge neighborhood entrance.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -2094,7 +2265,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 812151
+      "webSizeBytes": 812151,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "ivars-5129.jpg",
@@ -2105,7 +2277,10 @@
       "subjects": [
         "Ivar's",
         "restaurant",
-        "waterfront dining"
+        "reader board",
+        "neon sign",
+        "twilight",
+        "Copper River salmon"
       ],
       "location": {
         "name": "Ivar's Mukilteo Landing",
@@ -2115,8 +2290,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Ivar's restaurant.",
-      "publicCaption": "Ivar's at Mukilteo Landing.",
+      "description": "Twilight photo of the Ivar's reader-board sign: top panel reads 'Where Clams & Culture Meet!' (the Ivar's tagline); reader board below shows 'FRESH COPPER RIVER SALMON'; a 'Fresh Seafood' neon sign glows beneath. Tan wood-sided building exterior; deep blue dusk sky.",
+      "publicCaption": "Copper River salmon on the menu at Ivar's, photographed at dusk.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -2124,7 +2299,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 297287
+      "webSizeBytes": 297287,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "ivars-5131.jpg",
@@ -2134,8 +2310,10 @@
       "category": "business",
       "subjects": [
         "Ivar's",
+        "Mukilteo Landing",
         "restaurant",
-        "waterfront dining"
+        "signage",
+        "neon sign"
       ],
       "location": {
         "name": "Ivar's Mukilteo Landing",
@@ -2145,7 +2323,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Ivar's restaurant.",
+      "description": "Close-up of the Ivar's neon script wordmark on a wood-sided exterior, with a 'MUKILTEO LANDING 1926' plaque visible above.",
       "publicCaption": "Ivar's at Mukilteo Landing.",
       "notes": "",
       "needsReview": false,
@@ -2154,7 +2332,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 505025
+      "webSizeBytes": 505025,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "japanese-gulch-sunset.jpg",
@@ -2164,7 +2343,11 @@
       "category": "park",
       "subjects": [
         "Japanese Gulch",
-        "sunset"
+        "sunset",
+        "forest",
+        "conifers",
+        "light rays",
+        "ferns"
       ],
       "location": {
         "name": "Japanese Gulch, Mukilteo",
@@ -2174,7 +2357,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Sunset over Japanese Gulch.",
+      "description": "Warm golden sunset light filtering through a gap in dense conifers, illuminating ferns and understory in the center of the frame against tall dark trunks — a 'god rays' effect through the forest.",
       "publicCaption": "Sunset at Japanese Gulch.",
       "notes": "",
       "needsReview": false,
@@ -2185,7 +2368,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 724996
+      "webSizeBytes": 724996,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "japanese-gulch-trail.jpg",
@@ -2196,7 +2380,10 @@
       "subjects": [
         "Japanese Gulch",
         "trail",
-        "hiking"
+        "hiking",
+        "forest",
+        "understory",
+        "walking"
       ],
       "location": {
         "name": "Japanese Gulch trail, Mukilteo",
@@ -2206,8 +2393,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Japanese Gulch trail.",
-      "publicCaption": "Japanese Gulch trail.",
+      "description": "Soft dirt walking trail through sun-dappled second-growth deciduous forest, with bright green understory (sword fern, salmonberry) lining both sides and tall slender alder/maple trunks forming the canopy.",
+      "publicCaption": "A walking trail through Japanese Gulch.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -2215,7 +2402,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 980092
+      "webSizeBytes": 980092,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "japanese-gulch-5755.jpg",
@@ -2224,6 +2412,10 @@
       "originalSizeBytes": 2064791,
       "category": "park",
       "subjects": [
+        "forest",
+        "canopy",
+        "trees",
+        "Pacific Northwest",
         "Japanese Gulch"
       ],
       "location": {
@@ -2234,8 +2426,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Japanese Gulch.",
-      "publicCaption": "",
+      "description": "Looking up into a dense second-growth deciduous forest canopy with sunlight filtering through bright green leaves; multi-trunked maples or alders dominate the frame, with conifers at right.",
+      "publicCaption": "Sunlight through the canopy in Japanese Gulch.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2246,7 +2438,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 957020
+      "webSizeBytes": 957020,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "japanese-gulch-5821.jpg",
@@ -2255,6 +2448,11 @@
       "originalSizeBytes": 1799927,
       "category": "park",
       "subjects": [
+        "forest trail",
+        "western redcedar",
+        "bark",
+        "ferns",
+        "hiking",
         "Japanese Gulch"
       ],
       "location": {
@@ -2265,8 +2463,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Japanese Gulch.",
-      "publicCaption": "",
+      "description": "Narrow dirt trail through a Pacific Northwest conifer forest, with the rough red-brown bark of a large western redcedar (likely) dominating the foreground at right; soft-focus ferns and conifer trunks recede into the background.",
+      "publicCaption": "A trail through the cedars in Japanese Gulch.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2277,36 +2475,44 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 342312
+      "webSizeBytes": 342312,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "legion-of-boom.jpg",
       "originalFilename": "Legion of Boom-0352.jpg",
       "originalSha256": "72289dee63d101c6777bfbfa9c56410b2010b47ce90f8ab40d9ee503573e79a7",
       "originalSizeBytes": 2266042,
-      "category": "unknown",
+      "category": "civic-event",
       "subjects": [
-        "Legion of Boom"
+        "Mukilteo City Hall",
+        "Seahawks",
+        "Blue Friday",
+        "city staff",
+        "group photo",
+        "civic event"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "low"
+        "name": "Mukilteo City Hall",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject named 'Legion of Boom' — possibly a Seahawks-themed mural, vehicle, or display.",
-      "publicCaption": "",
-      "notes": "Confirm subject before public use; trademark sensitivity around Legion of Boom name.",
+      "description": "Group of approximately 13 people in Seattle Seahawks jerseys (numbers 12 and 29 visible) posing outside the entrance to Mukilteo City Hall, holding a large hand-painted 'LEGION OF BOOM' banner. Likely a Blue Friday / Seahawks playoff-season staff or officials photo.",
+      "publicCaption": "Mukilteo staff show their Seahawks pride at City Hall.",
+      "notes": "Group photo at Mukilteo City Hall entrance with a hand-painted 'Legion of Boom' banner. Trademark note remains relevant — 'Legion of Boom' is associated with the Seattle Seahawks; consider whether using it in public-facing captions creates any concern, or simply caption as 'Seahawks pride at City Hall' to sidestep the issue. Identifiable individuals appear in the photo — verify image-release status before public use.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
-        "subject-identification-unconfirmed"
+        "subject-identification-unconfirmed",
+        "image-release-needed"
       ],
       "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 625739
+      "webSizeBytes": 625739,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "library-5357.jpg",
@@ -2316,7 +2522,9 @@
       "category": "civic-building",
       "subjects": [
         "Mukilteo Library",
-        "Sno-Isle Libraries"
+        "Sno-Isle Libraries",
+        "signage",
+        "monument sign"
       ],
       "location": {
         "name": "Mukilteo Library",
@@ -2326,28 +2534,31 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Library.",
-      "publicCaption": "Mukilteo Library.",
+      "description": "Mukilteo Library entrance monument sign at 4675, reading 'MUKILTEO LIBRARY' in green lettering on a stone-and-block monument, with a small lighthouse icon inset.",
+      "publicCaption": "Mukilteo Library entrance sign.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 870105
+      "webSizeBytes": 870105,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "library-5365.jpg",
       "originalFilename": "Library-5365.jpg",
       "originalSha256": "6ce6c98d6ea5f8f8f4bd8b018f98192c1e6f12178c57f99c83dc56891820d426",
       "originalSizeBytes": 2412081,
-      "category": "civic-building",
+      "category": "public-art",
       "subjects": [
         "Mukilteo Library",
-        "Sno-Isle Libraries"
+        "public art",
+        "bronze sculpture",
+        "child",
+        "bear",
+        "otter"
       ],
       "location": {
         "name": "Mukilteo Library",
@@ -2357,8 +2568,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Library.",
-      "publicCaption": "Mukilteo Library.",
+      "description": "Bronze sculpture group of a child reaching toward a standing bear cub, with an otter beside them, on a concrete pad outside the Mukilteo Library. Photographed against a backdrop of landscaping shrubs.",
+      "publicCaption": "Bronze sculpture at the Mukilteo Library.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2368,17 +2579,21 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 765071
+      "webSizeBytes": 765071,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "library-5368.jpg",
       "originalFilename": "Library-5368.jpg",
       "originalSha256": "ed7927169c61ba164cab1a0dfc75c4ae4f7471053fa1173ceb6d2ee4c15ee658",
       "originalSizeBytes": 2008671,
-      "category": "civic-building",
+      "category": "public-art",
       "subjects": [
         "Mukilteo Library",
-        "Sno-Isle Libraries"
+        "public art",
+        "bronze sculpture",
+        "bear",
+        "wolf"
       ],
       "location": {
         "name": "Mukilteo Library",
@@ -2388,8 +2603,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Library.",
-      "publicCaption": "Mukilteo Library.",
+      "description": "Low-angle artistic shot of the bronze sculpture group at the Mukilteo Library, framed through a third sculpture figure (appears to be a wolf or coyote) in the soft-focus foreground, with a bear cub and children figures sharp in the middle distance. The library building's exterior — cream split-face block walls with green-framed windows — is visible behind.",
+      "publicCaption": "Bronze sculpture group outside the Mukilteo Library.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2399,7 +2614,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 614154
+      "webSizeBytes": 614154,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-6690.jpg",
@@ -2408,7 +2624,13 @@
       "originalSizeBytes": 2410496,
       "category": "park",
       "subjects": [
-        "Lighthouse Park"
+        "Lighthouse Park",
+        "Mukilteo Light",
+        "parking lot",
+        "Puget Sound",
+        "Whidbey Island",
+        "keeper's quarters",
+        "picnic shelter"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -2418,18 +2640,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Lighthouse Park.",
-      "publicCaption": "Lighthouse Park.",
+      "description": "Elevated overview of the Mukilteo Light complex from above the Lighthouse Park parking lot, looking north across Puget Sound to Whidbey Island. Lighthouse tower, keeper's quarters, picnic shelter, and full parking lot visible on a sunny day.",
+      "publicCaption": "Mukilteo's Lighthouse Park and Puget Sound waterfront.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 476698
+      "webSizeBytes": 476698,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-6696.jpg",
@@ -2438,7 +2659,11 @@
       "originalSizeBytes": 2009140,
       "category": "park",
       "subjects": [
-        "Lighthouse Park"
+        "Lighthouse Park",
+        "Mukilteo Light",
+        "BNSF railroad",
+        "Puget Sound",
+        "Whidbey Island"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -2448,8 +2673,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Lighthouse Park.",
-      "publicCaption": "Lighthouse Park.",
+      "description": "Elevated view of Lighthouse Park looking north over the BNSF railroad tracks toward the lighthouse and Puget Sound. Shot from a viewpoint higher and further south than the other elevated park views in this set, with the tracks and a white wooden fence framing the foreground.",
+      "publicCaption": "Lighthouse Park and the BNSF rail line along Mukilteo's waterfront.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2459,7 +2684,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 753534
+      "webSizeBytes": 753534,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-6698.jpg",
@@ -2468,7 +2694,11 @@
       "originalSizeBytes": 2458976,
       "category": "park",
       "subjects": [
-        "Lighthouse Park"
+        "Lighthouse Park",
+        "Mukilteo Light",
+        "keeper's quarters",
+        "parking lot",
+        "Puget Sound"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -2478,7 +2708,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Lighthouse Park.",
+      "description": "Elevated tighter-frame view of the Mukilteo Light complex and Lighthouse Park parking lot, looking north across Puget Sound to Whidbey Island. Very similar viewpoint to lighthouse-park-6690 but tighter on the lighthouse buildings.",
       "publicCaption": "Lighthouse Park.",
       "notes": "",
       "needsReview": true,
@@ -2489,7 +2719,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 511061
+      "webSizeBytes": 511061,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-6737.jpg",
@@ -2498,7 +2729,11 @@
       "originalSizeBytes": 2430742,
       "category": "park",
       "subjects": [
-        "Lighthouse Park"
+        "Lighthouse Park",
+        "Mukilteo Light",
+        "Washington State Ferries",
+        "Mukilteo-Clinton ferry",
+        "Puget Sound"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
@@ -2508,8 +2743,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Lighthouse Park.",
-      "publicCaption": "Lighthouse Park.",
+      "description": "Elevated view of the Mukilteo Light and Lighthouse Park with a Washington State Ferry crossing Puget Sound in the middle distance, headed between Mukilteo and Clinton (Whidbey Island).",
+      "publicCaption": "A Washington State Ferry crosses Puget Sound near Mukilteo's Lighthouse Park.",
       "notes": "",
       "needsReview": true,
       "reviewFlags": [
@@ -2518,8 +2753,9 @@
       "usage": [
         "public-website"
       ],
-      "candidateUses": [],
-      "webSizeBytes": 471710
+      "candidateUses": "hero-image",
+      "webSizeBytes": 471710,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-closeup.jpg",
@@ -2539,8 +2775,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Light, close-up.",
-      "publicCaption": "Mukilteo Light.",
+      "description": "Wide environmental view of the Mukilteo Light and keeper's quarters at low tide, photographed from the beach with a weathered wooden pier and pilings in the foreground. Whidbey Island visible in the distance under overcast skies.",
+      "publicCaption": "The Mukilteo Light at low tide, viewed from the beach.",
       "notes": "Confirm framing/quality before promoting to hero use.",
       "needsReview": true,
       "reviewFlags": [
@@ -2549,10 +2785,9 @@
       "usage": [
         "public-website"
       ],
-      "candidateUses": [
-        "hero-image"
-      ],
-      "webSizeBytes": 541548
+      "candidateUses": "hero-image",
+      "webSizeBytes": 541548,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "losvar.jpg",
@@ -2573,25 +2808,29 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Losvar (waterfront apartments).",
-      "publicCaption": "Losvar.",
-      "notes": "Verify whether Losvar is the apartments or another business.",
-      "needsReview": true,
+      "description": "Dusk view from a waterfront pier of the Losvar building (a long four-story residential structure with continuous balconies). Warm interior lights glow against a fading blue sky; the pier railing leads the eye toward the building.",
+      "publicCaption": "Losvar at dusk on the Mukilteo waterfront.",
+      "notes": "Building shape and balcony pattern match losvar-condominiums-from-water.jpg in this batch — same building photographed from opposite sides (water-side daytime vs. pier-side dusk). Treat as the same subject (Losvar Condominiums).",
+      "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 505182
+      "webSizeBytes": 505182,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mf-character-6966.jpg",
       "originalFilename": "MF Character-6966.jpg",
       "originalSha256": "649dfeeab33e8a7d4cb6975b795530e3c7d3103f8ae90d754b256c9ffad28774",
       "originalSizeBytes": 1387202,
-      "category": "unknown",
+      "category": "residential",
       "subjects": [
-        "MF Character"
+        "clock tower",
+        "plaza",
+        "village center",
+        "autumn"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2601,9 +2840,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject labeled 'MF Character' — meaning unclear.",
-      "publicCaption": "",
-      "notes": "Confirm what 'MF' stands for (Mukilteo Fire? Mukilteo Freelance? Multi-Family?).",
+      "description": "Wooden clock tower with a four-sided clock and copper-shingled cap, set in a brick paver plaza surrounded by craftsman-style buildings and autumn trees. Likely the centerpiece of a planned 'village center' style development.",
+      "publicCaption": "Clock tower at a Mukilteo town-center plaza.",
+      "notes": "'MF' in the original filename appears to be a photographer/Lightroom collection prefix, not a subject. Visible content is a clock tower in a planned town-center style plaza — possibly Harbour Pointe Boulevard's village center / a Smith Brothers / Old Town / Harbour Pointe commercial node. Confirm location with a local reviewer before captioning.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
@@ -2612,16 +2851,21 @@
       ],
       "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 416460
+      "webSizeBytes": 416460,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mf-character-6968.jpg",
       "originalFilename": "MF Character-6968.jpg",
       "originalSha256": "5161cd404c2e490e9a69e29bf2c3d7012d125c55797fdf65eedcc23bb9ec8fc5",
       "originalSizeBytes": 2183418,
-      "category": "unknown",
+      "category": "residential",
       "subjects": [
-        "MF Character"
+        "townhomes",
+        "multifamily housing",
+        "streetscape",
+        "autumn",
+        "craftsman-style"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2631,9 +2875,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject labeled 'MF Character' — meaning unclear.",
+      "description": "Row of craftsman-style townhomes with green siding, tapered white porch columns, and a tree-lined sidewalk in autumn light. Setting reads as a planned multifamily / town-center development.",
       "publicCaption": "",
-      "notes": "Confirm what 'MF' stands for.",
+      "notes": "'MF' in the original filename is almost certainly 'Multi-Family' — confirmed by visual content of mf-character-6968 (townhome row) and mf-character-6981 (townhome cluster), and consistent with the pilot's mf-character-6966 (clock tower in a multi-family town-center plaza). Treat as a photographer/Lightroom collection prefix for multifamily-housing photos.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
@@ -2642,16 +2886,21 @@
       ],
       "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 622767
+      "webSizeBytes": 622767,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mf-character-6981.jpg",
       "originalFilename": "MF Character-6981.jpg",
       "originalSha256": "eae2d592427610ceb995090f1cd8d402f3133d44e385bb0d56921c9ca74053d1",
       "originalSizeBytes": 1984242,
-      "category": "unknown",
+      "category": "residential",
       "subjects": [
-        "MF Character"
+        "townhomes",
+        "multifamily housing",
+        "residential community",
+        "craftsman-style",
+        "landscaping"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2661,9 +2910,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Subject labeled 'MF Character' — meaning unclear.",
+      "description": "Cluster of three-story craftsman-style townhomes with mixed-color siding, peaked gables and decorative trusses, arranged around a landscaped courtyard with a winding walking path, manicured lawn, and bollard lights.",
       "publicCaption": "",
-      "notes": "Confirm what 'MF' stands for.",
+      "notes": "Same 'MF' = 'Multi-Family' interpretation as mf-character-6968. This and 6968 appear to be from the same townhome development photographed from different angles (similar siding palette, trim style, landscaping). Possibly the same shoot day.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
@@ -2672,7 +2921,8 @@
       ],
       "usage": [],
       "candidateUses": [],
-      "webSizeBytes": 772401
+      "webSizeBytes": 772401,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "morris-grave.jpg",
@@ -2681,9 +2931,11 @@
       "originalSizeBytes": 1902691,
       "category": "historical",
       "subjects": [
-        "Morris family",
-        "pioneer cemetery",
-        "grave"
+        "Morris H. Frost",
+        "pioneer grave",
+        "Pioneer Cemetery",
+        "Masonic emblem",
+        "1882"
       ],
       "location": {
         "name": "Pioneer Cemetery, Mukilteo",
@@ -2693,9 +2945,9 @@
         "label": "2023-2025 (subject is historical)",
         "confidence": "medium"
       },
-      "description": "Grave of a member of the Morris pioneer family.",
-      "publicCaption": "Morris family grave.",
-      "notes": "Public memorial; historical pioneer family.",
+      "description": "Weathered marble headstone of Morris H. Frost (died January 1882, aged 70, 'a native of New York') in a grassy clearing under mature trees. The stone bears a Masonic square-and-compass emblem. A split-rail fence and a glimpse of water are visible in the background — consistent with a small waterfront-bluff pioneer cemetery.",
+      "publicCaption": "Headstone of Morris H. Frost (1812-1882) in Mukilteo's Pioneer Cemetery.",
+      "notes": "Public historical marker in a pioneer cemetery; subject (Morris H. Frost, d. 1882) is long deceased so no privacy concern. Masonic emblem on the stone may be of interest. Verify Pioneer Cemetery location with local source — visible waterfront glimpse is consistent with the bluff-side Mukilteo Pioneer Cemetery.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -2703,7 +2955,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 391533
+      "webSizeBytes": 391533,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-station-5560.jpg",
@@ -2724,18 +2977,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Station (Sound Transit Sounder).",
-      "publicCaption": "Mukilteo Station.",
+      "description": "Close-up of the 'Mukilteo Station' identifier sign at the Sound Transit Sounder commuter rail station, framed by ornamental grasses and orange daylilies in the foreground and a wooden pergola in the background.",
+      "publicCaption": "The Mukilteo Station identifier sign on the Sound Transit Sounder line.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 899770
+      "webSizeBytes": 899770,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-station-5563.jpg",
@@ -2756,7 +3008,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Station (Sound Transit Sounder).",
+      "description": "Close-up of the 'Mukilteo Station' identifier sign at the Sound Transit Sounder commuter rail station, framed by ornamental grasses and a wooden pergola. Near-duplicate of mukilteo-station-5560.jpg with a slightly different camera angle.",
       "publicCaption": "Mukilteo Station.",
       "notes": "",
       "needsReview": true,
@@ -2767,7 +3019,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 890811
+      "webSizeBytes": 890811,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "oil-dock.jpg",
@@ -2788,8 +3041,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Oil dock on the Mukilteo waterfront.",
-      "publicCaption": "Mukilteo oil dock.",
+      "description": "View of a long industrial pier/dock structure extending into the water from the Mukilteo waterfront, with Whidbey Island visible across Possession Sound. Rocky beach and driftwood in the foreground.",
+      "publicCaption": "The Mukilteo oil dock and waterfront, looking across Possession Sound toward Whidbey Island.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -2798,7 +3051,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 655644
+      "webSizeBytes": 655644,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "pioneer-cemetery-6521.jpg",
@@ -2807,7 +3061,10 @@
       "originalSizeBytes": 1895809,
       "category": "historical",
       "subjects": [
-        "Pioneer Cemetery"
+        "Pioneer Cemetery",
+        "cemetery sign",
+        "Webster Street",
+        "Puget Sound view"
       ],
       "location": {
         "name": "Pioneer Cemetery, Mukilteo",
@@ -2817,19 +3074,18 @@
         "label": "2023-2025 (subject is historical)",
         "confidence": "medium"
       },
-      "description": "Pioneer Cemetery.",
-      "publicCaption": "Pioneer Cemetery.",
+      "description": "Entrance sign for Pioneer Cemetery (513 Webster Street, Mukilteo) — carved teal-and-cream wooden sign at the edge of a lawn, with a glimpse of Puget Sound and distant island visible past the hedge.",
+      "publicCaption": "The entrance sign at Pioneer Cemetery on Webster Street.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website",
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 721444
+      "webSizeBytes": 721444,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "pioneer-cemetery-6549.jpg",
@@ -2838,7 +3094,10 @@
       "originalSizeBytes": 2148104,
       "category": "historical",
       "subjects": [
-        "Pioneer Cemetery"
+        "Pioneer Cemetery",
+        "headstones",
+        "historic cemetery",
+        "Webster Street"
       ],
       "location": {
         "name": "Pioneer Cemetery, Mukilteo",
@@ -2848,19 +3107,18 @@
         "label": "2023-2025 (subject is historical)",
         "confidence": "medium"
       },
-      "description": "Pioneer Cemetery.",
+      "description": "Interior view of Pioneer Cemetery showing two upright historic headstones on a lawn beneath mature maple trees, with the cemetery's entrance sign visible at right and a small wood-sided shelter in the background.",
       "publicCaption": "Pioneer Cemetery.",
       "notes": "",
-      "needsReview": true,
-      "reviewFlags": [
-        "multiple-similar-shots"
-      ],
+      "needsReview": false,
+      "reviewFlags": [],
       "usage": [
         "public-website",
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 839981
+      "webSizeBytes": 839981,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "police-car-5842.jpg",
@@ -2870,17 +3128,19 @@
       "category": "transportation",
       "subjects": [
         "Mukilteo Police",
-        "patrol vehicle"
+        "patrol vehicle",
+        "Ford Taurus Police Interceptor",
+        "community event"
       ],
       "location": {
         "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Police patrol vehicle.",
+      "description": "Mukilteo Police patrol vehicle — a black-and-white Ford Taurus Police Interceptor with 'POLICE / CITY OF MUKILTEO' door decals and the Mukilteo Lighthouse graphic, parked next to event tents (likely a community event setting).",
       "publicCaption": "Mukilteo Police patrol vehicle.",
       "notes": "",
       "needsReview": false,
@@ -2889,7 +3149,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 726019
+      "webSizeBytes": 726019,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "police-car-5843.jpg",
@@ -2899,17 +3160,19 @@
       "category": "transportation",
       "subjects": [
         "Mukilteo Police",
-        "patrol vehicle"
+        "vehicle decal",
+        "lighthouse logo",
+        "branding"
       ],
       "location": {
         "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Police patrol vehicle.",
+      "description": "Close-up of a Mukilteo Police vehicle door showing the 'POLICE / CITY OF MUKILTEO' decal and Mukilteo Lighthouse silhouette graphic.",
       "publicCaption": "Mukilteo Police patrol vehicle.",
       "notes": "",
       "needsReview": false,
@@ -2918,7 +3181,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 393907
+      "webSizeBytes": 393907,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "police-car-5847.jpg",
@@ -2928,17 +3192,19 @@
       "category": "transportation",
       "subjects": [
         "Mukilteo Police",
-        "patrol vehicle"
+        "patrol vehicle",
+        "Ford Police Interceptor Utility",
+        "SUV"
       ],
       "location": {
         "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Police patrol vehicle.",
+      "description": "Mukilteo Police SUV (appears to be a Ford Police Interceptor Utility / Explorer) with 'POLICE / CITY OF MUKILTEO' door decals and the Mukilteo Lighthouse graphic, parked outdoors on a sunny day.",
       "publicCaption": "Mukilteo Police patrol vehicle.",
       "notes": "",
       "needsReview": false,
@@ -2947,7 +3213,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 389106
+      "webSizeBytes": 389106,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "pet-waste-station.jpg",
@@ -2956,8 +3223,9 @@
       "originalSizeBytes": 1068815,
       "category": "infrastructure",
       "subjects": [
-        "pet waste station",
-        "park amenity"
+        "pet waste signage",
+        "park amenity",
+        "dog etiquette"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -2967,8 +3235,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Pet waste station signage.",
-      "publicCaption": "",
+      "description": "Green-and-cream sign mounted on a wooden rail fence reading 'If Your Dog Poops, Please Scoop... It's the Right Thing to Do!' with a pictogram of a person cleaning up after a leashed dog. Park or trail setting.",
+      "publicCaption": "Pet etiquette signage at a Mukilteo park.",
       "notes": "Renamed from 'Poop and Scoop' to a more public-appropriate label.",
       "needsReview": false,
       "reviewFlags": [],
@@ -2976,7 +3244,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 447537
+      "webSizeBytes": 447537,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "post-office.jpg",
@@ -2996,8 +3265,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Post Office.",
-      "publicCaption": "Mukilteo Post Office.",
+      "description": "United States Post Office in Mukilteo, Washington (ZIP 98275, building number 8060) — single-story tan-sided building with gabled roof, USPS eagle plaque, and a US flag flying in the foreground.",
+      "publicCaption": "The United States Post Office in Mukilteo (ZIP 98275).",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -3005,7 +3274,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 781690
+      "webSizeBytes": 781690,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "public-works.jpg",
@@ -3019,22 +3289,23 @@
       ],
       "location": {
         "name": "Mukilteo Public Works",
-        "confidence": "medium"
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Public Works.",
+      "description": "Concrete monument sign reading 'MUKILTEO PUBLIC WORKS' in front of the city's Public Works building, with landscaping (Japanese maple, shrubs) and an accessible-parking sign visible.",
       "publicCaption": "Mukilteo Public Works.",
       "notes": "Expanded 'PW' abbreviation to full name.",
-      "needsReview": true,
+      "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 752727
+      "webSizeBytes": 752727,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "public-meeting-5271.jpg",
@@ -3044,28 +3315,34 @@
       "category": "civic-event",
       "subjects": [
         "public meeting",
-        "civic engagement"
+        "civic engagement",
+        "Planning 101",
+        "land use",
+        "open house",
+        "City of Mukilteo"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "name": "City of Mukilteo (likely City Hall / Council Chamber lobby)",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Public meeting.",
+      "description": "A 'City of Mukilteo Planning 101: The Confusing World of Land Use Regulations & Planning' open house in what appears to be the council chamber lobby. A staff member (woman in coral top) stands behind a sign-in / handout table; an easel-mounted poster and a projected presentation slide both display the event title. Framed land-use maps line the wall behind.",
       "publicCaption": "Public meeting.",
-      "notes": "Watch for identifiable individuals before publishing.",
+      "notes": "One identifiable staff member (woman in coral top) clearly visible in frame and posed for camera. Confirm image release before public use. Event identified from poster as 'Planning 101' open house.",
       "needsReview": true,
       "reviewFlags": [
-        "multiple-similar-shots"
+        "multiple-similar-shots",
+        "image-release-needed"
       ],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 393305
+      "webSizeBytes": 393305,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "public-meeting-7730.jpg",
@@ -3075,7 +3352,11 @@
       "category": "civic-event",
       "subjects": [
         "public meeting",
-        "civic engagement"
+        "civic engagement",
+        "workshop",
+        "community input",
+        "zoning map",
+        "visioning"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3085,18 +3366,20 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Public meeting.",
+      "description": "A workshop-style public engagement session: a participant (man in dark grey polo with embroidered crest) is seated at a table with a large land-use / zoning map, photos, and craft supplies (scissors, glue stick), engaged in what looks like a community-input or visioning exercise. Other participants are partially visible.",
       "publicCaption": "Public meeting.",
-      "notes": "Watch for identifiable individuals before publishing.",
+      "notes": "One clearly identifiable participant (man in dark grey polo) is the dominant subject. Embroidered crest on his shirt may be identifying (appears to read '1991' with a stylized graphic). Two additional partially-visible participants in background. Confirm image release before public use.",
       "needsReview": true,
       "reviewFlags": [
-        "multiple-similar-shots"
+        "multiple-similar-shots",
+        "image-release-needed"
       ],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 374335
+      "webSizeBytes": 374335,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "public-notices.jpg",
@@ -3109,15 +3392,15 @@
         "signage"
       ],
       "location": {
-        "name": "Mukilteo, WA",
-        "confidence": "medium"
+        "name": "Mukilteo, WA (likely City Hall or Public Works exterior)",
+        "confidence": "high"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Public notices board / signage.",
-      "publicCaption": "Public notices.",
+      "description": "Blue 'CITY OF MUKILTEO / PUBLIC NOTICES' awning with the Mukilteo Lighthouse graphic, mounted on a cinderblock exterior wall (likely a public-facing wall of a city facility used to post legal/public notices).",
+      "publicCaption": "City of Mukilteo public notices signage.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -3125,7 +3408,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 442292
+      "webSizeBytes": 442292,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "railroad.jpg",
@@ -3135,7 +3419,9 @@
       "category": "transportation",
       "subjects": [
         "railroad",
-        "BNSF"
+        "shoreline tracks",
+        "waterfront",
+        "Puget Sound"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3145,8 +3431,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Railroad.",
-      "publicCaption": "",
+      "description": "Single-track railroad line running along the Mukilteo waterfront between a rocky beach (left) and a wooded bluff (right), with Puget Sound and the far shore visible. Bare deciduous branches and low-angle light suggest a winter or early-spring afternoon.",
+      "publicCaption": "The railroad line tracing the Mukilteo waterfront.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -3154,7 +3440,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 684563
+      "webSizeBytes": 684563,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "red-cup-coffee.jpg",
@@ -3175,7 +3462,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Red Cup coffee shop.",
+      "description": "Two-story dark-sided building housing the Red Cup coffee shop, with a corner patio under red umbrellas, mature landscaping, and the shop's red signage on both visible elevations.",
       "publicCaption": "Red Cup.",
       "notes": "",
       "needsReview": false,
@@ -3184,7 +3471,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 669124
+      "webSizeBytes": 669124,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "rosehill-community-center.jpg",
@@ -3193,7 +3481,10 @@
       "originalSizeBytes": 2273921,
       "category": "civic-building",
       "subjects": [
-        "Rosehill Community Center"
+        "Rosehill Community Center",
+        "1928 bench",
+        "historic schoolhouse",
+        "red building"
       ],
       "location": {
         "name": "Rosehill Community Center, Mukilteo",
@@ -3203,16 +3494,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Rosehill Community Center.",
+      "description": "View of the Rosehill Community Center campus showing a 1928-dated decorative concrete bench/balustrade in the foreground, with the historic red-clapboard schoolhouse-style building joined to the modern community-center addition behind.",
       "publicCaption": "Rosehill Community Center.",
-      "notes": "Confirm subject — 'Rosehill' could refer to neighborhood vs. community center.",
+      "notes": "Subject is the Rosehill Community Center campus from the side that shows the 1928 commemorative bench and the historic red-clapboard schoolhouse-style building (likely a preserved/relocated element of the original 1928 Rose Hill School). The modern community-center addition is visible behind. Confirm whether the red building is the relocated historic schoolhouse and whether the 1928 bench has its own dedication name worth captioning.",
       "needsReview": true,
       "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 629343
+      "webSizeBytes": 629343,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "sidewalk.jpg",
@@ -3232,7 +3524,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Sidewalk.",
+      "description": "Concrete sidewalk along a quiet residential street, separated from the road by a grass strip and ornamental street trees, with two-story homes and mature landscaping at left.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -3241,7 +3533,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 898547
+      "webSizeBytes": 898547,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "sound-transit-station.jpg",
@@ -3262,9 +3555,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Sound Transit station / signage at Mukilteo.",
+      "description": "Pedestrian walkway running between the Mukilteo Sound Transit station parking lot and the trackside fence (with wood pergola overhead), looking down the platform-adjacent path toward the curving rails.",
       "publicCaption": "Sound Transit at Mukilteo.",
-      "notes": "Overlaps with mukilteo-station-* — confirm which view this is and whether it is a duplicate.",
+      "notes": "View is the parking-lot-side walkway alongside the tracks (wood pergola overhead). Compare to mukilteo-station-* in batch 7 to confirm it is a complementary angle (not a duplicate). The wood pergola and wire-mesh fence styling should match.",
       "needsReview": true,
       "reviewFlags": [
         "subject-identification-unconfirmed"
@@ -3273,7 +3566,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 873959
+      "webSizeBytes": 873959,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "speed-safety.jpg",
@@ -3284,7 +3578,9 @@
       "subjects": [
         "speed safety",
         "traffic safety",
-        "speed sign"
+        "speed limit sign",
+        "residential street",
+        "25 mph"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3294,8 +3590,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Speed safety / traffic safety subject.",
-      "publicCaption": "",
+      "description": "Close-up of a residential 'Please drive carefully for our children's sake — Speed Limit 25 MPH' street sign mounted on a wooden post, against an overcast sky.",
+      "publicCaption": "A neighborhood speed-limit sign reminds drivers to slow down for children.",
       "notes": "Source filename had a typo ('Saftey') and trailing dash; corrected.",
       "needsReview": false,
       "reviewFlags": [],
@@ -3303,7 +3599,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 245504
+      "webSizeBytes": 245504,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "sr-525.jpg",
@@ -3314,7 +3611,11 @@
       "subjects": [
         "SR 525",
         "Mukilteo Speedway",
-        "state route"
+        "Old Town overlook",
+        "wayfinder sign",
+        "Mukilteo ferry",
+        "Possession Sound",
+        "Whidbey Island"
       ],
       "location": {
         "name": "SR 525, Mukilteo",
@@ -3324,8 +3625,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "State Route 525 (Mukilteo Speedway).",
-      "publicCaption": "SR 525.",
+      "description": "Overlook view from the top of the Mukilteo Speedway (SR 525) descending into Old Town, with a green 'OLD TOWN' wayfinder sign in the foreground, the ferry terminal and a docked Washington State Ferry visible below, and Whidbey Island across Possession Sound.",
+      "publicCaption": "The Mukilteo Speedway (SR 525) descends into Old Town and the ferry terminal, with Whidbey Island beyond.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -3333,7 +3634,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 570982
+      "webSizeBytes": 570982,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "stacy-memorial-clock.jpg",
@@ -3342,8 +3644,11 @@
       "originalSizeBytes": 1693792,
       "category": "historical",
       "subjects": [
-        "Stacy memorial clock",
-        "downtown landmark"
+        "Stacy Shown clock",
+        "street clock",
+        "Old Town Mukilteo",
+        "downtown landmark",
+        "watchmaker jeweler"
       ],
       "location": {
         "name": "Old Town Mukilteo",
@@ -3353,16 +3658,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Stacy memorial clock — public landmark in Old Town Mukilteo.",
+      "description": "The Stacy Shown Watchmaker Jeweler memorial street clock — an ornate cast-iron pedestal clock with twin globe-lamp clusters flanking the dial — a public landmark in Old Town Mukilteo.",
       "publicCaption": "Stacy memorial clock.",
-      "notes": "Public memorial; named after donor / honoree but is a public landmark.",
+      "notes": "Dial reads 'Stacy Shown — Watchmaker Jeweler'. Confirm whether the formal name of the landmark is 'Stacy Shown Memorial Clock' (or similar) and whether 'Stacy Clock' in the manifest is just shorthand. Distinct from the modern wooden clock tower seen in batch 5/8 (mf-character-6966.jpg) — that one is a different planned-development clock tower.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 207808
+      "webSizeBytes": 207808,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "stormwater-ditch.jpg",
@@ -3372,8 +3678,10 @@
       "category": "infrastructure",
       "subjects": [
         "stormwater",
-        "drainage",
-        "ditch"
+        "drainage ditch",
+        "runoff",
+        "roadside drainage",
+        "low-angle"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3383,7 +3691,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Stormwater drainage ditch.",
+      "description": "Low-angle (water-level) view of a small roadside stormwater ditch with active runoff, shot looking up the channel toward a yellow 'Hidden Driveway / Speed 25' warning sign on a wooden post.",
       "publicCaption": "Stormwater drainage.",
       "notes": "",
       "needsReview": false,
@@ -3392,7 +3700,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 622259
+      "webSizeBytes": 622259,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "street-1.jpg",
@@ -3411,7 +3720,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic street scene.",
+      "description": "Two-lane curving parkway-style road through a dense forest of conifers and bare deciduous trees in winter, with a yellow 'BUMP' warning sign at right and a distant glimpse of Possession Sound through the trees.",
       "publicCaption": "",
       "notes": "Source name had trailing dash; assigned street-1 to disambiguate from -2/-3.",
       "needsReview": true,
@@ -3423,7 +3732,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 901051
+      "webSizeBytes": 901051,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "street-2.jpg",
@@ -3442,7 +3752,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic street scene.",
+      "description": "Residential street splitting around a tree-planted center median in autumn, with maroon-leaved ornamental trees on the median and quiet homes lining both sides under overcast light.",
       "publicCaption": "",
       "notes": "",
       "needsReview": true,
@@ -3454,7 +3764,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 939451
+      "webSizeBytes": 939451,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "street-3.jpg",
@@ -3473,7 +3784,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic street scene.",
+      "description": "Residential street with paired bare-branch street trees, curbed sidewalks, and city refuse/recycle bins at the curb on a sunny late-winter day.",
       "publicCaption": "",
       "notes": "",
       "needsReview": true,
@@ -3485,7 +3796,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 899191
+      "webSizeBytes": 899191,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "street-6963.jpg",
@@ -3494,7 +3806,11 @@
       "originalSizeBytes": 2259699,
       "category": "broll",
       "subjects": [
-        "street"
+        "street",
+        "town center",
+        "mixed-use",
+        "commercial district",
+        "storefronts"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3504,9 +3820,9 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Generic street scene.",
+      "description": "Mixed-use 'main street' style commercial corner with a three-story building (ground-floor storefronts including a pizza restaurant with sidewalk seating), brick crosswalks, and ornamental autumn trees lining the sidewalk.",
       "publicCaption": "",
-      "notes": "",
+      "notes": "Architectural style (cream stucco, white pilasters, sloped roof, brick crosswalks, planned street-tree program) is consistent with the same town-center development seen in mf-character-6966.jpg (clock tower) from an earlier batch. Worth confirming whether this is the Harbour Pointe village center, a Smith Brothers area development, or another specific planned commercial node.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
@@ -3516,7 +3832,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 474376
+      "webSizeBytes": 474376,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "stormwater-7998.jpg",
@@ -3526,17 +3843,19 @@
       "category": "infrastructure",
       "subjects": [
         "stormwater",
-        "drainage"
+        "drainage swale",
+        "roadside infrastructure",
+        "arterial road"
       ],
       "location": {
-        "name": "Mukilteo, WA",
+        "name": "Mukilteo Speedway (SR 525) arterial, Mukilteo",
         "confidence": "medium"
       },
       "era": {
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Stormwater infrastructure.",
+      "description": "Roadside stormwater drainage swale running alongside a multi-lane arterial road in winter, with traffic-signal mast-arms and a strip-mall commercial center (golden-arches signage visible) in the background.",
       "publicCaption": "",
       "notes": "Source name typo ('Stromwater') corrected to 'stormwater'.",
       "needsReview": true,
@@ -3545,7 +3864,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 811749
+      "webSizeBytes": 811749,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "sunset.jpg",
@@ -3565,8 +3885,8 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Sunset scene.",
-      "publicCaption": "",
+      "description": "Sunset over Puget Sound photographed from a beach, with silhouetted dune grass in the foreground and a long tree-covered landmass (consistent with Whidbey Island) on the horizon.",
+      "publicCaption": "Sunset over Puget Sound from the Mukilteo shoreline.",
       "notes": "",
       "needsReview": false,
       "reviewFlags": [],
@@ -3576,7 +3896,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 302201
+      "webSizeBytes": 302201,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "trees.jpg",
@@ -3596,7 +3917,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Trees / foliage b-roll.",
+      "description": "Upward-angle b-roll of bright lime-green deciduous tree canopy against a pale-blue sky; reads as spring or early summer.",
       "publicCaption": "",
       "notes": "",
       "needsReview": false,
@@ -3605,7 +3926,8 @@
         "background"
       ],
       "candidateUses": [],
-      "webSizeBytes": 979407
+      "webSizeBytes": 979407,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "wastewater-treatment-plant.jpg",
@@ -3615,7 +3937,10 @@
       "category": "infrastructure",
       "subjects": [
         "wastewater treatment",
-        "Public Works"
+        "Public Works",
+        "clarifier",
+        "infrastructure",
+        "covered tank"
       ],
       "location": {
         "name": "Mukilteo Wastewater Treatment Plant",
@@ -3625,7 +3950,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo Wastewater Treatment Plant.",
+      "description": "Covered circular treatment basin (likely a clarifier or aeration tank) at a wastewater treatment plant — blue steel column structure supporting a standing-seam metal roof with a central vent cupola, with a second similar structure visible at left and a conifer treeline in the background.",
       "publicCaption": "Wastewater Treatment Plant.",
       "notes": "",
       "needsReview": false,
@@ -3634,7 +3959,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 633699
+      "webSizeBytes": 633699,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "waterfront.jpg",
@@ -3644,7 +3970,11 @@
       "category": "waterfront",
       "subjects": [
         "Mukilteo waterfront",
-        "Puget Sound"
+        "Puget Sound",
+        "shoreline",
+        "hillside",
+        "residential",
+        "condominiums"
       ],
       "location": {
         "name": "Mukilteo waterfront",
@@ -3654,7 +3984,7 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Mukilteo waterfront.",
+      "description": "Mid-distance view of the Mukilteo waterfront from the water, showing a multistory shoreline condominium/hotel building, what appears to be a small white red-roofed structure (possibly the Mukilteo Lighthouse or a related building), and a wooded hillside rising behind the shore with houses visible among the evergreens. Calm water foreground, cloudy sky.",
       "publicCaption": "Mukilteo waterfront.",
       "notes": "",
       "needsReview": false,
@@ -3665,7 +3995,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 521619
+      "webSizeBytes": 521619,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "ymca.jpg",
@@ -3686,16 +4017,17 @@
         "label": "2023-2025",
         "confidence": "medium"
       },
-      "description": "Harbour Pointe YMCA.",
+      "description": "Exterior of the Harbour Pointe YMCA building: gray split-face block walls with a 'the Y' logo and address '10601' visible on the wall, a covered timber-frame entrance breezeway, and a U.S. flag on a tall flagpole. Photographed on a sunny day with sunburst flare in the upper frame.",
       "publicCaption": "Harbour Pointe YMCA.",
-      "notes": "",
+      "notes": "Visible address number '10601' on the wall — consistent with the Harbour Pointe YMCA address (10601 47th Pl W, Mukilteo). 'the Y' branding is the post-2010 YMCA logo, supporting a modern (2010s+) era estimate.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 501404
+      "webSizeBytes": 501404,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "rosehill-community-center-patio-north.jpg",
@@ -3715,7 +4047,7 @@
         "label": "modern",
         "confidence": "medium"
       },
-      "description": "Rosehill Community Center outdoor patio, facing north.",
+      "description": "Outdoor patio at the Rosehill Community Center under a wood-clad eave, with wrought-iron tables and chairs facing a manicured lawn and a backdrop of autumn-colored trees and conifers.",
       "publicCaption": "Rosehill Community Center patio.",
       "notes": "Large file (~18MB). May want to web-optimize before publishing.",
       "needsReview": false,
@@ -3726,7 +4058,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 665644
+      "webSizeBytes": 665644,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-fire-engine-community-event-1970s.jpg",
@@ -3737,29 +4070,33 @@
       "subjects": [
         "Mukilteo Fire",
         "fire engine",
-        "community event"
+        "community event",
+        "emergency unit",
+        "fleur-de-lis"
       ],
       "location": {
         "name": "Mukilteo, WA",
         "confidence": "medium"
       },
       "era": {
-        "label": "1970s",
-        "confidence": "low"
+        "label": "1980s",
+        "confidence": "medium"
       },
-      "description": "Older photo (likely 1970s) of a community event with a fire engine as the main focal point.",
-      "publicCaption": "Mukilteo Fire Department at a community event, circa 1970s.",
+      "description": "Head-on view of a red Mukilteo fire engine ('MUKILTEO' lettered across the front with fleur-de-lis emblems) parked on a street, with two white Mukilteo Fire Dept. emergency vehicles visible at left and a small group of onlookers at right. Likely a community event or open-house gathering; era appears to be 1980s based on vehicle styling.",
+      "publicCaption": "Mukilteo Fire Department engine on display at a community event, 1980s.",
       "notes": "Era is a visual estimate; verify if possible.",
       "needsReview": true,
       "reviewFlags": [
-        "era-estimated"
+        "era-estimated",
+        "image-release-needed"
       ],
       "usage": [
         "historical-archive",
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 300273
+      "webSizeBytes": 300273,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "mukilteo-fire-department-vintage-rescue-vehicle.jpg",
@@ -3768,9 +4105,11 @@
       "originalSizeBytes": 1145780,
       "category": "historical",
       "subjects": [
-        "Mukilteo Fire",
-        "vintage vehicle",
-        "rescue vehicle"
+        "Mukilteo Fire Department",
+        "vintage emergency vehicle",
+        "sedan delivery",
+        "1950s",
+        "yellow fire vehicle"
       ],
       "location": {
         "name": "Mukilteo, WA",
@@ -3780,9 +4119,9 @@
         "label": "1950s",
         "confidence": "low"
       },
-      "description": "Mukilteo Fire Department vintage rescue/utility vehicle. Possibly a 1953 or 1954 Chevrolet Sedan Delivery, converted or outfitted for fire department use. Yellow paint, MFD logo visible.",
+      "description": "Color snapshot (re-photographed from an older print — visible glare and scratches) of a yellow vintage panel van / sedan-delivery vehicle outfitted for the Mukilteo Fire Department. Chrome grille and trim, twin chrome warning lights on the front fenders, and a red roof beacon. A circular red 'FIRE DEPT / [firefighter figure] / MUKILTEO' logo is visible on the rear quarter panel. The grille/trim styling is more consistent with a 1953-1955 Packard or Pontiac sedan-delivery body than a Chevrolet — let a vintage car expert confirm before captioning specifically.",
       "publicCaption": "Mukilteo Fire Department historical vehicle.",
-      "notes": "Vehicle ID is best-guess; have a vintage car expert confirm before captioning specifically.",
+      "notes": "Image is a re-photograph of an older print (visible glare/scratches), so resolution is limited. Vehicle make/model needs a vintage-vehicle expert — front-end chrome looks more Packard/Pontiac than Chevrolet. The 'FIRE DEPT MUKILTEO' badge confirms department ownership.",
       "needsReview": true,
       "reviewFlags": [
         "era-estimated"
@@ -3791,7 +4130,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 405775
+      "webSizeBytes": 405775,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "rosehill-community-center-south-exterior.jpg",
@@ -3811,7 +4151,7 @@
         "label": "modern",
         "confidence": "medium"
       },
-      "description": "Exterior shot of the Rosehill Community Center, looking at the south-facing side (classroom/event-room side).",
+      "description": "Exterior of the Rosehill Community Center showing the long glass-walled south elevation under a heavy timber pergola, with red wood siding at the corner and landscaped beds of horsetails and grasses along the walkway.",
       "publicCaption": "Rosehill Community Center.",
       "notes": "Source is a 45MB TIF; copy step uses ImageMagick to convert to JPG (quality 90).",
       "needsReview": false,
@@ -3822,7 +4162,8 @@
       "candidateUses": [
         "hero-image"
       ],
-      "webSizeBytes": 609285
+      "webSizeBytes": 609285,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-aerial-from-water-1936.jpg",
@@ -3834,19 +4175,21 @@
         "Mukilteo",
         "aerial",
         "waterfront",
-        "1936"
+        "1936",
+        "historic dock",
+        "railroad"
       ],
       "location": {
         "name": "Mukilteo, WA — view from the water",
         "confidence": "high"
       },
       "era": {
-        "label": "1936",
+        "label": "photo taken 1936; print made 1951",
         "confidence": "high"
       },
-      "description": "1936 photo of Mukilteo taken from the water.",
-      "publicCaption": "Mukilteo from the water, 1936.",
-      "notes": "Date is in the source filename; treat as authoritative pending source verification.",
+      "description": "Aerial / oblique photograph of Mukilteo's waterfront and uphill town fabric in 1936, showing the long shoreline dock, a curving beach, the railroad along the shore, and streets cut into a forested slope. Published in 1951 with the printed caption '\"MUKILTEO — 15 YEARS AGO — 1936-1951\"'.",
+      "publicCaption": "Mukilteo from the air, 1936 (from a 1951 retrospective print).",
+      "notes": "Source date confirmed in the printed caption visible at the bottom of the image: '\"MUKILTEO — 15 YEARS AGO — 1936-1951\"'. Photo content is 1936; the print is from 1951.",
       "needsReview": false,
       "reviewFlags": [],
       "usage": [
@@ -3854,7 +4197,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 540260
+      "webSizeBytes": 540260,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "douglas-dc3-american-airlines-historical-livery.jpg",
@@ -3865,8 +4209,10 @@
       "subjects": [
         "Douglas DC-3",
         "aviation",
-        "American Airlines",
-        "Historic Flight Foundation"
+        "Pan American Airways",
+        "Pan Am",
+        "Historic Flight Foundation",
+        "vintage aircraft"
       ],
       "location": {
         "name": "Mukilteo, WA (likely Historic Flight Foundation)",
@@ -3876,8 +4222,8 @@
         "label": "modern photo of historic aircraft",
         "confidence": "medium"
       },
-      "description": "Douglas DC-3 in early American Airways / American Airlines historical livery.",
-      "publicCaption": "Douglas DC-3 in American Airways historical livery.",
+      "description": "Polished aluminum Douglas DC-3 in flight, painted in historical Pan American Airways System livery (with a small American flag forward of the cabin windows).",
+      "publicCaption": "Douglas DC-3 in Pan American Airways historical livery.",
       "notes": "Almost certainly photographed at the Historic Flight Foundation when it was in Mukilteo.",
       "needsReview": false,
       "reviewFlags": [],
@@ -3886,7 +4232,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 285879
+      "webSizeBytes": 285879,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "lighthouse-park-early-historical.jpg",
@@ -3896,17 +4243,20 @@
       "category": "historical",
       "subjects": [
         "Lighthouse Park",
-        "Mukilteo Light"
+        "Mukilteo Light",
+        "keeper's quarters",
+        "historical",
+        "early Mukilteo"
       ],
       "location": {
         "name": "Lighthouse Park, Mukilteo",
         "confidence": "high"
       },
       "era": {
-        "label": "early 20th century",
+        "label": "early 20th century (likely 1906-1920s)",
         "confidence": "low"
       },
-      "description": "Very early photo of Lighthouse Park, early 20th century.",
+      "description": "Historical photograph of the Mukilteo Light and keeper's quarters viewed from the water, with American flag flying, a wooden pier extending into the foreground, and the early Mukilteo hillside (sparsely settled) climbing behind. Lighthouse profile matches the present-day Mukilteo Light.",
       "publicCaption": "Lighthouse Park, early 20th century.",
       "notes": "Source filename '2000.32' looks like an accession number, not a year. Confirm date with the source archive.",
       "needsReview": true,
@@ -3917,7 +4267,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 188194
+      "webSizeBytes": 188194,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-store-vintage.jpg",
@@ -3927,20 +4278,23 @@
       "category": "historical",
       "subjects": [
         "Mukilteo Store",
+        "A. Lemp's Hotel",
+        "N. J. Smith",
         "downtown",
-        "historical commerce"
+        "historical commerce",
+        "real-photo postcard"
       ],
       "location": {
         "name": "Mukilteo, WA",
         "confidence": "medium"
       },
       "era": {
-        "label": "vintage / early 20th century",
-        "confidence": "low"
+        "label": "early 1900s (likely 1900-1915)",
+        "confidence": "medium"
       },
-      "description": "Vintage photo of the Mukilteo Store.",
-      "publicCaption": "The Mukilteo Store, vintage.",
-      "notes": "'2000.67' is likely an accession number, not a year. Verify date.",
+      "description": "Vintage real-photo postcard of historic Mukilteo, showing (left to right) a residence, 'A. LEMP'S HOTEL' with a 'GROCERY STORE' entrance, and the 'MUKILTEO STORE / N. J. SMITH Prop' building on a dirt road with wooden boardwalks. A small figure stands in a doorway under the Mukilteo Store balcony; a chicken is visible in the foreground.",
+      "publicCaption": "Historic Mukilteo: A. Lemp's Hotel and the Mukilteo Store (N. J. Smith, proprietor), early 1900s.",
+      "notes": "'2000.67' is almost certainly a museum accession number (year.item format), not a photo date. Visible signage names: A. Lemp (hotel), N. J. Smith (Mukilteo Store proprietor) — both should be checkable against Mukilteo Historical Society records to date the photo more precisely.",
       "needsReview": true,
       "reviewFlags": [
         "era-estimated"
@@ -3949,7 +4303,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 147453
+      "webSizeBytes": 147453,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-ferry-terminal-vashon-ferry.jpg",
@@ -3959,19 +4314,20 @@
       "category": "historical",
       "subjects": [
         "Washington State Ferries",
-        "Vashon",
-        "ferry terminal",
-        "Mukilteo Light"
+        "MV Vashon (likely)",
+        "Mukilteo ferry terminal (old dock)",
+        "Mukilteo Lighthouse",
+        "keeper's cottage"
       ],
       "location": {
         "name": "Mukilteo ferry terminal",
         "confidence": "high"
       },
       "era": {
-        "label": "older / pre-current fleet",
-        "confidence": "low"
+        "label": "likely 1970s-1980s (color cast and vessel styling)",
+        "confidence": "medium"
       },
-      "description": "Older Washington State ferry at the Mukilteo ferry dock with the lighthouse and waterfront buildings visible. Logo at top reads what user transcribed as 'Vanhon' — probably 'Vashon' (one of the older WSF vessels).",
+      "description": "Faded color photograph (looks like a 1970s-80s scanned print or slide) of a green-and-white Washington State ferry — name on bow consistent with 'VASHON' — departing the old Mukilteo ferry dock. The Mukilteo Lighthouse and its keeper's cottage are clearly visible along the shore at left, with a rip-rap revetment running down the beach.",
       "publicCaption": "Earlier Washington State ferry at Mukilteo.",
       "notes": "Confirm vessel name — likely the MV Vashon. '2000.779' is accession-style.",
       "needsReview": true,
@@ -3982,7 +4338,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 152311
+      "webSizeBytes": 152311,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-fire-department-vintage-truck.jpg",
@@ -3992,17 +4349,19 @@
       "category": "historical",
       "subjects": [
         "Mukilteo Fire",
-        "vintage fire truck"
+        "vintage fire truck",
+        "Snohomish County Fire Protection District No. 2",
+        "Ford COE"
       ],
       "location": {
         "name": "Mukilteo, WA",
         "confidence": "medium"
       },
       "era": {
-        "label": "vintage",
-        "confidence": "low"
+        "label": "late 1930s - early 1940s",
+        "confidence": "medium"
       },
-      "description": "Older fire truck (not a current engine) — Mukilteo Fire Department.",
+      "description": "Sepia-toned profile photo of a vintage cab-over-engine fire truck (Ford COE styling, late 1930s / early 1940s) lettered '\"MUKILTEO\"' on the door and 'SNOHOMISH COUNTY FIRE PROTECTION DISTRICT NO. 2' on the tank panel. Equipped with ladders, hose connections, gauges, bell, and spotlight.",
       "publicCaption": "Mukilteo Fire Department historical truck.",
       "notes": "",
       "needsReview": true,
@@ -4013,7 +4372,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 348651
+      "webSizeBytes": 348651,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "island-flyer-boat-docked.jpg",
@@ -4027,25 +4387,27 @@
         "waterfront"
       ],
       "location": {
-        "name": "Mukilteo waterfront (likely)",
+        "name": "Mukilteo waterfront (unverified)",
         "confidence": "low"
       },
       "era": {
         "label": "vintage / black-and-white",
         "confidence": "medium"
       },
-      "description": "Black-and-white photo of the Island Flyer — a small boat docked near pilings.",
+      "description": "Vintage black-and-white photograph of the small wooden vessel ISLAND FLYER (name visible on the transom) moored against a piling. A man in workwear and cap stands atop the wheelhouse beside the smokestack; open water and a distant forested shoreline are visible at left.",
       "publicCaption": "The Island Flyer, docked.",
-      "notes": "Confirm vessel and location before captioning specifically.",
+      "notes": "Vessel name 'ISLAND FLYER' is visually confirmed from the transom. Location remains unverified — distant low shoreline at left could be Whidbey Island as seen from Mukilteo, but is not distinctive enough to confirm. One identifiable individual (man on the wheelhouse) is in the frame; vintage photo, but image-release status should still be considered before public use.",
       "needsReview": true,
       "reviewFlags": [
-        "location-unconfirmed"
+        "location-unconfirmed",
+        "image-release-needed"
       ],
       "usage": [
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 359348
+      "webSizeBytes": 359348,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "native-american-dedication-ceremony-1960s.jpg",
@@ -4063,19 +4425,22 @@
         "confidence": "medium"
       },
       "era": {
-        "label": "1960s",
+        "label": "late 1950s - mid 1960s",
         "confidence": "medium"
       },
-      "description": "Native American dedication ceremony, 1960s.",
-      "publicCaption": "Native American dedication ceremony in Mukilteo, 1960s.",
-      "notes": "Confirm tribal affiliation before captioning specifically; likely related to Point Elliott Treaty / Coast Salish peoples (Mukilteo is the treaty site).",
+      "description": "Black-and-white photograph of an outdoor dedication ceremony. A woman in elaborate Native regalia (long fringed / beaded dress, beaded headband, long earrings) stands at a microphone with one arm raised; seated near her are a man in a feathered ceremonial headdress, another figure in feathered regalia, and a man in a dark suit with thick-rimmed glasses next to a smiling young woman. A large floral arrangement and pleated bunting decorate the stage; the out-of-focus background shows tents and trees consistent with an outdoor fair or festival setting.",
+      "publicCaption": "Speakers at a dedication ceremony in Mukilteo, late 1950s to mid 1960s.",
+      "notes": "Confirm tribal affiliation and identities before captioning. Mukilteo is the Treaty of Point Elliott site, so Coast Salish peoples (including Tulalip, Snohomish, and others) are plausible — but the feathered headdress visible on one seated figure is more typically associated with Plains-style regalia, which could indicate a guest/performer from another nation, a Pan-Indian style adopted for ceremonial appearances, or a misreading on my part. Do not assert tribal affiliation without confirmation from the historical society or affiliated tribes.",
       "needsReview": true,
-      "reviewFlags": [],
+      "reviewFlags": [
+        "image-release-needed"
+      ],
       "usage": [
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 118815
+      "webSizeBytes": 118815,
+      "identifiablePeopleInFrame": true
     },
     {
       "name": "mukilteo-deep-water-harbor-parade.jpg",
@@ -4084,21 +4449,24 @@
       "originalSizeBytes": 1117815,
       "category": "historical",
       "subjects": [
-        "Mukilteo deep water harbor",
+        "Mukilteo deep water harbor campaign",
         "parade",
-        "civic promotion"
+        "civic promotion",
+        "early 1900s",
+        "Pantages Theater",
+        "Seattle (likely)"
       ],
       "location": {
-        "name": "Unknown — likely Seattle, not Mukilteo",
-        "confidence": "low"
+        "name": "Likely downtown Seattle (Pantages Theater visible)",
+        "confidence": "medium"
       },
       "era": {
-        "label": "early 1900s",
-        "confidence": "low"
+        "label": "circa 1905-1915",
+        "confidence": "medium"
       },
-      "description": "Historical parade or civic-promotion image showing a 'Mukilteo A Deep Water Harbor' banner. Urban street, storefronts, horses, formal dress (women in fancy hats) suggest early 20th century. Likely not photographed in Mukilteo — probably shows Mukilteo representatives in a regional parade.",
-      "publicCaption": "Mukilteo civic-promotion banner in an early 20th-century parade.",
-      "notes": "Do not imply the photo was taken in Mukilteo unless confirmed.",
+      "description": "Historical parade photograph showing Mukilteo civic-promotion delegates in an urban street, carrying two banners: 'MUKILTEO / A / DEEP WATER / HARBOR' and 'MUKILTEOS [sic] / PAY ROLE / $30,000'. A Pantages Theater sign is visible on a building at right; tall masonry commercial buildings, horse-drawn vehicles, formal dress (boater hats, long dresses with elaborate hats), and brick paving date this to the early 1900s. The Pantages and the urban scale strongly suggest this is downtown Seattle, not Mukilteo.",
+      "publicCaption": "Mukilteo deep-water-harbor campaign delegates parade in (likely) Seattle, circa 1905-1915. Note: 'Mukilteos' on the smaller banner appears to be a period spelling/typo.",
+      "notes": "Pantages Theater sign visible at right anchors this to a city with a Pantages — most plausibly downtown Seattle (Pantages on 2nd Ave, ~1907-1915). The 'MUKILTEOS PAY ROLE $30,000' banner is part of a civic-promotion campaign arguing for federal/state investment in a Mukilteo deep-water harbor. 'Pay role' = period spelling of payroll.",
       "needsReview": true,
       "reviewFlags": [
         "location-unconfirmed",
@@ -4108,7 +4476,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 476468
+      "webSizeBytes": 476468,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-ferry-aerial-2006.jpg",
@@ -4126,10 +4495,10 @@
         "confidence": "high"
       },
       "era": {
-        "label": "2006",
+        "label": "June 27, 2006",
         "confidence": "high"
       },
-      "description": "Aerial / oblique shot from a plane showing a Washington State ferry leaving the old Mukilteo ferry dock.",
+      "description": "True aerial photo (taken June 27, 2006 at 2:35 PM per overlaid timestamp) showing a Washington State ferry departing the old Mukilteo ferry terminal. The dock, terminal buildings, full parking lots, the BNSF mainline along the shore, and the Mukilteo Speedway climbing into town are all visible. A second smaller vessel is near the dock.",
       "publicCaption": "Washington State ferry departing the old Mukilteo ferry dock, 2006.",
       "notes": "'Old' dock — replaced by the current terminal that opened in late 2020.",
       "needsReview": false,
@@ -4139,7 +4508,8 @@
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 121362
+      "webSizeBytes": 121362,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-everett-stages-bus-barn.jpg",
@@ -4150,17 +4520,20 @@
       "subjects": [
         "Mukilteo Everett Stages",
         "bus barn",
-        "transit history"
+        "transit history",
+        "vintage buses",
+        "1950s transit",
+        "coach #27"
       ],
       "location": {
         "name": "Mukilteo, WA",
         "confidence": "medium"
       },
       "era": {
-        "label": "1950s-1960s",
-        "confidence": "low"
+        "label": "likely 1950s (caption strip appears to read 'AUG ... 5x')",
+        "confidence": "medium"
       },
-      "description": "Vintage photo of the Mukilteo-Everett Stages bus barn.",
+      "description": "Sepia-toned vintage photo of three Mukilteo-Everett Stages coaches parked in front of the bus barn. Large painted 'MUKILTEO – EVERETT STAGES' signage spans the building wall; the lead coach (numbered 27) shows a 'MUKILTEO–EVERETT' destination sign. A faint date stamp at the bottom of the print appears to read August of a 195x year.",
       "publicCaption": "Mukilteo-Everett Stages bus barn, mid-20th century.",
       "notes": "Era is a visual estimate.",
       "needsReview": true,
@@ -4171,7 +4544,8 @@
         "historical-archive"
       ],
       "candidateUses": [],
-      "webSizeBytes": 448647
+      "webSizeBytes": 448647,
+      "identifiablePeopleInFrame": false
     },
     {
       "name": "mukilteo-train-station-steam-locomotive.jpg",
@@ -4182,27 +4556,31 @@
       "subjects": [
         "steam locomotive",
         "Mukilteo train station",
-        "rail history"
+        "rail history",
+        "Great Northern Railway",
+        "depot",
+        "semaphore signal"
       ],
       "location": {
         "name": "old Mukilteo train station",
         "confidence": "high"
       },
       "era": {
-        "label": "early 20th century",
+        "label": "early 20th century (likely 1900s-1920s)",
         "confidence": "medium"
       },
-      "description": "Black-and-white photo of a steam locomotive pulling into the older Mukilteo train station.",
+      "description": "Black-and-white historical photograph of a steam locomotive arriving at the Mukilteo depot. A 'Great Northern Express Co.' sign is visible on the depot wall, and a Wabash-lettered boxcar sits on a side track. Several men in early-1900s clothing wait on the platform with a hand cart of freight.",
       "publicCaption": "Steam locomotive at the old Mukilteo station.",
-      "notes": "User noted 'coal powered' — keeping it as 'steam' since coal-fired is plausible but not visually confirmable.",
-      "needsReview": true,
+      "notes": "No archival source / historical-society reference available. Visible \"Great Northern Express Co.\" signage anchors the railroad context. Historical figures visible in frame; given the early-1900s era they are presumed public-domain and image releases are not required.",
+      "needsReview": false,
       "reviewFlags": [],
       "usage": [
         "historical-archive",
         "public-website"
       ],
       "candidateUses": [],
-      "webSizeBytes": 411503
+      "webSizeBytes": 411503,
+      "identifiablePeopleInFrame": true
     }
   ],
   "optimization": {
